@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* CSS Document */
+/* ========== Do Not Touch In Css Strat ========== */
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf')  format('truetype'), url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf')  format('truetype'), url('../fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url('../fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-SemiBold.woff') format('woff'), url('../fonts/OpenSans-SemiBold.ttf')  format('truetype'), url('../fonts/OpenSans-SemiBold.svg#OpenSans-SemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf')  format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url('../fonts/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-ExtraBold.woff') format('woff'), url('../fonts/OpenSans-ExtraBold.ttf')  format('truetype'), url('../fonts/OpenSans-ExtraBold.svg#OpenSans-ExtraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+	--theme-color: #102749;
+	--option-color:#60B8D1;
+ }
+html{height:100%; min-height:100%;}
+body{margin:0px; padding: 0 0 0; background: linear-gradient(to top left, var(--option-color), var(--theme-color)); overflow-x: hidden; height:100%; min-height:100%; font-family: 'OpenSans-Regular'; background-attachment: fixed; }
+p{margin:0px; padding:0px 0 0 0; line-height:22px; color: #2e2d31; font-size: 13px;}
+p.padding_15{padding-bottom:15px;}
+p.padding_30{padding-bottom:35px;}
+.no_padding{padding:0px!important;}
+.clear {clear:both;}
+a {text-decoration:none; color:var(--theme-color); cursor: pointer;}
+a:hover, a.selected,a:focus {text-decoration:none; color:#191919;}
+ul {list-style:none; padding: 0; margin: 0;}
+li {list-style:none;}
+b,strong { font-family: 'OpenSans-SemiBold';}
+h1{ font: normal 30px/30px 'OpenSans-Regular';  margin:0 0 25px 0; color:var(--theme-color); text-transform:uppercase;}
+h2{color:var(--theme-color); display:block; font:normal 20px/20px 'OpenSans-Regular'; margin:0 0 25px 0; text-transform:uppercase;}
+h3{ font-size:20px; color:var(--theme-color); margin:0 0 15px 0;  font-weight: normal; line-height:20px; text-transform:none; font-family: 'OpenSans-SemiBold';}
+h3 span{color:#2e2d31; font-size: 13px; display: block; margin-top: 5px; font-family: 'OpenSans-Regular';}
+h4{ font-size:16px; color:#0085AD; display:block; padding:0 0; margin:0 0 10px 0; font-weight: normal; line-height:16px;}
+h5{color:#A50034; display:block; font:normal 16px/18px 'OpenSans-SemiBold'; margin:0 0 15px 0; text-transform:capitalize;}
+/* ========== Do Not Touch In Css End ========== */
+
+/*-------------Header and navigation--------------------*/
+.container{ width:100%; max-width:100%; padding:0 30px;}
+header{ position: fixed; z-index: 999; width: 100%; padding:10px 0; top: 0;}
+header .logo {padding: 5px 0;}
+header .logo .logo_text{font-family: 'OpenSans-Light'; width:75%; font-size: 30px; letter-spacing: -1px; text-decoration: none; text-transform: uppercase; color: #fff; line-height: 30px;}
+header .logo .toggle{background: rgba(0, 0, 0, 0.3);border-radius: 3px;color:#fff;cursor: pointer;display: block;height: 30px;line-height: 30px;text-align: center;width: 30px; border: 0; position: relative; right: -20px;}
+
+header .notification{display: inline-block; padding: 5px 0;}
+header .notification li{position:relative;display:block; float: left; margin: 0 10px;}
+header .notification li a{color:#fff;font-size:20px;}
+header .notification li a span{border-radius: 10px;color: #FFFFFF;font-size: 12px;right:-10px;padding: 0;position: absolute;text-align: center;width: 20px;line-height: 20px;height: 20px;top:-7px;}
+header .notification li a span.badge1{background:#EA3F3F;}
+header .notification li a span.badge2{background:#4AC4BC;}
+
+.header_right{text-align: right;}
+.account_menu{ display:inline-block; position: relative;}
+.account_menu li{position:relative; display:block; float: left; margin-left:10px;}
+.account_menu li a .caret{margin-left:5px; border-top: 4px solid #fff;}
+.account_menu li a span.user_img{ width: 40px; height: 40px; border:2px solid #fff; border-radius:100%; text-align: center; color: #fff; font-size: 14px; display: inline-block; margin-right: 10px; padding: 8px 0;}
+.account_menu li a {font-size:13px; padding: 0 15px; text-align: left; color: #ffffff; box-shadow: none; position: relative; transition:all 0.8s ease 0s; display:block;}
+.account_menu li:hover a,.account_menu li:focus a{background-position: right bottom; color: #ffffff; }
+.account_menu li .dropdown-backdrop{display: none!important;}
+.account_menu li .toggle{background: rgba(0, 0, 0, 0.3);border-radius: 3px;color:#fff;cursor: pointer;display: block;height: 30px;line-height: 30px;text-align: center;width: 30px; border: 0; margin: 5px 0 0 0;}
+
+ul.dropdown-menu{ background:#fff; padding:0px 0 0 0px; border-radius:0 0; position:absolute; left:auto; right:0; width:200px; z-index: 99!important; margin: 0; box-shadow: none; border:1px solid #d0d0d6;}
+ul.dropdown-menu li {float:none; display:block; position:relative; margin:0;}
+ul.dropdown-menu li a{ padding:10px 10px!important; line-height: 14px!important; text-transform:capitalize; background:#fff!important; background-image:none!important; width:100%; text-align:left; white-space: normal!important; color: #313133!important; font-size: 14px!important; height: auto; border-radius:0px; border-bottom:1px dashed #ccc; }
+ul.dropdown-menu li:hover a,ul.dropdown-menu li.active a, ul.dropdown-menu li:focus a,.navigation ul li ul.dropdown-menu li:hover a,.navigation ul li ul.dropdown-menu li.active a, .navigation ul li ul.dropdown-menu li:focus a{color:#fff!important; background:#0085AD!important;background-image:none!important; cursor: pointer;}
+ul.dropdown-menu li:last-child a,ul.dropdown-menu li:last-child{ border-radius:0 0; border:0px;}
+/*--------------End header and navigation--------------------*/
+
+/* ------- Sidebar Area Start ------- */
+.sidebar_wrap{ position: fixed; top: 65px; left: 0; padding: 0 0 0 30px; height: 100%; width: 17.6667%; z-index: 999;}
+.sidebar_wrap .sidebar_box{background: rgba(0, 0, 0, 0.1);border-radius: 3px;padding: 10px;margin-bottom:10px;box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);}
+.sidebar_wrap .sidebar_box .sidebar_box_label{left:0px;background: rgba(0, 0, 0, 0.2);border-radius: 15px;padding: 5px 10px;color:#fff;}
+.sidebar_wrap .sidebar_box li i {font-size: 18px; width:25px;}
+.sidebar_wrap .sidebar_box li a {color: #FFFFFF !important;display: block;font-size: 13px;line-height: 15px;list-style: none outside none;padding: 10px 10px 10px 10px;text-decoration: none;text-transform: capitalize;}
+.sidebar_wrap .sidebar_box li a span {display: inline-block;float: none;left: 10px;position: relative;}
+/* ------- Sidebar Area End ------- */
+
+/*--------------Common content--------------------*/
+.right_content_block{position: fixed; right: -15px; top: 65px; height: 100%; min-height: 100%; width: 100%;}
+.right_content_block .height_100{height: 100%;}
+.right_content_block .bg_white_block{height:91.5%;width:100%; overflow-y: auto; position: relative;  background:#fff;}
+.right_content_block .bg_white_block:before { content: ""; position: absolute; top: 0; left: 0; border-width: 0 42px 42px 0; border-style: solid; border-color: #ffffff #203553; box-shadow: 0 0 0 rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.3); -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg);}
+
+.right_content_block .bg_white_block .title_heading{ background: #f5f5f5; color: #9EA7B3; padding-right: 15px;}
+.right_content_block .bg_white_block .title_heading .title_text{text-transform: uppercase; color: #9EA7B3; font-family: 'OpenSans-Regular'; font-size: 18px; margin-left:30px; padding: 15px;}
+.right_content_block .bg_white_block .title_heading .title_text i{margin-right: 10px; font-size: 18px;}
+.right_content_block .bg_white_block .title_heading .alert{padding: 15px 0 15px 15px; margin: 0; text-align:right; }
+.right_content_block .bg_white_block .title_heading .alert .close{margin-left:15px;}
+.right_content_block .bg_white_block .title_heading .alert i{color: #fff; font-size: 11px; margin-right: 10px; background: #4AC4BC; width: 18px; height: 18px; border-radius: 100%; text-align: center; line-height: 18px;}
+.right_content_block .bg_white_block .title_text{ height: 50px;}
+.right_content_block .bg_white_block .add_back {border-left: 1px dashed #CCCCCC; height: 50px; padding: 10px 15px; text-align: right;}
+.right_content_block .bg_white_block .title_heading .breadcrumb_block{border-top: 1px dashed #CCCCCC; display: block; padding: 10px 0;}
+.right_content_block .bg_white_block .title_heading .breadcrumb_block .breadcrumb{ margin: 5px 0 0 0; padding: 0;}
+.right_content_block .bg_white_block .title_heading .breadcrumb_block .breadcrumb li{color: #666; font-family: 'OpenSans-Regular'; font-size: 14px;}
+.right_content_block .bg_white_block .title_heading .breadcrumb_block .breadcrumb a{color: #9EA7B3;}
+
+.next_btn{background: var(--theme-color); border-radius:4px; color: #fff; font-size: 13px; border: 0; padding: 10px; line-height: 13px; min-width: 100px; opacity: 0.85; transition: all .3s ease-in-out; text-align: center; display: inline-block;}
+.next_btn:hover,.next_btn:focus{opacity: 1; transition: all .3s ease-in-out; box-shadow: 0 5px 10px 2px rgba(88,103,221,.15); color: #fff;}
+.back_btn{background: var(--option-color); border-radius:4px; color: #fff; font-size: 13px; border: 0; padding: 10px; line-height: 13px; min-width: 100px; opacity: 0.85; transition: all .3s ease-in-out; text-align: center;  display: inline-block;}
+.back_btn:hover,.back_btn:focus{opacity: 1; transition: all .3s ease-in-out; box-shadow: 0 5px 10px 2px rgba(88,103,221,.15); color: #fff;}
+
+.content_block{padding:30px 15px 30px 0px;}
+.dataTables_wrapper .dt-buttons {float:right!important; margin-left:15px;}
+.dt-buttons button.dt-button, .dt-buttons div.dt-button,.dt-buttons a.dt-button{ background: none!important; padding: 0!important; margin: 0 0 0 10px!important; font-size: 20px!important; color:var(--theme-color)!important; width: 30px; border: 0!important; }
+.dt-buttons .buttons-print::before,.dt-buttons .buttons-excel::before{color:var(--theme-color)!important; }
+
+.dataTables_filter label,.dataTables_length label{line-height:13px; color: #9ea7b3; font-size: 13px; font-weight:normal; }
+.dataTables_filter input{line-height:20px; color: #666!important; font-size: 13px; font-weight:normal; box-shadow: none; border: 1px solid #ccc; padding: 5px 12px;}
+.dataTables_length select{width: auto!important; border: 1px solid #ccc!important; padding-left:10px!important;}
+.dataTables_scroll{margin-top: 15px; clear: both; position: relative; overflow: hidden; display: inline-block; width: 100%;}
+.dataTables_wrapper .dataTables_info{ font-size:13px; color: #9ea7b3; }
+table.dataTable { border: 1px solid #ddd!important;}
+table tr th,table tr td{line-height:20px; color: #666; font-size: 13px; font-family: 'OpenSans-Regular';}
+table tr th{ font-family: 'OpenSans-Regular'; text-transform:none; color: #666; background: #F5F5F5;}
+table .activeyes_box{margin:0 0;}
+table .activeyes_box label{height: 20px; width: 45px; top: 0;}
+table .activeyes_box label:after{width: 15px; height: 15px; top: 2px; }
+table .activeyes_box input[type="checkbox"]:checked + label:after{left :62%;}
+
+.activeyes_box.note_check label{height: 20px; width: 45px; top: 0;}
+.activeyes_box.note_check label:after{width: 15px; height: 15px; top: 2px; }
+.activeyes_box.note_check input[type="checkbox"]:checked + label:after{left :62%;}
+.activeyes_box.note_check span{font-size:13px; line-height:20px;}
+
+table .edit,table .delete{font-size: 12px; min-width: 25px; line-height: 12px; box-shadow: none; opacity: 1; background: none; padding: 0; border: 0;}
+table .edit i,table .delete i{font-size: 17px; line-height: 17px;}
+table .edit i{color: #222;}
+table .delete i{color: darkred;}
+table .sr_no_width{width: 60px;}
+table .active_width{width: 80px;}
+table .action_width{width: 80px;}
+table .instructor_width{width:25%;}
+table .rating_width{width:20%;}
+.accepted{color:green;}
+.invited{color:red;}
+
+select {-moz-appearance: none!important;-webkit-appearance: none!important;background:transparent url("../images/arrow-down-b.png") no-repeat scroll right 5px / 23px auto!important; border: 0!important; border-bottom: 1px solid #888!important; color: #666!important; border-radius:0!important;padding: 0px 20px 0px 0px !important;height: 35px !important; width: 100%!important; font-size:13px!important; z-index: 99; position: relative; outline: 0;}
+select option{ background:#f4f4f4!important; padding:5px!important; color:#666!important; font-size:12px!important; text-transform:capitalize!important; display:block!important; width:100%!important; transition:all 0.2s linear 0s!important; border:0!important; border-bottom:1px solid #ccc!important;}
+
+.no_margin{margin: 0!important;}
+.list_li{padding: 0; margin: 0; width: 100%; display: block; position: relative;}
+.list_li li{padding:0px 0 7px 15px; background: url(../images/dot.png) left 5px no-repeat; background-size: 10px; color: #2e2d31; font-size: 13px;}
+.width_li30 li{width: 33%; float: left;}
+
+.activeyes_box {display:inline-block; margin:5px 20px 0 0;}
+.activeyes_box label{ background:#dfe2ea; font-weight:normal; height: 30px; width: 60px; display:inline-block; vertical-align:top; margin:0; cursor:pointer; color:#444; position: relative; top: 5px; border-radius: 20px;}
+.activeyes_box label:after{ content: ''; width: 24px; height: 24px; border-radius: 100%; left: 3px; top: 3px; background: #aaa; position: absolute; transition:left 0.3s linear 0s; }
+.activeyes_box input[type="checkbox"]:checked + label:after{left :52%; background: #333333; transition:left 0.3s linear 0s; }
+input[type="checkbox"] { visibility:hidden; position:absolute;}
+/*--------------End Common content--------------------*/
+
+/* ------------------------ Footer Area Start ----------------- */
+footer{ background:#f5f5f5; padding:15px 15px 15px 0; font-size:12px; font-weight: normal; line-height: 10px; color:#666; position: relative; bottom:0; right: 0; z-index: 999;}
+footer.footer_fixed{position: fixed; width: 81.35%; }
+footer a{color:#666; }
+footer a:hover{color:var(--theme-color); }
+.go_top { position:fixed; bottom: 50px; right:20px; padding:0px; display:none; cursor: pointer; z-index: 99; height: 45px; width: 45px; text-align: center; background:#fff; color:#6f727d; font-size: 25px; line-height: 45px; border-radius: 100%; transition: all .3s ease-in-out; box-shadow: 0 5px 10px 2px rgba(88, 103, 221, 0.19);}
+.go_top:hover{color:#222; transition: all .3s ease-in-out;}
+#colorPickerFrameCanvas{display:none!important;}
+/* --------------------- Footer Area End ------------------- */
+
+/* --------------------- Calendar Start ------------------ */
+.color_description{ display: block; margin: 0; position:relative; z-index:99;}
+.color_description ul{padding: 0 15px; margin: 0; position:absolute; top:40px; left:0; width:100%; text-align:right;}
+.color_description ul li{border: 1px solid #ccc; border-radius: 3px;  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); display:inline-block; font-size: 11px; font-weight: normal; line-height: 13px; padding: 5px !important; position: relative; margin-bottom: 10px;}
+.color_description ul li span{ border-radius: 100%; display: inline-block; height: 8px; margin-right: 6px; width: 8px;}
+.fc button{text-transform:capitalize;}
+.fc-toolbar.fc-header-toolbar{margin-bottom:45px;}
+/* --------------------- Calendar End ------------------ */
+
+/* --------------------- Certificate Start ------------------ */
+.certificate_box{ display: block; position: relative; border:1px solid #ccc; box-shadow: 1px 1px 10px rgba(0,0,0,0.1); margin-bottom: 30px; padding: 20px; text-align: center; border-radius: 5px; height: 317px;}
+.certificate_box .icon_img{ height: 170px; display: block; margin-bottom: 10px; position: relative;}
+.certificate_box .icon_img img{height: 100%; margin: auto; opacity: 0.9;}
+.certificate_box .course_name{color:var(--theme-color); font-size: 18px; font-family: 'OpenSans-Regular'; margin-bottom: 10px; text-transform: uppercase;}
+.certificate_box .badge_button { overflow:hidden; background: #f4f4f4; border: 1px solid #ccc; border-radius: 5px; display: inline-block; margin: 0 10px; width: 40%;}
+.badge_button > p { border-bottom: 1px solid #ccc; font-size: 12px !important; line-height: 12px; padding:10px;}
+.certificate_box a {display: block; float:left; border-radius:0; font-size: 13px; min-width: 50%; opacity: 1; padding: 7px; }
+/* --------------------- Certificate End ------------------ */
+
+/* --------------------- Course Detail Start ------------------ */
+.course_detail_block .stars_block{ margin: 10px 0 20px 0; color:#2e2d31; font-size: 12px; }
+.course_detail_block .stars_block i{margin: 0 5px 0 0; color:#f9a825; font-size: 14px;}
+.course_detail_block .review_link{color: #2e2d31;}
+.course_detail_block .video_margin{margin: 0 15px 15px 0;}
+.course_detail_block .course_tabs{ box-shadow:0px 0px 5px #ccc; display: block; position: relative; margin-bottom:30px;}
+.course_detail_block .course_tabs .nav-tabs{ display: block; position: relative; width: 100%; padding: 0; margin: 0; border-bottom:1px solid #ccc;}
+.course_detail_block .course_tabs .nav-tabs li{margin: 0!important; background: none!important; border: 0!important; text-align: center; border-right: 1px solid #ccc!important;}
+.course_detail_block .course_tabs .nav-tabs li a{ padding: 15px; display: block; color: #2e2d31; font-size: 16px; font-family: 'OpenSans-SemiBold'; border: 0!important; background: none!important; border-bottom: 3px solid transparent!important; margin: 0; margin-bottom: -2px; min-width: 180px; border-radius: 0;}
+.course_detail_block .course_tabs .nav-tabs li.active a,.course_detail_block .course_tabs .nav-tabs li:hover a,.course_detail_block .course_tabs .nav-tabs li:focus a{color:var(--theme-color); border-bottom: 3px solid var(--theme-color)!important; background: #f4f4f4!important;}
+.course_detail_block .course_tabs .tab-content{padding: 20px; display: block;}
+.course_detail_block .course_right{box-shadow:0px 0px 2px #ccc; background: #f4f3f4; display: block; position: relative; padding: 15px; margin-bottom: 30px;}
+.course_detail_block .course_right i{width:18px;}
+.course_detail_block .course_right i.fa-user,.course_detail_block .course_right i.fa-clock-o{font-size:14px;}
+.course_detail_block .course_right i.fa-graduation-cap{font-size:12px;}
+.course_detail_block .course_right p{ line-height: 30px;}
+.course_detail_block .course_right .text-center{ border-top:1px solid #ccc; padding-top: 15px;}
+.course_detail_block .course_right .next_btn{font-size: 17px; padding: 12px;}
+.course_detail_block .instrutor_right{box-shadow:0px 0px 2px #ccc; background: #f4f3f4; display: block; position: relative; padding: 15px; height: 265px; margin-bottom: 30px;}
+.course_detail_block .instrutor_right img{width: 50px; height: 50px; margin-right: 10px; float: left; border-radius: 100%;}
+.course_detail_block .related_course{box-shadow:0px 0px 2px #ccc; background: #f4f3f4; display: block; position: relative; padding: 15px; margin-bottom: 30px;}
+.course_detail_block .related_course li{display: block; line-height:22px; color: #2e2d31; font-size: 14px; padding: 10px 0; border-bottom: 1px solid #ccc; vertical-align: top;}
+.course_detail_block .related_course li a{color: #2e2d31;}
+.course_detail_block .related_course li a:hover{color:var(--option-color);}
+.course_detail_block .related_course li:first-child{padding-top:0;}
+.course_detail_block .related_course li:last-child{border: 0; padding-bottom: 0;}
+.course_detail_block .related_course li i.fa-graduation-cap{float: left; width: 40px; height: 40px; margin-right: 10px; font-size: 24px; background: #fff; color: #ccc; text-align: center; padding: 10px 0;}
+.course_detail_block .related_course .stars_block{margin: 0 0 0 50px;}
+.course_detail_block .related_course .stars_block i{font-size: 10px; margin: 0 2px 0 0;}
+.course_forum_block {box-shadow:0px 0px 5px #ccc; display: block; position: relative; padding:15px; margin-bottom: 30px;}
+.course_forum_block h3{margin-bottom: 20px;}
+.course_forum_block .forum_box{display: block; position: relative; width: 100%; }
+.course_forum_block .forum_box.inner_forum{margin-left: 60px; width: 90%; }
+.course_forum_block .forum_box.inner_forum:last-child{border: 0; margin-bottom: 0;}
+.forum_box.inner_forum::before { background: #eee; content: ""; height: 100%; left: -35px; position: absolute; top: -45px; width: 1px;}
+.forum_box.inner_forum::after { background: #eee; content: ""; height: 1px; left: -35px; position: absolute; top: 25px; width: 30px;}
+.course_forum_block .forum_box .img_icon{border: 1px solid #2e2d31; color: #2e2d31; font-size: 20px; line-height: 46px; height: 50px; width: 50px; border-radius: 100%; text-align: center; display: inline-block; vertical-align: top;}
+.course_forum_block .forum_box .img_icon img{border-radius: 100%;}
+.course_forum_block .forum_box .content_name{display: inline-block; position: relative; margin-left: 10px; width: 90%; padding-bottom: 15px;  border-bottom: 1px solid #ccc; margin-bottom: 15px;}
+.course_forum_block .forum_box .content_name .name{font-size: 13px; color: var(--theme-color); font-family: 'OpenSans-SemiBold'; margin-bottom: 5px;}
+.course_forum_block .forum_box .content_name .content{font-size: 13px; color: #2e2d31; font-family: 'OpenSans-regular'; margin-bottom: 10px; line-height: 22px;}
+.course_forum_block .forum_box .content_name .reply_time,.course_forum_block .forum_box .content_name .reply_time a{font-size: 12px; color: #2e2d31; font-family: 'OpenSans-regular';}
+.course_forum_block .forum_box .content_name .reply_time a:hover{color: var(--option-color);}
+.course_forum_block .forum_box .content_name .reply_time .star_review i{margin: 0 5px 0 0; color:#f9a825; font-size: 14px;}
+/* --------------------- Course Detail End ------------------ */
+
+/* --------------------- Admin Dashboard Start ------------------ */
+.admin_dashboard .overview_block{box-shadow:0px 0px 5px #ccc; background: #F1F1F1; display: block; position: relative; padding: 15px; margin-bottom: 30px;}
+.admin_dashboard .overview_block i { background: var(--option-color); border-radius: 10px; color: #fff; float: left; font-size: 21px; height: 40px; padding: 8px; position: absolute; right: 30px; text-align: center; top: -21px; width: 40px;}
+.admin_dashboard .overview_block .title{ font-size: 12px; display: inline-block; padding: 5px 10px; line-height: 12px; color: #2e2d31; font-family: 'OpenSans-regular';}
+.admin_dashboard .overview_block .icon_number{font-size: 45px; display: inline-block; line-height: 45px; color: var(--theme-color); font-family: 'OpenSans-Light';}
+.admin_dashboard .users_block {box-shadow:0px 0px 5px #ccc; background: #fff; display: block; position: relative; padding: 15px; margin-bottom: 30px; height: 368px;}
+.admin_dashboard .users_block .users{display: block; position: relative; padding: 0 0 10px 0; margin: 0 0 10px 0; border-bottom: 1px solid #ccc;}
+.admin_dashboard .users_block .users:last-child{border: 0; margin: 0;}
+.admin_dashboard .users_block h3 span{background: #f4f4f4; font-size: 12px; line-height: 12px; border-radius: 5px; float: right; padding: 7px; margin: 0;}
+.admin_dashboard .users_block .users .img_box{border: 1px solid #2e2d31; color: #2e2d31; font-size: 14px; line-height: 34px; height: 35px; width: 35px; border-radius: 100%; text-align: center; display: inline-block; vertical-align: top; margin-right: 5px;}
+.admin_dashboard .users_block .users .img_box img{border-radius: 100%;}
+.admin_dashboard .users_block .users .name_box{font-size: 14px; color: #2e2d31; line-height: 18px; display: inline-block; width: 80%;}
+.admin_dashboard .users_block .users .name_box i{display: block; font-style: normal;}
+.admin_dashboard .instructor_block .users .name_box i{line-height: 35px;}
+.admin_dashboard .instructor_block .users .name_box span{display: block; font-size: 18px; font-family: 'OpenSans-Bold'; float: right; color: var(--option-color); top: 10px; right: 10px; position: absolute;}
+.admin_dashboard .instructor_block h3{margin-bottom: 48px;}
+.admin_dashboard .instructor_block h3 span{margin-top: 10px;}
+.admin_dashboard .users_block .courses_li li{ display: inline-block; font-size: 10px; margin: 0 8px 15px 0;}
+.admin_dashboard .users_block .courses_li li span{height: 8px; width: 8px; margin-right: 5px; display: inline-block;}
+.admin_dashboard .users_block .courses_li li span.success{background: #5CB85C;}
+.admin_dashboard .users_block .courses_li li span.warning{background: #F0AD4E;}
+.admin_dashboard .users_block .courses_li li span.danger{background: #D9534F;}
+.admin_dashboard .users_block .progress{height: 5px; margin:5px 0 0 0;}
+.admin_dashboard .notification_block{box-shadow:0px 0px 5px #ccc; background: #fff; display: block; position: relative; padding: 15px; margin-bottom: 30px;}
+.admin_dashboard .notification_block .title_block{border-bottom: 2px solid #f3f3f3;padding-bottom: 10px;}
+.admin_dashboard .notification_block .notification_time{padding:4px 10px 0 0;color: #2e2d31;letter-spacing:1px;font-size: 12px; font-style:italic; text-align:right;}
+.admin_dashboard .notification_block .notification_desc{padding-top:0; }
+.admin_dashboard .notification_block .row{margin:0 0 15px 0;}
+.admin_dashboard .notification_block .notification_desc span{color:#b6b6b6; font-size: 12px;}
+.admin_dashboard .notification_block .notification_red .notification_time:after{background: var(--option-color);width: 3px;height: 45px;position: absolute;content: "";right: 3px;top: 0;}
+
+.admin_dashboard .audit_block{box-shadow:0px 0px 5px #ccc; background: #fff; display: block; position: relative; padding: 15px; margin-bottom: 30px;}
+.admin_dashboard .audit_block .audit_box{display: block; position: relative; padding-bottom: 15px;}
+.admin_dashboard .audit_block .audit_box .title{font-size: 13px; color: #2e2d31; line-height: 18px; display: inline-block; width: 75%;}
+.admin_dashboard .audit_block .audit_box span.dot{ width: 10px; height: 10px; border-radius: 100%; display: inline-block; background: var(--option-color); margin-right: 20px; position: relative; z-index: 9;}
+.admin_dashboard .audit_block .audit_box .title:before{content: ''; height: 100%; top: 0; left: 4px; position: absolute; width: 1px; background: #ccc;}
+.admin_dashboard .audit_block .audit_box .name{ display:block; font-size: 12px; color: #b6b6b6; padding:5px 0 0 30px;}
+.admin_dashboard .audit_block .audit_box .time{font-size: 12px; display: inline-block; width: 22%; text-align: right; font-style: italic;}
+
+.admin_dashboard .rated_course_block{box-shadow:0px 0px 5px #ccc; background: #fff; display: block; position: relative; padding: 15px; margin-bottom: 30px; height: 368px;}
+.admin_dashboard .rated_course_block .stars_block{ margin: 0 0 0 0; color:#2e2d31; font-size: 12px; }
+.admin_dashboard .rated_course_block .stars_block i{margin: 0 5px 0 0; color:#f9a825; font-size: 12px;}
+
+.admin_dashboard .invited_user_block{box-shadow:0px 0px 5px #ccc; background: #fff; display: block; position: relative; padding: 15px; margin-bottom: 30px; height: 300px;}
+.admin_dashboard .graph_block{box-shadow:0px 0px 5px #ccc; background: #fff; display: block; position: relative; padding: 15px; margin-bottom: 30px; height: 300px;}
+.admin_dashboard .chart {width: 100%; height: 230px;}
+
+.admin_dashboard .logincourse_tabs .nav-tabs{ display: block; position: relative; width: 100%; padding: 0; margin: 0 0 15px; border:0; text-align:right; border-radius:5px;}
+.admin_dashboard .logincourse_tabs .nav-tabs li{margin: 0 -4px 0 0!important; background: #f4f4f4!important; border: 0!important; text-align: center; float:none; display:inline-block;}
+.admin_dashboard .logincourse_tabs .nav-tabs li a{ padding: 6px; display: block; color: #2e2d31; font-size: 12px; font-family: 'OpenSans-regular'; border: 0!important; background: none!important;  margin: 0;  border-radius: 0;}
+.admin_dashboard .logincourse_tabs .nav-tabs li.active a,.admin_dashboard .course_tabs .nav-tabs li:hover a,.admin_dashboard .course_tabs .nav-tabs li:focus a{color:#fff; background: var(--theme-color)!important;}
+.admin_dashboard .logincourse_tabs .tab-content{padding: 0; display: block;}
+/* --------------------- Admin Dashboard End ------------------ */
