@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-declare var $: any;
+declare function myInput() : any;
+declare var $,Bloodhound: any;
 
 @Component({
   selector: 'app-edit-profile-learner',
@@ -18,7 +19,25 @@ export class EditProfileLearnerComponent implements OnInit {
 			else{  
 				$('footer').addClass('footer_fixed');    
 			}
-		},1000);
+		},1500);
+		myInput();
+		var skills = new Bloodhound({
+		  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+		  queryTokenizer: Bloodhound.tokenizers.whitespace,
+		  prefetch: {
+			url: '../assets/skills.json'
+		  }
+		});
+		skills.initialize();
+			 var elt = $('#skills');
+				elt.tagsinput({
+				  typeaheadjs: {
+					name: 'skills',
+					displayKey: 'name',
+					valueKey: 'name',
+					source: skills.ttAdapter()
+				  }
+				});
   }
 
 }

@@ -17,6 +17,8 @@ import { RegisterInstructorComponent } from './register-instructor/register-inst
 import { RegisterLearnerComponent } from './register-learner/register-learner.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
 import { EditProfileLearnerComponent } from './edit-profile-learner/edit-profile-learner.component';
+import { EditProfileAdminComponent } from './edit-profile-admin/edit-profile-admin.component';
+import { EditProfileInstructorComponent } from './edit-profile-instructor/edit-profile-instructor.component';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -47,6 +49,8 @@ const routes: Routes = [
 				  { path : 'link-list', component : LinkListComponent,canActivate : [AuthGuard] },
 				  { path : 'forgot-password', component : ForgotPasswordComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile-learner', component : EditProfileLearnerComponent,canActivate : [AuthGuard] },
+				  { path : 'edit-profile-instructor', component : EditProfileInstructorComponent,canActivate : [AuthGuard] },
+				  { path : 'edit-profile-admin', component : EditProfileAdminComponent,canActivate : [AuthGuard] },
 				  { path: '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path: '**', redirectTo : 'link-list' }
         

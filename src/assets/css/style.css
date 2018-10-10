@@ -383,6 +383,25 @@ footer.register_footer a:hover{color:var(--theme-color); }
 .admin_dashboard .logincourse_tabs .tab-content{padding: 0; display: block;}
 /* --------------------- Admin Dashboard End ------------------ */
 
+/*------------------------Edit Profile page---------------------------*/
+.editprofile_left{ background: #eee; display: block;}
+.editprofile_left .img_profile{padding: 20px; text-align: center; border-bottom: 1px solid #e3e3e3; margin-bottom: 20px;}
+.editprofile_left .img_profile .letter_img{margin: 0 auto 15px; padding:0; border: 2px solid #e3e3e3; border-radius: 100%; height: 90px; width: 90px; background: #fff; text-align: center; font-size: 35px; display: block; font-weight: bold; color:var(--theme-color); overflow: hidden; line-height: 90px;}
+.editprofile_left .img_profile .letter_img img{border-radius: 100%; }
+
+.editprofile_left .img_profile .completeness_li .progress{margin: 10px 0 0 0; padding: 0; height: 15px;}
+.editprofile_left .img_profile .completeness_li .progress .progress-bar{ font-size: 10px; background: #468847; line-height: 14px;}
+.editprofile_left .nav-tabs{margin-bottom: 20px; border: 0;}
+.editprofile_left .nav-tabs li{display: block; float: none; width: 100%;}
+.editprofile_left .nav-tabs li a{ padding:15px 30px; line-height: 13px; text-transform:capitalize; text-align:left; white-space: normal; color: #6f727d; font-size: 13px; font-weight: normal; height: auto; display: block; clear: both; border: 0; background: none!important;}
+.editprofile_left .nav-tabs li a i{font-size: 13px; margin-right: 7px; width: 20px;}
+.editprofile_left .nav-tabs li a:hover,.editprofile_left .nav-tabs li.active a {color: var(--theme-color); border: 0;}
+.editprofile_left .img_profile .profile_name{font-size:20px; text-transform: uppercase; font-weight: bold; margin-bottom: 10px;}
+.editprofile_right{ padding:0;}
+.editprofile_right .next_btn,.editprofile_right .back_btn{margin: 10px 5px 0;}
+.border_bottom{border-bottom: 1px solid #e3e3e3; width: 100%; display: block; margin:10px 0 20px;}
+/*------------------------End Edit Profile page---------------------------*/
+
 @media (min-width: 768px) {
     .account_menu ul li ul.dropdown-menu {display:block; opacity:0; top:100px; visibility:hidden; -moz-transition: all .25s ease-out;-ms-transition: all .25s ease-out;-o-transition: all .25s ease-out;transition: all .25s ease-out; }
     .account_menu ul li:hover ul.dropdown-menu {opacity:1; visibility:visible; top:40px; -moz-transition: all .25s ease-out;-ms-transition: all .25s ease-out;-o-transition: all .25s ease-out;transition: all .25s ease-out; }
