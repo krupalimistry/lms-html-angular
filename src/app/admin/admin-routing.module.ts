@@ -8,9 +8,16 @@ import { AdminComponent  } from './admin.component.module';
 import { Globals } from './globals';
 import { HttpClientModule } from '@angular/common/http';
 
+<<<<<<< HEAD
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { DashboardLearnerComponent } from './dashboard-learner/dashboard-learner.component';
 import { DashboardInstructorComponent } from './dashboard-instructor/dashboard-instructor.component';
+=======
+import { AuthGuard } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+>>>>>>> 25051dc6da8f65e690dbfa582375522b6657c788
 import { UserListComponent } from './user-list/user-list.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CertificateComponent } from './certificate/certificate.component';
@@ -31,8 +38,6 @@ import { FooterRegisterComponent } from './footer-register/footer-register.compo
 import { LinkListComponent } from './link-list/link-list.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-
-import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [	
   {
@@ -60,8 +65,6 @@ const routes: Routes = [
 				  { path: '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path: '**', redirectTo : 'link-list' }
         
-        
-		
         ]
   }
 ];
@@ -70,7 +73,7 @@ const routes: Routes = [
 imports: [RouterModule.forChild(routes)],
 exports: [RouterModule],
  
-  providers: [Globals,AuthGuard],
+  providers: [Globals,AuthGuard,AuthService],
   bootstrap: [AdminComponent]
 })
 export class AdminRoutingModule  { }

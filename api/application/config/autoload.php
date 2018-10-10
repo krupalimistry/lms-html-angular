@@ -1,5 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+date_default_timezone_set("Asia/Kolkata");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Authorization,Origin, Content-Type, Accept, Access-Control-Request-Method");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header('Content-Type: application/json');
+
 
 /*
 | -------------------------------------------------------------------
@@ -58,7 +64,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('database','session','form_validation','email','lib_log');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +95,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array();
+$autoload['helper'] = array('url', 'form', 'html', 'file');
 
 /*
 | -------------------------------------------------------------------

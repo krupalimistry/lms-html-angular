@@ -8,7 +8,7 @@ declare var $, AmCharts : any;
 })
 export class DashboardAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
 	  setTimeout(function(){

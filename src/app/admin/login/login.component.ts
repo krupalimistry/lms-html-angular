@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 declare function myInput() : any;
-declare var $: any;
+import { Globals } from '.././globals';
+declare var $,swal: any;
 
 @Component({
   selector: 'app-login',
@@ -9,10 +13,45 @@ declare var $: any;
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  loginEntity;
+  submitted;
+  btn_disable;
+
+  constructor(private router: Router,public globals: Globals,private route: ActivatedRoute,private AuthService : AuthService) { }
 
   ngOnInit() {
+    this.globals.isLoading = false;
+    this.loginEntity = {};
 	   myInput();
+  }
+
+  login(loginForm)
+	 {		 debugger
+		this.submitted = true;
+		if(loginForm.valid){
+			this.btn_disable = true;
+      this.globals.isLoading = true;
+			this.AuthService.login(this.loginEntity)
+			.then((data) => 
+			{
+        this.btn_disable = false;
+        this.submitted = false;
+        this.loginEntity = {};
+        loginForm.form.markAsPristine(); 
+        this.router.navigate(['/dashboard']);         
+			}, 
+			(error) => 
+			{   
+          swal({
+            type: 'warning',
+            title: 'Oops...',
+            text: 'Either email or password is incorrect',
+            })
+          this.globals.isLoading = false;
+          this.btn_disable = false;
+          this.submitted = false;
+			});
+		} 		
   }
 
 }

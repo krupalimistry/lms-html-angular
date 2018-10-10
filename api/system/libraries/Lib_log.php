@@ -61,7 +61,7 @@ class CI_Lib_log
             // Load config file
             //$this->_ci->load->config('log');
             //Retrieve the table name from the $config array::
-            $this->_log_table_name = ($this->_ci->config->item('log_table_name')) ? $this->_ci->config->item('log_table_name') : 'logs';
+            $this->_log_table_name = ($this->_ci->config->item('log_table_name')) ? $this->_ci->config->item('log_table_name') : 'tblerrorlog';
         }
         catch (Exception $e) {
             throw new Exception($e->getMessage());
@@ -104,7 +104,7 @@ class CI_Lib_log
      * @return void
      */
     public function exception_handler($exception)
-    {
+    {   //echo 'hello';
         try {
             $data = array(
             'errno' => $exception->getCode(),
