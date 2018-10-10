@@ -21,6 +21,9 @@ import { RegisterInstructorComponent } from './register-instructor/register-inst
 import { RegisterLearnerComponent } from './register-learner/register-learner.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
 import { EditProfileLearnerComponent } from './edit-profile-learner/edit-profile-learner.component';
+import { EditProfileAdminComponent } from './edit-profile-admin/edit-profile-admin.component';
+import { EditProfileInstructorComponent } from './edit-profile-instructor/edit-profile-instructor.component';
+
 import { LinkListComponent } from './link-list/link-list.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
@@ -48,7 +51,9 @@ import { FooterRegisterComponent } from './footer-register/footer-register.compo
 	LinkListComponent,
 	LoginComponent,
 	ForgotPasswordComponent,
-	EditProfileLearnerComponent
+	EditProfileLearnerComponent,
+	EditProfileAdminComponent,
+    EditProfileInstructorComponent
     
   ],
   imports: [

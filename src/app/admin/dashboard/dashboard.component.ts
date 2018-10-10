@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 import { Globals } from '.././globals';
 declare var $, AmCharts : any;
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,7 +11,7 @@ declare var $, AmCharts : any;
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
 	   setTimeout(function(){

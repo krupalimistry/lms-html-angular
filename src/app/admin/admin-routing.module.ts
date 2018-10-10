@@ -20,6 +20,9 @@ import { RegisterInstructorComponent } from './register-instructor/register-inst
 import { RegisterLearnerComponent } from './register-learner/register-learner.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
 import { EditProfileLearnerComponent } from './edit-profile-learner/edit-profile-learner.component';
+import { EditProfileAdminComponent } from './edit-profile-admin/edit-profile-admin.component';
+import { EditProfileInstructorComponent } from './edit-profile-instructor/edit-profile-instructor.component';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -35,20 +38,23 @@ const routes: Routes = [
         component: AdminComponent,
         children: [
 		  
-			{ path : 'dashboard', component : DashboardComponent,canActivate : [AuthGuard] },
-			{ path : 'user-list', component : UserListComponent,canActivate : [AuthGuard] },
-			{ path : 'calendar', component : CalendarComponent,canActivate : [AuthGuard] },
-			{ path : 'certificate', component : CertificateComponent,canActivate : [AuthGuard] },
-			{ path : 'course-detail', component : CourseDetailComponent,canActivate : [AuthGuard] },
-			{ path : 'register-instructor', component : RegisterInstructorComponent,canActivate : [AuthGuard] },
-			{ path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
-			{ path : 'register-learner', component : RegisterLearnerComponent,canActivate : [AuthGuard] },
-			{ path : 'login', component : LoginComponent,canActivate : [AuthGuard] },
-			{ path : 'link-list', component : LinkListComponent,canActivate : [AuthGuard] },
-			{ path : 'forgot-password', component : ForgotPasswordComponent,canActivate : [AuthGuard] },
-			{ path : 'edit-profile-learner', component : EditProfileLearnerComponent,canActivate : [AuthGuard] },
-			{ path : '', redirectTo: 'link-list', pathMatch:'full'},
-			{ path : '**', redirectTo : 'link-list' }
+		          { path : 'dashboard', component : DashboardComponent,canActivate : [AuthGuard] },
+				  { path : 'user-list', component : UserListComponent,canActivate : [AuthGuard] },
+				  { path : 'calendar', component : CalendarComponent,canActivate : [AuthGuard] },
+				  { path : 'certificate', component : CertificateComponent,canActivate : [AuthGuard] },
+				  { path : 'course-detail', component : CourseDetailComponent,canActivate : [AuthGuard] },
+				  { path : 'register-instructor', component : RegisterInstructorComponent,canActivate : [AuthGuard] },
+				  { path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
+				  { path : 'register-learner', component : RegisterLearnerComponent,canActivate : [AuthGuard] },
+				  { path : 'login', component : LoginComponent,canActivate : [AuthGuard] },
+				  { path : 'link-list', component : LinkListComponent,canActivate : [AuthGuard] },
+				  { path : 'forgot-password', component : ForgotPasswordComponent,canActivate : [AuthGuard] },
+				  { path : 'edit-profile-learner', component : EditProfileLearnerComponent,canActivate : [AuthGuard] },
+				  { path : 'edit-profile-instructor', component : EditProfileInstructorComponent,canActivate : [AuthGuard] },
+				  { path : 'edit-profile-admin', component : EditProfileAdminComponent,canActivate : [AuthGuard] },
+				  { path: '', redirectTo: 'link-list', pathMatch:'full'},
+				  { path: '**', redirectTo : 'link-list' }
+        
         ]
   }
 ];

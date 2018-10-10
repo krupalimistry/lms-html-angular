@@ -5,10 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CourseListComponent } from './course-list/course-list.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CourseListComponent
+    
+    //HomeComponent,
+    //DashboardComponent
   ],
   imports: [
     BrowserModule,
