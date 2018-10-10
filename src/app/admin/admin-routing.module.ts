@@ -8,16 +8,12 @@ import { AdminComponent  } from './admin.component.module';
 import { Globals } from './globals';
 import { HttpClientModule } from '@angular/common/http';
 
-<<<<<<< HEAD
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { DashboardLearnerComponent } from './dashboard-learner/dashboard-learner.component';
 import { DashboardInstructorComponent } from './dashboard-instructor/dashboard-instructor.component';
-=======
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
->>>>>>> 25051dc6da8f65e690dbfa582375522b6657c788
 import { UserListComponent } from './user-list/user-list.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CertificateComponent } from './certificate/certificate.component';
