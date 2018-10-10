@@ -35,6 +35,9 @@
 		"assets/js/buttons.html5.min.js",
 		"assets/js/amcharts.js",
 		"assets/js/serial.js",
+		"assets/js/customInput.js",
+		"assets/js/typeahead.bundle.js",
+		"assets/js/bootstrap-tagsinput.min.js",
 		"assets/js/custom.js"
 	  ],
       "environmentSource": "environments/environment.ts",

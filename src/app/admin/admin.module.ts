@@ -17,6 +17,16 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CertificateComponent } from './certificate/certificate.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { RegisterInstructorComponent } from './register-instructor/register-instructor.component';
+import { RegisterLearnerComponent } from './register-learner/register-learner.component';
+import { RegisterAdminComponent } from './register-admin/register-admin.component';
+import { EditProfileLearnerComponent } from './edit-profile-learner/edit-profile-learner.component';
+import { LinkListComponent } from './link-list/link-list.component';
+import { LoginComponent } from './login/login.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+
+import { HeaderRegisterComponent } from './header-register/header-register.component';
+import { FooterRegisterComponent } from './footer-register/footer-register.component';
 
 
 @NgModule({
@@ -30,6 +40,15 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 	CalendarComponent,
 	CertificateComponent,
 	CourseDetailComponent,
+	RegisterInstructorComponent,
+    RegisterLearnerComponent,
+    RegisterAdminComponent,
+	HeaderRegisterComponent,
+    FooterRegisterComponent,
+	LinkListComponent,
+	LoginComponent,
+	ForgotPasswordComponent,
+	EditProfileLearnerComponent
     
   ],
   imports: [

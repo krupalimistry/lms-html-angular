@@ -5,13 +5,21 @@
     </div>
 </div>
  -->
+<div class="height_100_box" *ngIf="globals.IsLoggedIn && globals.currentLink!='/link-list'">
 <app-header></app-header> 
 <app-sidebar></app-sidebar> 
 <div class="right_content_block">
-	<div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-2 height_100">
+	<div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-2 height_100 menu_right">
 		<div class="bg_white_block"> 
-        <router-outlet></router-outlet>
-        <app-footer></app-footer>
+			<router-outlet></router-outlet>
+			<app-footer></app-footer>
 		</div>
 	</div>
 </div>
+</div>
+
+<div class="height_100_box" *ngIf="!globals.IsLoggedIn && globals.currentLink!='/link-list'">
+	<router-outlet></router-outlet>
+</div>
+
+<router-outlet *ngIf="globals.currentLink=='/link-list'"></router-outlet>

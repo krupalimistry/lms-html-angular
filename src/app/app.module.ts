@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
 //import { HomeComponent } from './home/home.component';
 //import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -31,12 +30,12 @@ import { HttpClientModule } from '@angular/common/http';
 	HttpClientModule,
 	RouterModule.forRoot([	
 		{
-			path: 'admin',
+			path: '',
 			//canActivate: [AuthGuard],
 			loadChildren: './admin/admin.module#AdminModule'
 		},	
 		{
-			path: '',
+			path: 'client',
 			//canActivate: [AuthGuard],
 			loadChildren: './client/client.module#ClientModule'
 		}
