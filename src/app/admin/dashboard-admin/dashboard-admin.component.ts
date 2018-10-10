@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-import { Router } from '@angular/router';
-import { Globals } from '.././globals';
 declare var $, AmCharts : any;
+
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-dashboard-admin',
+  templateUrl: './dashboard-admin.component.html',
+  styleUrls: ['./dashboard-admin.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardAdminComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-	   setTimeout(function(){
+	  setTimeout(function(){
 			if( $(".bg_white_block").hasClass( "ps--active-y" )){  
 				$('footer').removeClass('footer_fixed');     
 			}      

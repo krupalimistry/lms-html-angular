@@ -8,14 +8,16 @@ import { CommonModule } from "@angular/common";
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component.module';
 
-
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { DashboardLearnerComponent } from './dashboard-learner/dashboard-learner.component';
+import { DashboardInstructorComponent } from './dashboard-instructor/dashboard-instructor.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CertificateComponent } from './certificate/certificate.component';
+import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { RegisterInstructorComponent } from './register-instructor/register-instructor.component';
 import { RegisterLearnerComponent } from './register-learner/register-learner.component';
@@ -38,10 +40,13 @@ import { FooterRegisterComponent } from './footer-register/footer-register.compo
 	HeaderComponent,
 	FooterComponent,
 	SidebarComponent,
-    DashboardComponent,
+    DashboardAdminComponent,
+    DashboardLearnerComponent,
+    DashboardInstructorComponent,
 	UserListComponent,
 	CalendarComponent,
 	CertificateComponent,
+	CourseListComponent,
 	CourseDetailComponent,
 	RegisterInstructorComponent,
     RegisterLearnerComponent,

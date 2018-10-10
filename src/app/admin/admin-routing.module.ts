@@ -8,10 +8,13 @@ import { AdminComponent  } from './admin.component.module';
 import { Globals } from './globals';
 import { HttpClientModule } from '@angular/common/http';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { DashboardLearnerComponent } from './dashboard-learner/dashboard-learner.component';
+import { DashboardInstructorComponent } from './dashboard-instructor/dashboard-instructor.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CertificateComponent } from './certificate/certificate.component';
+import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { RegisterInstructorComponent } from './register-instructor/register-instructor.component';
 import { RegisterLearnerComponent } from './register-learner/register-learner.component';
@@ -37,11 +40,14 @@ const routes: Routes = [
         component: AdminComponent,
         children: [
 		  
-		          { path : 'dashboard', component : DashboardComponent,canActivate : [AuthGuard] },
+		          { path : 'dashboard-admin', component : DashboardAdminComponent,canActivate : [AuthGuard] },
+				  { path : 'dashboard-learner', component : DashboardLearnerComponent,canActivate : [AuthGuard] },
+				  { path : 'dashboard-instructor', component : DashboardInstructorComponent,canActivate : [AuthGuard] },
 				  { path : 'user-list', component : UserListComponent,canActivate : [AuthGuard] },
 				  { path : 'calendar', component : CalendarComponent,canActivate : [AuthGuard] },
 				  { path : 'certificate', component : CertificateComponent,canActivate : [AuthGuard] },
 				  { path : 'course-detail', component : CourseDetailComponent,canActivate : [AuthGuard] },
+				  { path : 'course-list', component : CourseListComponent,canActivate : [AuthGuard] },
 				  { path : 'register-instructor', component : RegisterInstructorComponent,canActivate : [AuthGuard] },
 				  { path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'register-learner', component : RegisterLearnerComponent,canActivate : [AuthGuard] },

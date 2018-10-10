@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
-import { CourseListComponent } from './course-list/course-list.component';
+
 
 
 
@@ -20,8 +20,7 @@ import { CourseListComponent } from './course-list/course-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CourseListComponent
+    AppComponent
     
     //HomeComponent,
     //DashboardComponent
