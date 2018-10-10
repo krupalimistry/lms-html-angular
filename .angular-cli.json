@@ -23,7 +23,8 @@
       ],
       "scripts": [
 		"assets/js/jquery-1.11.3.min.js",
-		"assets/js/bootstrap.min.js",
+    "assets/js/bootstrap.min.js",
+    "assets/js/sweetalert2.min.js",
 		"assets/js/moment.min.js",
 		"assets/js/fullcalendar.min.js",
 		"assets/js/perfect-scrollbar.js",
@@ -43,45 +44,8 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "local": "environments/environment.local.ts",
-		"dev": "environments/environment.ts",
+		    "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      }
-    },
-	{"name":"app1",
-      "root": "src",
-      "outDir": "dist",
-      "assets": [
-        "assets1",
-        "favicon1.ico"
-      ],
-      "index": "index1.html",
-      "main": "main1.ts",
-      "polyfills": "polyfills1.ts",
-      "test": "test1.ts",
-      "tsconfig": "tsconfig.app1.json",
-      "testTsconfig": "tsconfig.spec1.json",
-      "prefix": "app1",
-      "styles": [
-        "styles1.css"
-      ],
-      "scripts": [
-        "assets1/plugins/jquery-1.10.2.js",
-        "assets1/plugins/bootstrap/bootstrap.min.js",
-        "assets1/plugins/dataTables/jquery.dataTables.js",
-        "assets1/plugins/dataTables/dataTables.bootstrap.js",
-        "assets1/plugins/metisMenu/jquery.metisMenu.js",
-        "assets1/scripts/perfect-scrollbar.js",
-        "assets1/scripts/siminta.js",
-        "assets1/plugins/morris/raphael-2.1.0.min.js",
-        "assets1/plugins/morris/morris.js",
-        "assets1/scripts/dashboard-demo.js",
-        "assets1/scripts/custom.js"       
-      ],  
-      "environmentSource": "environments1/environment.ts",
-      "environments": {
-        "dev": "environments1/environment.ts",
-        "prod": "environments1/environment.prod.ts",
-		 "local": "environments1/environment.local.ts"
       }
     }
   ],

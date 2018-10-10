@@ -22,7 +22,7 @@
 
 			<div class="account_menu">
 				<ul>
-					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="user_img"><img src="../assets/images/guy-6.jpg" alt="" class="img-responsive"/></span>Dave Mattew<span class="caret"></span></a>
+					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="user_img"><img src="../assets/images/guy-6.jpg" alt="" class="img-responsive"/></span>{{globals.authData.FirstName}} {{globals.authData.LastName}}<span class="caret"></span></a>
 					  <ul class="dropdown-menu">
 						<li class="completeness_li">
 							Profile Completeness
@@ -32,7 +32,7 @@
 						</li>
 						<li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
 						<li><a href="#"><i class="fa fa-cog"></i>Setting</a></li>
-						<li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out</a></li>
+						<li><a (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out</a></li>
 					  </ul>
 					</li>
 					<div class="clearfix"></div>
