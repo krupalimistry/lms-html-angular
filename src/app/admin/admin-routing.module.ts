@@ -13,6 +13,7 @@ import { DashboardLearnerComponent } from './dashboard-learner/dashboard-learner
 import { DashboardInstructorComponent } from './dashboard-instructor/dashboard-instructor.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
+import { RegisterService } from './services/register.service';
 
 import { UserListComponent } from './user-list/user-list.component';
 import { CalendarComponent } from './calendar/calendar.component';
@@ -25,7 +26,6 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
 import { EditProfileLearnerComponent } from './edit-profile-learner/edit-profile-learner.component';
 import { EditProfileAdminComponent } from './edit-profile-admin/edit-profile-admin.component';
 import { EditProfileInstructorComponent } from './edit-profile-instructor/edit-profile-instructor.component';
-
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -58,8 +58,8 @@ const routes: Routes = [
 				  { path : 'edit-profile-learner', component : EditProfileLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile-instructor', component : EditProfileInstructorComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile-admin', component : EditProfileAdminComponent,canActivate : [AuthGuard] },
-				  { path: '', redirectTo: 'link-list', pathMatch:'full'},
-				  { path: '**', redirectTo : 'link-list' }
+				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
+				  { path : '**', redirectTo : 'link-list' }
         
         ]
   }
@@ -69,7 +69,7 @@ const routes: Routes = [
 imports: [RouterModule.forChild(routes)],
 exports: [RouterModule],
  
-  providers: [Globals,AuthGuard,AuthService],
+  providers: [Globals,AuthGuard,AuthService,RegisterService],
   bootstrap: [AdminComponent]
 })
 export class AdminRoutingModule  { }

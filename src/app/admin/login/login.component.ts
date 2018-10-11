@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(loginForm)
-	 {		 debugger
+	 {		 
 		this.submitted = true;
 		if(loginForm.valid){
 			this.btn_disable = true;
@@ -38,7 +38,13 @@ export class LoginComponent implements OnInit {
         this.submitted = false;
         this.loginEntity = {};
         loginForm.form.markAsPristine(); 
-        this.router.navigate(['/dashboard']);         
+        if(this.globals.authData.RoleId==1 || this.globals.authData.RoleId==2){
+          this.router.navigate(['/dashboard-admin']);
+        } else if(this.globals.authData.RoleId==3){
+          this.router.navigate(['/dashboard-learner']);
+        } else if(this.globals.authData.RoleId==4){
+          this.router.navigate(['/dashboard-instructor']);
+        }                 
 			}, 
 			(error) => 
 			{   
