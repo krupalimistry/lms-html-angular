@@ -38,13 +38,14 @@ export class LoginComponent implements OnInit {
         this.submitted = false;
         this.loginEntity = {};
         loginForm.form.markAsPristine(); 
-        if(this.globals.authData.RoleId==1 || this.globals.authData.RoleId==2){
-          this.router.navigate(['/dashboard-admin']);
-        } else if(this.globals.authData.RoleId==3){
-          this.router.navigate(['/dashboard-learner']);
-        } else if(this.globals.authData.RoleId==4){
-          this.router.navigate(['/dashboard-instructor']);
-        }                 
+		this.router.navigate(['/link-list']);
+        // if(this.globals.authData.RoleId==1 || this.globals.authData.RoleId==2){
+          // this.router.navigate(['/dashboard-admin']);
+        // } else if(this.globals.authData.RoleId==3){
+          // this.router.navigate(['/dashboard-learner']);
+        // } else if(this.globals.authData.RoleId==4){
+          // this.router.navigate(['/dashboard-instructor']);
+        // }                 
 			}, 
 			(error) => 
 			{   

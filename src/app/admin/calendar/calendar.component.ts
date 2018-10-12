@@ -13,11 +13,11 @@ export class CalendarComponent implements OnInit {
   ngOnInit() {
 
  setTimeout(function(){
-			if( $(".bg_white_block").hasClass( "ps--active-y" )){  
-				$('footer').removeClass('footer_fixed');     
+			if ($(".bg_white_block").height() < $(window).height()-100) {  
+				$('footer').addClass('footer_fixed');     
 			}      
 			else{  
-				$('footer').addClass('footer_fixed');    
+				$('footer').removeClass('footer_fixed');    
 			}
 		},1000);
 	$('#calendar').fullCalendar({

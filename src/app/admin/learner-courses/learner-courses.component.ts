@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 declare var $ : any;
 
 @Component({
-  selector: 'app-course-list',
-  templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.css']
+  selector: 'app-learner-courses',
+  templateUrl: './learner-courses.component.html',
+  styleUrls: ['./learner-courses.component.css']
 })
-export class CourseListComponent implements OnInit {
+export class LearnerCoursesComponent implements OnInit {
 
   constructor() { }
 
@@ -23,16 +23,7 @@ export class CourseListComponent implements OnInit {
 			$('.menu_right').toggleClass("active_right");
 			$('footer.footer_fixed').toggleClass("active_footermenu");
 		},500);
-	$('.grid_btn').click(function(){
-		$('.grid_btn').addClass("active");
-		$('.list_btn').removeClass("active");
-		$('.course_list_block .col-md-4').removeClass("list_block");
-	});
-	$('.list_btn').click(function(){
-		$('.list_btn').addClass("active");
-		$('.grid_btn').removeClass("active");
-		$('.course_list_block .col-md-4').addClass("list_block");
-	});
+	  
   }
 
 }

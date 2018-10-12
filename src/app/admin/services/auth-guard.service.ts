@@ -13,16 +13,19 @@ export class AuthGuard implements CanActivate {
   canActivate(route,state:RouterStateSnapshot) { 
 
 	this.globals.isLoading = false;	
+	if(state.url.split('/')[3] != undefined){
+		this.globals.currentLink = '/'+state.url.split('/')[1]+'/'+state.url.split('/')[2]+'/'+state.url.split('/')[3];
+	} else if(state.url.split('/')[2] != undefined) {
+		this.globals.currentLink = '/'+state.url.split('/')[1]+'/'+state.url.split('/')[2];
+	} else {
+		this.globals.currentLink = '/'+state.url.split('/')[1];
+	}
+	
+	if(state.url=='/link-list'){
+		return true;		  
+	}
 	
 	  if(this.authService.isLoggedIn()==true){	
-
-			if(state.url.split('/')[3] != undefined){
-				this.globals.currentLink = '/'+state.url.split('/')[1]+'/'+state.url.split('/')[2]+'/'+state.url.split('/')[3];
-			} else if(state.url.split('/')[2] != undefined) {
-				this.globals.currentLink = '/'+state.url.split('/')[1]+'/'+state.url.split('/')[2];
-			} else {
-				this.globals.currentLink = '/'+state.url.split('/')[1];
-			}
 
 		  if(state.url=='/register-instructor' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin'){			
 			  this.globals.IsLoggedIn = true;

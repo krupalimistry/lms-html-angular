@@ -34,6 +34,7 @@ import { FooterRegisterComponent } from './footer-register/footer-register.compo
 import { LinkListComponent } from './link-list/link-list.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { LearnerCoursesComponent } from './learner-courses/learner-courses.component';
 
 const routes: Routes = [	
   {
@@ -58,6 +59,7 @@ const routes: Routes = [
 				  { path : 'edit-profile-learner', component : EditProfileLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile-instructor', component : EditProfileInstructorComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile-admin', component : EditProfileAdminComponent,canActivate : [AuthGuard] },
+				  { path : 'learner-courses', component : LearnerCoursesComponent,canActivate : [AuthGuard] },
 				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path : '**', redirectTo : 'link-list' }
         
