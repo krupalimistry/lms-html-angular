@@ -46,14 +46,30 @@ class EditProfile extends CI_Controller
 		}
 	}
 
+	public function updateEducationDetails()
+	{
+		$post_user = json_decode(trim(file_get_contents('php://input')), true);					
+		if ($post_user) 
+		{			
+			$result = $this->EditProfile_model->updateEducationDetails($post_user);
+			if($result){
+				echo json_encode('success');
+			}				
+		}
+	}
+
 	public function getProfileById($user_id=null)
 	{			
 		if(!empty($user_id))
 		{
 			$data=[];
+			$this->load->model('Register_model');
 			$data['user']=$this->EditProfile_model->get_userdata($user_id);
-			$data['country']=$this->EditProfile_model->getlist_country();
-			//$data['company']=$this->EditProfile_model->get_companydata($user_id);
+			$data['country']=$this->EditProfile_model->getlist_country(); 
+			$data['educationLevel']=$this->Register_model->getlist_EducationLevel();
+			if($data['user'] && $data['user']->CompanyId > 0){
+				$data['company']=$this->EditProfile_model->get_companydata($data['user']->CompanyId);
+			}
 			if($data['user'] && $data['user']->CountryId > 0){
 				$data['state']=$this->EditProfile_model->getStateList($data['user']->CountryId);
 			}			

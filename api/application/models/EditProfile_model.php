@@ -90,13 +90,13 @@ class EditProfile_model extends CI_Model
 	}
 	}
 
-	public function get_companydata($user_id=Null)
+	public function get_companydata($CompanyId=Null)
 	{
 		try{
-	    if($user_id)
+	    if($CompanyId)
 	    {		  
-		    $this->db->select('CompanyId,ParentId,UserId,CompanyName,CompanyLogo,Favicon,CompanyEmail,Website,WorkspaceURL,ThemeCode,PhoneNo,Address,IsActive');
-			$this->db->where('UserId',$user_id);
+		    $this->db->select('CompanyId,ParentId,CompanyName,Industry,Website,PhoneNumber,Address1,Address2,CountryId,StateId,City,ZipCode');
+			$this->db->where('CompanyId',$CompanyId);
 			$result = $this->db->get('tblcompany');
 			$db_error = $this->db->error();
 				if (!empty($db_error) && !empty($db_error['code'])) { 
@@ -124,24 +124,22 @@ class EditProfile_model extends CI_Model
 	public function edit_profile($post_user) {
 		try{
 		if($post_user) 
-		{
-
-	
-				$this->db->select('EmailAddress');
-				$this->db->from('tbluser');
-				$this->db->where('EmailAddress',trim($post_user['EmailAddress']));
-				//$this->db->where('ParentId',trim($post_user['ParentId']));
-				$this->db->where('UserId!=',trim($post_user['UserId']));
-				$this->db->limit(1);
-				$query = $this->db->get();
-				$db_error = $this->db->error();
-					if (!empty($db_error) && !empty($db_error['code'])) { 
-						throw new Exception('Database error! Error Code [' . $db_error['code'] . '] Error: ' . $db_error['message']);
-						return false; // unreachable return statement !!!
-					}
-				if ($query->num_rows() == 1) {
-					return false;
-				} 
+		{	
+			$this->db->select('EmailAddress');
+			$this->db->from('tbluser');
+			$this->db->where('EmailAddress',trim($post_user['EmailAddress']));
+			//$this->db->where('ParentId',trim($post_user['ParentId']));
+			$this->db->where('UserId!=',trim($post_user['UserId']));
+			$this->db->limit(1);
+			$query = $this->db->get();
+			$db_error = $this->db->error();
+				if (!empty($db_error) && !empty($db_error['code'])) { 
+					throw new Exception('Database error! Error Code [' . $db_error['code'] . '] Error: ' . $db_error['message']);
+					return false; // unreachable return statement !!!
+				}
+			if ($query->num_rows() == 1) {
+				return false;
+			} 
 		
 			if(isset($post_user['JobTitle']) && !empty($post_user['JobTitle'])){
 				$JobTitle = $post_user['JobTitle'];
@@ -225,85 +223,122 @@ class EditProfile_model extends CI_Model
 	}		
 	}
 
-	public function updateCompany($company_data)
-	{
+	public function updateEducationDetails($post_user) {
 		try{
-			if(isset($company_data['Website']) && !empty($company_data['Website'])){
-				$Website = $company_data['Website'];
-			}	else {
-				$Website = '';
-			}
-			if(isset($company_data['ThemeCode']) && !empty($company_data['ThemeCode'])){
-				$ThemeCode = $company_data['ThemeCode'];
-			}	else {
-				$ThemeCode = '';
-			}
-		if($company_data['fileToUpload']){
-			if($company_data['Faviconicon']){
-				$company_details=array(
-					"CompanyName"=>$company_data['CompanyName'],
-					//"CompanyEmail"=>$company_data['CompanyEmail'],
-					//"Address"=>$company_data['Address'],
-					"Website"=>$Website,
-					"CompanyLogo"=>$company_data['fileToUpload'],
-					"Favicon"=>$company_data['Faviconicon'],
-					//"PhoneNo"=>$company_data['PhoneNo'],
-					"ThemeCode"=>$company_data['ThemeCode'],
-					"UpdatedBy" =>$company_data['UpdatedBy'],
-					'UpdatedOn' => date('y-m-d H:i:s'),
+		if($post_user) 
+		{				
+			if($post_user['RoleId']==3){
+				$user_data = array(
+					"EducationLevelId"=>trim($post_user['EducationLevelId']),
+					"Field"=>trim($post_user['Field']),
+					"Certificate"=>trim($post_user['Certificate']),
+					'UpdatedOn' => date('y-m-d H:i:s')
 				);
-			} else {
-				$company_details=array(
-					"CompanyName"=>$company_data['CompanyName'],
-					//"CompanyEmail"=>$company_data['CompanyEmail'],
-					//"Address"=>$company_data['Address'],
-					"Website"=>$company_data['Website'],
-					"CompanyLogo"=>$company_data['fileToUpload'],
-					//"PhoneNo"=>$company_data['PhoneNo'],
-					"ThemeCode"=>$company_data['ThemeCode'],
-					"UpdatedBy" =>$company_data['UpdatedBy'],
-					'UpdatedOn' => date('y-m-d H:i:s'),
+			} elseif($post_user['RoleId']==4){
+				$user_data = array(
+					"EducationLevelId"=>trim($post_user['EducationLevelId']),
+					"Field"=>trim($post_user['Field']),
+					"Skills"=>trim($post_user['Skills']),
+					'UpdatedOn' => date('y-m-d H:i:s')
 				);
-			}
-		} else if($company_data['Faviconicon']){
-			$company_details=array(
-				"CompanyName"=>$company_data['CompanyName'],
-				//"CompanyEmail"=>$company_data['CompanyEmail'],
-				//"Address"=>$company_data['Address'],
-				"Website"=>$company_data['Website'],
-				"Favicon"=>$company_data['Faviconicon'],
-				//"PhoneNo"=>$company_data['PhoneNo'],
-				"ThemeCode"=>$company_data['ThemeCode'],
-				"UpdatedBy" =>$company_data['UpdatedBy'],
-				'UpdatedOn' => date('y-m-d H:i:s'),
-			);
-		} else {
-			$company_details=array(
-				"CompanyName"=>$company_data['CompanyName'],
-				//"CompanyEmail"=>$company_data['CompanyEmail'],
-				//"Address"=>$company_data['Address'],
-				"Website"=>$company_data['Website'],
-				//"PhoneNo"=>$company_data['PhoneNo'],
-				"ThemeCode"=>$company_data['ThemeCode'],
-				"UpdatedBy" =>$company_data['UpdatedBy'],
-				'UpdatedOn' => date('y-m-d H:i:s'),
-			);
-		}
-		
-		$this->db->where('CompanyId',$company_data['CompanyId']);	
-		$res = $this->db->update('tblcompany',$company_details);
-		$db_error = $this->db->error();
+			}						
+			
+			$this->db->where('UserId',$post_user['UserId']);
+			$res = $this->db->update('tbluser',$user_data);
+			$db_error = $this->db->error();
 				if (!empty($db_error) && !empty($db_error['code'])) { 
 					throw new Exception('Database error! Error Code [' . $db_error['code'] . '] Error: ' . $db_error['message']);
 					return false; // unreachable return statement !!!
 				}
-		if($res)
-		{
-			return true;
+			if($res) 
+			{
+				return true;
+			} 
+			else
+			{
+				return false;
+			}
 		}
-		else
+		else 
 		{
 			return false;
+		}
+	}
+	catch(Exception $e){
+		trigger_error($e->getMessage(), E_USER_ERROR);
+		return false;
+	}		
+	}
+
+
+	public function updateCompany($company_data)
+	{
+		try{
+			if($company_data){
+				if(isset($company_data['PhoneNumber']) && !empty($company_data['PhoneNumber'])){
+					$PhoneNumber = $company_data['PhoneNumber'];
+				}	else {
+					$PhoneNumber = '';
+				}
+				if(isset($company_data['Address1']) && !empty($company_data['Address1'])){
+					$Address1 = $company_data['Address1'];
+				}	else {
+					$Address1 = '';
+				}
+				if(isset($company_data['Address2']) && !empty($company_data['Address2'])){
+					$Address2 = $company_data['Address2'];
+				}	else {
+					$Address2 = '';
+				}
+				if(isset($company_data['CountryId']) && !empty($company_data['CountryId'])){
+					$CountryId = $company_data['CountryId'];
+				}	else {
+					$CountryId = '';
+				}
+				if(isset($company_data['StateId']) && !empty($company_data['StateId'])){
+					$StateId = $company_data['StateId'];
+				}	else {
+					$StateId = '';
+				}
+				if(isset($company_data['City']) && !empty($company_data['City'])){
+					$City = $company_data['City'];
+				}	else {
+					$City = '';
+				}
+				if(isset($company_data['ZipCode']) && !empty($company_data['ZipCode'])){
+					$ZipCode = $company_data['ZipCode'];
+				}	else {
+					$ZipCode = '';
+				}
+				$company_details=array(
+					"CompanyName"=>$company_data['CompanyName'],
+					"Industry"=>$company_data['Industry'],
+					"Website"=>$company_data['Website'],
+					"PhoneNumber"=>$PhoneNumber,
+					"Address1"=>$Address1,
+					"Address2"=>$Address2,
+					"CountryId"=>$CountryId,
+					"StateId"=>$StateId,
+					"City"=>$City,
+					"ZipCode"=>$ZipCode,
+					"UpdatedBy" =>$company_data['UpdatedBy'],
+					'UpdatedOn' => date('y-m-d H:i:s'),
+				);
+			$this->db->where('CompanyId',$company_data['CompanyId']);	
+			$res = $this->db->update('tblcompany',$company_details);
+			$db_error = $this->db->error();
+					if (!empty($db_error) && !empty($db_error['code'])) { 
+						throw new Exception('Database error! Error Code [' . $db_error['code'] . '] Error: ' . $db_error['message']);
+						return false; // unreachable return statement !!!
+					}
+			if($res)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 	}
 	catch(Exception $e){

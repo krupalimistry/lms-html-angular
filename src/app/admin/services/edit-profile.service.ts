@@ -10,7 +10,7 @@ export class EditProfileService {
   constructor( private http: HttpClient,private globals: Globals,private router: Router) { }
 
   editprofile(RegisterEntity)
-  {    debugger
+  {    
    let promise = new Promise((resolve, reject) => {
      this.http.post(this.globals.baseAPIUrl + 'EditProfile/editprofile', RegisterEntity)
        .toPromise()
@@ -32,27 +32,43 @@ export class EditProfileService {
    });		
    return promise;
    }
+
+   updateEducationDetails(RegisterEntity)
+  {    
+   let promise = new Promise((resolve, reject) => {
+     this.http.post(this.globals.baseAPIUrl + 'EditProfile/updateEducationDetails', RegisterEntity)
+     .toPromise()
+     .then(
+       res => { // Success
+         resolve(res);
+       },
+       msg => { // Error
+        reject(msg);
+        this.globals.isLoading = false;
+        this.router.navigate(['/pagenotfound']);
+       }
+     );
+   });		
+   return promise;
+   }
  
    updateCompany(CompanyEntity)
    { 
-     let promise = new Promise((resolve, reject) => {
-       this.http.post(this.globals.baseAPIUrl + 'EditProfile/updateCompany', CompanyEntity,{
-         reportProgress: true,
-         observe: 'events'
-     })
-       .toPromise()
-       .then(
-         res => { // Success
-           resolve(res);
-         },
-         msg => { // Error
-       reject(msg);
-       this.globals.isLoading = false;
-       this.router.navigate(['/pagenotfound']);
-         }
-       );
-     });		
-     return promise;
+    let promise = new Promise((resolve, reject) => {
+      this.http.post(this.globals.baseAPIUrl + 'EditProfile/updateCompany', CompanyEntity)
+      .toPromise()
+      .then(
+        res => { // Success
+          resolve(res);
+        },
+        msg => { // Error
+         reject(msg);
+         this.globals.isLoading = false;
+         this.router.navigate(['/pagenotfound']);
+        }
+      );
+    });		
+    return promise;
    }
     
    getStateList(CountryId){
