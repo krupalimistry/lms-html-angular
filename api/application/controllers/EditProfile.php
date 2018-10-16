@@ -2,14 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 use \Firebase\JWT\JWT;
 
-class EditProfile extends MY_Controller 
+class EditProfile extends CI_Controller 
 {	
 	public function __construct()
 	{
 		parent::__construct();
+		include APPPATH . 'vendor/firebase/php-jwt/src/JWT.php';
 		$this->load->model('EditProfile_model');
 	}
-	
+
 	public function getStateList($country_id = NULL) {
 		
 		if(!empty($country_id)) {			
@@ -31,8 +32,7 @@ class EditProfile extends MY_Controller
 					"RoleId" => $post_user['RoleId'],
 					"EmailAddress" => $post_user['EmailAddress'],
 					"FirstName" => $post_user['FirstName'],
-					"LastName" => $post_user['LastName'],
-					"UserName" => $post_user['UserName']
+					"LastName" => $post_user['LastName']
 				);
 
 				$jwt = JWT::encode($token, "MyGeneratedKey","HS256");
@@ -53,8 +53,8 @@ class EditProfile extends MY_Controller
 			$data=[];
 			$data['user']=$this->EditProfile_model->get_userdata($user_id);
 			$data['country']=$this->EditProfile_model->getlist_country();
-			$data['company']=$this->EditProfile_model->get_companydata($user_id);
-			if($data['user']){
+			//$data['company']=$this->EditProfile_model->get_companydata($user_id);
+			if($data['user'] && $data['user']->CountryId > 0){
 				$data['state']=$this->EditProfile_model->getStateList($data['user']->CountryId);
 			}			
 			echo json_encode($data);
@@ -77,17 +77,20 @@ class EditProfile extends MY_Controller
 		}
 	}
 
-	public function uploadFile()
-	{
-		if($_FILES){
-			if(isset($_FILES['logo']) && !empty($_FILES['logo'])){
-				move_uploaded_file($_FILES["logo"]["tmp_name"], "../src/assets/company/".$_FILES["logo"]["name"]);
+	public function changePassword()
+	{								
+		$post_pass = json_decode(trim(file_get_contents('php://input')), true);		
+		if ($post_pass)
+		{					
+			$result = $this->EditProfile_model->change_password($post_pass);
+			if($result){
+				echo json_encode('success');
 			}
-			if(isset($_FILES['favicon']) && !empty($_FILES['favicon'])){
-				move_uploaded_file($_FILES["favicon"]["tmp_name"], "../src/assets/company/".$_FILES["favicon"]["name"]);
-			}
-			echo json_encode('success');
-		}
+			else
+			{
+				echo json_encode('wrong current password');
+			}									
+		}		
 	}
 
 }

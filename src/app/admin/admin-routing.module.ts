@@ -3,10 +3,12 @@ import { Component,NgModule } from '@angular/core';
 import { Routes,RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpInterceptorClassService } from './http-interceptor-class.service';
 import { CommonModule } from "@angular/common";
 import { AdminComponent  } from './admin.component.module';
 import { Globals } from './globals';
-import { HttpClientModule } from '@angular/common/http';
 
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { DashboardLearnerComponent } from './dashboard-learner/dashboard-learner.component';
@@ -14,6 +16,7 @@ import { DashboardInstructorComponent } from './dashboard-instructor/dashboard-i
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { RegisterService } from './services/register.service';
+import { EditProfileService } from './services/edit-profile.service';
 
 import { UserListComponent } from './user-list/user-list.component';
 import { CalendarComponent } from './calendar/calendar.component';
@@ -58,7 +61,7 @@ const routes: Routes = [
 				  { path : 'forgot-password', component : ForgotPasswordComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile-learner', component : EditProfileLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile-instructor', component : EditProfileInstructorComponent,canActivate : [AuthGuard] },
-				  { path : 'edit-profile-admin', component : EditProfileAdminComponent,canActivate : [AuthGuard] },
+				  { path : 'edit-profile', component : EditProfileAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'learner-courses', component : LearnerCoursesComponent,canActivate : [AuthGuard] },
 				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path : '**', redirectTo : 'link-list' }
@@ -71,7 +74,12 @@ const routes: Routes = [
 imports: [RouterModule.forChild(routes)],
 exports: [RouterModule],
  
-  providers: [Globals,AuthGuard,AuthService,RegisterService],
+  providers: [Globals,AuthGuard,AuthService,RegisterService,EditProfileService,{
+    
+    provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorClassService,
+      multi: true
+    }],
   bootstrap: [AdminComponent]
 })
 export class AdminRoutingModule  { }

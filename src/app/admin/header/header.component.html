@@ -31,9 +31,10 @@
 							</div>
 						</li>
 						<li>
-							<a routerLink="/edit-profile-admin" *ngIf="globals.authData.RoleId==1 || globals.authData.RoleId==2"><i class="fa fa-user"></i>My Profile</a>
+								<a routerLink="/edit-profile"><i class="fa fa-user"></i>My Profile</a>
+							<!-- <a routerLink="/edit-profile-admin" *ngIf="globals.authData.RoleId==1 || globals.authData.RoleId==2"><i class="fa fa-user"></i>My Profile</a>
 							<a routerLink="/edit-profile-instructor" *ngIf="globals.authData.RoleId==3"><i class="fa fa-user"></i>My Profile</a>
-							<a routerLink="/edit-profile-learner" *ngIf="globals.authData.RoleId==4"><i class="fa fa-user"></i>My Profile</a>
+							<a routerLink="/edit-profile-learner" *ngIf="globals.authData.RoleId==4"><i class="fa fa-user"></i>My Profile</a> -->
 						</li>
 						<li><a href="#"><i class="fa fa-cog"></i>Setting</a></li>
 						<li><a (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out</a></li>

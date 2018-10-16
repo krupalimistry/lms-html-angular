@@ -79,7 +79,10 @@
 					<div class="clearfix"></div>
 					<div class="form-group file_upload">
 						<label><span>*</span>Upload Certificate </label>
-						<input type="text" disabled /><input type="file" accept="image/*" name="Certificate" id="Certificate" class="form-control" #Certificate="ngModel" [(ngModel)]="RegisterEntity.Certificate"/>
+						<input type="text" disabled /><input type="file" accept="image/*" name="CertificateId" id="CertificateId" class="form-control" #CertificateId="ngModel" [(ngModel)]="RegisterEntity.CertificateId"/>
+						<span class="error_span" *ngIf="certificate_error"> 
+							Please upload certificate
+						</span>
 					</div>
 					<div class="clearfix"></div>
 					<a (click)="previous1()" aria-controls="personaldetail" id="personalbtn" role="tab" data-toggle="tab" class="back_btn pull-left">Previous</a>
@@ -121,7 +124,7 @@
 						[(ngModel)]="RegisterEntity.cPassword" name="cPassword" [ngClass]="{red_border: ((cPassword.dirty && cPassword.invalid) || (cPassword.pristine && submitted)) || (same && !(cPassword.errors && cPassword.errors.pattern && cPassword.errors.required))}" required/>
 								<span class="error_span" *ngIf="(cPassword.dirty && cPassword.invalid) || (cPassword.pristine && submitted) || same">
 						<span *ngIf="cPassword.errors && cPassword.errors.required && !same">
-							Please enter Confirm Password
+							Please enter confirm password
 							</span>
 							
 							<span *ngIf="cPassword.errors && cPassword.errors.pattern && !same">
