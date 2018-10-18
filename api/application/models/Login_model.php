@@ -4,7 +4,7 @@ class Login_model extends CI_Model {
 
 	public function check_login($data) {
 		try{
-			$this->db->select('u.UserId,u.RoleId,u.FirstName,u.LastName,u.EmailAddress');
+			$this->db->select('u.UserId,u.RoleId,u.ParentId,u.FirstName,u.LastName,u.EmailAddress');
 			$this->db->from('tbluser u');
 			$this->db->where('u.EmailAddress',trim($data['EmailAddress']));
 			$this->db->where('u.Password',md5(trim($data['Password'])));

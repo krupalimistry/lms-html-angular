@@ -24,6 +24,7 @@ class Login extends CI_Controller {
 				$token = array(
 					"UserId" => $result[0]->UserId,
 					"RoleId" => $result[0]->RoleId,
+					"ParentId" => $result[0]->ParentId,
 					"EmailAddress" => $result[0]->EmailAddress,
 					"FirstName" => $result[0]->FirstName,
 					"LastName" => $result[0]->LastName

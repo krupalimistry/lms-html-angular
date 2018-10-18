@@ -192,8 +192,12 @@
 			<strong><i class="fa fa-calendar"></i> Posted On:</strong> 18 September 2018 <br>
  			<strong><i class="fa fa-user"></i> Instructor:</strong> Adrian Demian <br>
   			<strong><i class="fa fa-graduation-cap"></i> Max. students:</strong> 50 <br>
-  			<strong><i class="fa fa-check"></i> Attending:</strong> 30</p>
-			<div class="text-center"><a href="#" class="next_btn">Register</a></div>
+			  <strong><i class="fa fa-check"></i> Attending:</strong> 30</p>
+			  <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+			<div class="text-center">
+				<div id="paypal-checkout-btn"></div>
+				<!-- <a id="paypal-checkout-btn" class="next_btn">Register</a> -->
+		</div>
 		</div>
 		<div class="clearfix"></div>
 		<div class="instrutor_right">

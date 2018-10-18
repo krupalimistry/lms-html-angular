@@ -30,6 +30,7 @@ class EditProfile extends CI_Controller
 				$token = array(
 					"UserId" => $post_user['UserId'],
 					"RoleId" => $post_user['RoleId'],
+					"ParentId" => $post_user['ParentId'],
 					"EmailAddress" => $post_user['EmailAddress'],
 					"FirstName" => $post_user['FirstName'],
 					"LastName" => $post_user['LastName']
