@@ -50,7 +50,8 @@ export class CourseDetailComponent implements AfterViewChecked {
       return actions.payment.execute().then((payment) => {
         //Do something when payment is successful.
 				this.PurchaseEntity.LernerId= this.globals.authData.UserId;
-				this.PurchaseEntity.InstracterId= this.globals.authData.ParentId;
+        this.PurchaseEntity.InstracterId= this.globals.authData.ParentId;
+        this.PurchaseEntity.EmailAddress= this.globals.authData.EmailAddress;
 				this.PurchaseEntity.CourseId= 1;
 				//alert('success');
         this.CourseService.PurchaseCourse(this.PurchaseEntity)

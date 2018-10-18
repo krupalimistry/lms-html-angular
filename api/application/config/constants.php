@@ -90,7 +90,7 @@ define('ACTIVE_GROUP', 'default'); // database mode
 //define('ACTIVE_GROUP', 'Production'); // database mode
 
 define('BASE_URL', 'http://localhost:4200'); // Base URL - Local
-//define('BASE_URL', 'http://learnfeedback.devbyopeneyes.com'); // Base URL - Development
+//define('BASE_URL', 'http://lms-demo.devbyopeneyes.com'); // Base URL - Development
 //define('BASE_URL', 'http://learnfeedback.uatbyopeneyes.com'); // Base URL - QA
-//define('BASE_URL', 'http://learnfeedback.uatbyopeneyes.com'); // Base URL - Production<?php
+//define('BASE_URL', 'http://learnfeedback.uatbyopeneyes.com'); // Base URL - Production
 

@@ -5,6 +5,6 @@
 
 export const environment = {
   production: true,
-  baseUrl: 'http://learnfeedback.uatbyopeneyes.com',
+  baseUrl: 'http://lms-demo.devbyopeneyes.com',
   env: 'prod'
 };

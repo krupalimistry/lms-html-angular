@@ -33,17 +33,17 @@ class Register extends CI_Controller
 					$smtpPassword = $row->Value;
 				}
 				
-				$config['protocol']='smtp';
-				$config['smtp_host']='ssl://smtp.googlemail.com';
-				$config['smtp_port']='465';
-				$config['smtp_user']='myopeneyes3937@gmail.com';
-				$config['smtp_pass']='W3lc0m3@2018';	
+				// $config['protocol']='smtp';
+				// $config['smtp_host']='ssl://smtp.googlemail.com';
+				// $config['smtp_port']='465';
+				// $config['smtp_user']='myopeneyes3937@gmail.com';
+				// $config['smtp_pass']='W3lc0m3@2018';	
 
-				// $config['protocol']='mail';
-				// $config['smtp_host']='vps40446.inmotionhosting.com';
-				// $config['smtp_port']='587';
-				// $config['smtp_user']=$smtpEmail;
-				// $config['smtp_pass']=$smtpPassword;
+				$config['protocol']='mail';
+				$config['smtp_host']='vps40446.inmotionhosting.com';
+				$config['smtp_port']='587';
+				$config['smtp_user']=$smtpEmail;
+				$config['smtp_pass']=$smtpPassword;
 				
 				$config['charset']='utf-8';
 				$config['newline']="\r\n";
@@ -127,17 +127,17 @@ class Register extends CI_Controller
 					$smtpPassword = $row->Value;
 				}
 				
-				$config['protocol']='smtp';
-				$config['smtp_host']='ssl://smtp.googlemail.com';
-				$config['smtp_port']='465';
-				$config['smtp_user']='myopeneyes3937@gmail.com';
-				$config['smtp_pass']='W3lc0m3@2018';	
+				// $config['protocol']='smtp';
+				// $config['smtp_host']='ssl://smtp.googlemail.com';
+				// $config['smtp_port']='465';
+				// $config['smtp_user']='myopeneyes3937@gmail.com';
+				// $config['smtp_pass']='W3lc0m3@2018';	
 
-				// $config['protocol']='mail';
-				// $config['smtp_host']='vps40446.inmotionhosting.com';
-				// $config['smtp_port']='587';
-				// $config['smtp_user']=$smtpEmail;
-				// $config['smtp_pass']=$smtpPassword;
+				$config['protocol']='mail';
+				$config['smtp_host']='vps40446.inmotionhosting.com';
+				$config['smtp_port']='587';
+				$config['smtp_user']=$smtpEmail;
+				$config['smtp_pass']=$smtpPassword;
 				
 				$config['charset']='utf-8';
 				$config['newline']="\r\n";
@@ -221,17 +221,17 @@ class Register extends CI_Controller
 					$smtpPassword = $row->Value;
 				}
 				
-				$config['protocol']='smtp';
-				$config['smtp_host']='ssl://smtp.googlemail.com';
-				$config['smtp_port']='465';
-				$config['smtp_user']='myopeneyes3937@gmail.com';
-				$config['smtp_pass']='W3lc0m3@2018';	
+				// $config['protocol']='smtp';
+				// $config['smtp_host']='ssl://smtp.googlemail.com';
+				// $config['smtp_port']='465';
+				// $config['smtp_user']='myopeneyes3937@gmail.com';
+				// $config['smtp_pass']='W3lc0m3@2018';	
 
-				// $config['protocol']='mail';
-				// $config['smtp_host']='vps40446.inmotionhosting.com';
-				// $config['smtp_port']='587';
-				// $config['smtp_user']=$smtpEmail;
-				// $config['smtp_pass']=$smtpPassword;
+				$config['protocol']='mail';
+				$config['smtp_host']='vps40446.inmotionhosting.com';
+				$config['smtp_port']='587';
+				$config['smtp_user']=$smtpEmail;
+				$config['smtp_pass']=$smtpPassword;
 				
 				$config['charset']='utf-8';
 				$config['newline']="\r\n";
@@ -304,7 +304,7 @@ class Register extends CI_Controller
 	{
 		if($_FILES){
 			if(isset($_FILES['Certificate']) && !empty($_FILES['Certificate'])){
-				move_uploaded_file($_FILES["Certificate"]["tmp_name"], "../src/assets/certificate/".$_FILES["Certificate"]["name"]);
+				move_uploaded_file($_FILES["Certificate"]["tmp_name"], "../assets/certificate/".$_FILES["Certificate"]["name"]);
 			}
 			echo json_encode('success');
 		}
