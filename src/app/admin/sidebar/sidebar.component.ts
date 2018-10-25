@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '.././globals';
 declare var $,PerfectScrollbar: any;
 
 @Component({
@@ -8,7 +9,7 @@ declare var $,PerfectScrollbar: any;
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private globals: Globals) { }
 
   ngOnInit() {
 	    $('.left_menu_toggle').click(function(){

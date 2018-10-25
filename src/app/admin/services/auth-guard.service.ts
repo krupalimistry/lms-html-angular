@@ -11,7 +11,7 @@ export class AuthGuard implements CanActivate {
   constructor(private authService : AuthService,private router: Router, public globals: Globals) { }
 
   canActivate(route,state:RouterStateSnapshot) { 
-
+debugger
 	this.globals.isLoading = false;	
 	if(state.url.split('/')[3] != undefined){
 		this.globals.currentLink = '/'+state.url.split('/')[1]+'/'+state.url.split('/')[2]+'/'+state.url.split('/')[3];
