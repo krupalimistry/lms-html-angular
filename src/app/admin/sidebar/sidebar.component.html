@@ -1,7 +1,15 @@
 <div class="sidebar_wrap">
 	<ul class="sidebar_box">
 		<li class="sidebar_box_label"><span>General</span></li>
-				<li class="active"><a href="#" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
+				<li *ngIf="globals.authData.RoleId==1 || globals.authData.RoleId==2" class="active">
+					<a routerLink="/dashboard-admin" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="fa fa-tachometer"></i><span>Dashboard</span></a>
+				</li>
+				<li *ngIf="globals.authData.RoleId==3" class="active">
+						<a routerLink="/dashboard-instructor" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="fa fa-tachometer"></i><span>Dashboard</span></a>
+					</li>
+					<li *ngIf="globals.authData.RoleId==4" class="active">
+							<a routerLink="/dashboard-learner" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="fa fa-tachometer"></i><span>Dashboard</span></a>
+						</li>
 				<li><a href="#" title="Settings" data-toggle="tooltip" data-placement="right"><i class="fa fa-cogs"></i><span>Settings</span></a></li>
 				<li><a href="#" title="Email" data-toggle="tooltip" data-placement="right"><i class="fa fa-envelope"></i><span>Email</span></a></li>
 			</ul>
