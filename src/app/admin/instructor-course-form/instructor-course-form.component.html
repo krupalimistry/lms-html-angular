@@ -31,7 +31,7 @@
   <div class="col-md-12 col-sm-12">
     <div class="course_details">
       <div class="mydivs">
-        <div>
+        <div *ngIf="!secondform">
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <form>
@@ -136,7 +136,7 @@
                             <div class="form-group focused ckeditor_block editor">
                               <label>
                                 <span>*</span>Email Body</label>
-                              <textarea class="form-control" name="EmailBody2" id="EmailBody2" rows="10" cols="60"
+                              <textarea class="form-control" name="EmailBody2" id="EmailBodyW" rows="10" cols="60"
                                 contenteditable="true"></textarea>
                             </div>
                             <div class="clearfix"></div>
@@ -145,7 +145,7 @@
                             <div class="form-group focused ckeditor_block editor">
                               <label>
                                 <span>*</span>Email Body</label>
-                              <textarea class="form-control" name="EmailBody3" id="EmailBody3" rows="10" cols="60"
+                              <textarea class="form-control" name="EmailBody3" id="EmailBodyT" rows="10" cols="60"
                                 contenteditable="true"></textarea>
                             </div>
                             <div class="clearfix"></div>
@@ -154,7 +154,7 @@
                             <div class="form-group focused ckeditor_block editor">
                               <label>
                                 <span>*</span>Email Body</label>
-                              <textarea class="form-control" name="EmailBody4" id="EmailBody4" rows="10" cols="60"
+                              <textarea class="form-control" name="EmailBody4" id="EmailBodyM" rows="10" cols="60"
                                 contenteditable="true"></textarea>
                             </div>
                             <div class="clearfix"></div>
@@ -174,11 +174,11 @@
           <div class="row">
             <div class="col-md-12 col-sm-12  text-center">
               <!-- <button class="submit_btn next_btn" name="next">prev</button> -->
-              <button class="submit_btn back_btn" name="prev">Next</button>
+              <button (click)="next_btn()" class="submit_btn back_btn" name="prev">Next</button>
             </div>
           </div>
         </div>
-        <div>
+        <div *ngIf="secondform">
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <form>
@@ -189,13 +189,13 @@
                       <p class="padding_15">Enter your details to Register:</p>
                     </div>
                     <div class="pull-right">
-                      <button class="next_btn" name="next">Back</button>
+                      <button (click)="back_btn()" class="next_btn" name="next">Back</button>
                     </div>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="course_forum_block">
-                  <div id="clonedInput1" class="clonedInput">
+                  <div id="clonedInput1" class="clonedInput" *ngFor="let form of CourseFormList; let i=index;">
                     <div class="row">
                       <div class="col-md-6 col-sm-6">
                         <div class="form-group">
@@ -216,7 +216,7 @@
                         <div class="form-group focused ckeditor_block editor">
                           <label>
                             <span>*</span>Email Body</label>
-                          <textarea class="form-control" name="EmailBody1" id="EmailBody1" rows="10" cols="60"
+                          <textarea class="form-control" name="EmailBody" id="EmailBody{{i+1}}" rows="10" cols="60"
                             contenteditable="true"></textarea>
                         </div>
                       </div>
@@ -241,14 +241,14 @@
                       </div>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="alert-close">×</div>
+                    <div (click)="DeleteCourseForm(form)" class="alert-close">×</div>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="row">
                   <div class="col-md-12 col-sm-12 text-center">
                     <div class="actions">
-                      <button class="clone back_btn">Add</button>
+                      <button (click)="AddCourseForm()" class="clone back_btn">Add</button>
                       <!-- <button class="remove next_btn">Remove</button> -->
                     </div>
                   </div>
