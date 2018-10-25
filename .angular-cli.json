@@ -39,7 +39,8 @@
 		"assets/js/customInput.js",
 		"assets/js/typeahead.bundle.js",
 		"assets/js/bootstrap-tagsinput.min.js",
-		"assets/js/custom.js"
+    "assets/js/custom.js",
+    "assets/js/dropzone.js"
 	  ],
       "environmentSource": "environments/environment.ts",
       "environments": {

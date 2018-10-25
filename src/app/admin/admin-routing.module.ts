@@ -39,6 +39,8 @@ import { LinkListComponent } from './link-list/link-list.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LearnerCoursesComponent } from './learner-courses/learner-courses.component';
+import { InstructorCourseFormComponent } from './instructor-course-form/instructor-course-form.component';
+import { InstructorCoursesComponent } from './instructor-courses/instructor-courses.component';
 
 const routes: Routes = [	
   {
@@ -64,6 +66,8 @@ const routes: Routes = [
 				  { path : 'edit-profile-instructor', component : EditProfileInstructorComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile', component : EditProfileAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'learner-courses', component : LearnerCoursesComponent,canActivate : [AuthGuard] },
+				  { path : 'instructor-course-form', component : InstructorCourseFormComponent,canActivate : [AuthGuard] },
+				  { path : 'instructor-courses', component : InstructorCoursesComponent,canActivate : [AuthGuard] },
 				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path : '**', redirectTo : 'link-list' }
         
