@@ -69,12 +69,15 @@ header.register_header .logo {padding: 5px 0; width:100%; text-align:center;}
 header.register_header .logo a{margin:auto; width:350px; display:block;}
 
 header .notification{display: inline-block; padding: 5px 0;}
+header .notification li.user_indicator{border:1px solid #fff;padding:5px;border-radius: 3px;color:#fff;}
 header .notification li{position:relative;display:block; float: left; margin: 0 10px;}
 header .notification li a{color:#fff;font-size:20px;}
 header .notification li a span{border-radius: 10px;color: #FFFFFF;font-size: 12px;right:-10px;padding: 0;position: absolute;text-align: center;width: 20px;line-height: 20px;height: 20px;top:-7px;}
 header .notification li a span.badge1{background:#EA3F3F;}
 header .notification li a span.badge2{background:#4AC4BC;}
 
+.header_left{text-align: left;padding: 5px 0px;}
+.header_left .fa{background: rgba(0, 0, 0, 0.3);border-radius: 3px;color: #fff;cursor: pointer;display: block;height: 30px;line-height: 30px;text-align: center;width: 30px;border: 0;position: relative;right: -5px;}
 .header_right{text-align: right;}
 .account_menu{ display:inline-block; position: relative;}
 .account_menu li{position:relative; display:block; float: left; margin-left:10px;}
@@ -106,7 +109,7 @@ header .notification li a span.badge2{background:#4AC4BC;}
 select {-moz-appearance: none!important;-webkit-appearance: none!important;background:transparent url("../images/arrow-down-b.png") no-repeat scroll right 5px / 23px auto!important; border: 0!important; border-bottom: 1px solid #888!important; color: #2e2d31!important; border-radius:0!important;padding: 0px 20px 0px 0px !important;height: 35px !important; width: 100%!important; font-size:13px!important; font-family: 'OpenSans-Regular'; z-index: 99; position: relative; outline: 0; box-shadow: none!important; margin-bottom: 2px;}
 select option{ background:#ddd!important; padding:5px!important; color:#2e2d31!important; font-size:13px!important; text-transform:capitalize!important; display:block!important; width:100%!important; transition:all 0.2s linear 0s!important; border:0!important; font-family:'OpenSans-Regular';}
 
-.form-group {position: relative; margin: 15px 0; border-bottom: 1px solid #888;}
+.form-group {position: relative; margin: 15px 0 20px;}
 .form-group label{line-height:15px; color: #2e2d31; font-size: 13px; font-weight:normal; background: transparent; position: absolute; top: 10px; z-index: 1; transition: transform 150ms ease-out, font-size 150ms ease-out;} 
 .form-group label span{color:red;}
 .form-group.focused label{ transform: translateY(-145%); font-size: 13px;}
@@ -139,13 +142,13 @@ select option{ background:#ddd!important; padding:5px!important; color:#2e2d31!i
 .register_tab { border: 0; margin: 10px 0 0;text-align: center;}
 .register_tab li { display: inline-block;float: none;}
 .register_tab li::after { border-bottom: 1px solid #fff; content: ""; left: 60px; position: absolute; top: 50%; width: 73px;}
-.register_tab li a { background: transparent !important; border: 1px solid #fff!important; border-radius: 100%; color: #fff !important; font-size: 25px; height: 60px; margin: 0 70px 0 0; padding: 10px; text-align: center; width: 60px;}
+.register_tab li a {outline:none; background: transparent !important; border: 1px solid #fff!important; border-radius: 100%; color: #fff !important; font-size: 25px; height: 60px; margin: 0 70px 0 0; padding: 10px; text-align: center; width: 60px;}
 .register_tab li.active a { background: var(--option-color) !important;}
 .register_tab li.complete a{ background:#dff0d8!important; color: #3c763d !important;}
 .register_tab li:last-child:after{display:none;}
 .register_tab li:last-child a{margin:0;}
 
-.error_span { color: #ff0000; font-size: 10px; position: absolute;}
+.error_span { color: #ff0000; font-size: 10px; position: absolute;padding-top: 3px;}
 /*--------------End Register Login--------------------*/
 
 /* ------- Sidebar Area Start ------- */
@@ -190,9 +193,9 @@ footer.footer_fixed.active_footermenu{width:94.4%; transition:all 0.4s ease 0s;}
 .right_content_block .bg_white_block .title_heading{ background: #f5f5f5; color: #9EA7B3; padding-right: 15px;}
 .right_content_block .bg_white_block .title_heading .title_text{text-transform: uppercase; color: #9EA7B3; font-family: 'OpenSans-Regular'; font-size: 18px; margin-left:30px; padding: 15px;}
 .right_content_block .bg_white_block .title_heading .title_text i{margin-right: 10px; font-size: 18px;}
-.right_content_block .bg_white_block .title_heading .alert{padding: 15px 0 15px 15px; margin: 0; text-align:right; }
+.right_content_block .bg_white_block .title_heading .alert{padding: 15px 0 15px 15px; margin: 0; text-align:right;display: flex;float: right; }
 .right_content_block .bg_white_block .title_heading .alert .close{margin-left:15px;}
-.right_content_block .bg_white_block .title_heading .alert i{color: #fff; font-size: 11px; margin-right: 10px; background: #4AC4BC; width: 18px; height: 18px; border-radius: 100%; text-align: center; line-height: 18px;}
+.right_content_block .bg_white_block .title_heading .alert i{color: #fff; font-size: 11px; margin-right: 10px; background: #4AC4BC; width: 18px; height: 18px; border-radius: 100%; text-align: center; line-height: 20px;}
 .right_content_block .bg_white_block .title_text{ height: 50px;}
 .right_content_block .bg_white_block .add_back {border-left: 1px dashed #CCCCCC; height: 50px; padding: 10px 15px; text-align: right;}
 .right_content_block .bg_white_block .title_heading .breadcrumb_block{border-top: 1px dashed #CCCCCC; display: block; padding: 10px 0;}
@@ -317,7 +320,7 @@ footer.register_footer a:hover{color:var(--theme-color); }
 .course_forum_block {position: relative;}
 .course_forum_block h3{margin-bottom: 20px;}
 .course_forum_block .forum_box{display: block; position: relative; width: 100%; }
-.course_forum_block .forum_box.inner_forum{margin-left: 60px; width: 90%; }
+.course_forum_block .forum_box.inner_forum{margin-left: 60px; width: 91.3%; }
 .course_forum_block .forum_box.inner_forum:last-child{border: 0; margin-bottom: 0;}
 .forum_box.inner_forum::before { background: #eee; content: ""; height: 100%; left: -35px; position: absolute; top: -45px; width: 1px;}
 .forum_box.inner_forum::after { background: #eee; content: ""; height: 1px; left: -35px; position: absolute; top: 25px; width: 30px;}
@@ -522,6 +525,11 @@ textarea{resize: none;}
 .learner_dashboard .audit_block{height: 415px;}
 .learner_dashboard .users_block{height: 300px;}
 /*----------------------------End learner dashboard ------------------------------*/
+
+/*--------------------------- welcome page ------------------------------*/
+.welcome_page{text-align: center;}
+.welcome_page .logo img{width: 125px;height: 125px;margin: 0px auto 20px;}
+/*----------------------------End welcome page ------------------------------*/
 
 @media (min-width: 768px) {
     .account_menu ul li ul.dropdown-menu {display:block; opacity:0; top:100px; visibility:hidden; -moz-transition: all .25s ease-out;-ms-transition: all .25s ease-out;-o-transition: all .25s ease-out;transition: all .25s ease-out; }

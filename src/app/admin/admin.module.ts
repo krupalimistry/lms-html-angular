@@ -28,6 +28,7 @@ import { EditProfileInstructorComponent } from './edit-profile-instructor/edit-p
 import { LearnerCoursesComponent } from './learner-courses/learner-courses.component';
 import { InstructorCourseFormComponent } from './instructor-course-form/instructor-course-form.component';
 import { InstructorCoursesComponent } from './instructor-courses/instructor-courses.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 import { LinkListComponent } from './link-list/link-list.component';
 import { LoginComponent } from './login/login.component';
@@ -64,7 +65,8 @@ import { FooterRegisterComponent } from './footer-register/footer-register.compo
     EditProfileInstructorComponent,
 	LearnerCoursesComponent,
     InstructorCourseFormComponent,
-	InstructorCoursesComponent
+	InstructorCoursesComponent,
+	WelcomeComponent
     
   ],
   imports: [
