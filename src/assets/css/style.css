@@ -531,6 +531,27 @@ textarea{resize: none;}
 .welcome_page .logo img{width: 125px;height: 125px;margin: 0px auto 20px;}
 /*----------------------------End welcome page ------------------------------*/
 
+/*--------------------------- linkup page ------------------------------*/
+.top_header .logo img{width: 75px;height: 75px;margin: 10px 0px;}
+.linkup_wrapper{background: #fff;}
+.linkup_wrapper .linkup_section .linkup_header{position: relative;width: 100%;float: left;clear: both;text-align: center;margin: 19px 0;}
+.linkup_wrapper .linkup_section .linkup_header h2{padding: 0 10px;line-height: 26px;color: #111;font-weight: 600;text-transform: uppercase;display: inline-block;font-size: 14px;background-color: #fff;vertical-align: middle;position: relative;z-index: 1;}
+.linkup_wrapper .linkup_section .linkup_header h2 span {position: relative;top: -1px;vertical-align: middle;font-size: 12px;border: 1px solid #111;border-radius: 20px;color: #111;padding: 2px 10px;margin: 0 5px;}
+.linkup_wrapper .linkup_section .linkup_header:after {content: "";background: #111;position: absolute;width: 100%;top: 0;left: 0;margin: 13px 0 0;height: 1px;}
+#demos .owl-carousel {margin: 2rem 0;padding: 0px 132px;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item{position: relative;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul li {transition: all 0.5s ease-in-out 0s;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul {position: absolute;z-index: 2;bottom: 50px;text-align: center;width: 100%;padding-left: 0px;height: 0px;margin: 0px;opacity: 0;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul li {display: inline-block;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul li a {border: 1px solid #000;width: 35px;height: 35px;font-size: 12px;display: block;margin: 0 3px;line-height: 35px;border: 1px solid #fff;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul a {transition: all 0.3s ease-in-out 0s;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul li a span.fa {color: #fff;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item:hover ul {opacity: 1;margin-bottom: 15px;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item:after {content: "";opacity: 0;background-color: rgba(0, 0, 0, 0.75);position: absolute;right: 0;left: 0;top: 0;bottom: 0;}
+.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item:hover:after {opacity: 1;}
+.owl-theme .owl-nav{position: absolute;top: 25px;left: 0px;}
+/*----------------------------End linkup page ------------------------------*/
+
 @media (min-width: 768px) {
     .account_menu ul li ul.dropdown-menu {display:block; opacity:0; top:100px; visibility:hidden; -moz-transition: all .25s ease-out;-ms-transition: all .25s ease-out;-o-transition: all .25s ease-out;transition: all .25s ease-out; }
     .account_menu ul li:hover ul.dropdown-menu {opacity:1; visibility:visible; top:40px; -moz-transition: all .25s ease-out;-ms-transition: all .25s ease-out;-o-transition: all .25s ease-out;transition: all .25s ease-out; }
