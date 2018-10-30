@@ -37,7 +37,7 @@
 	--screen-height:500px;
  }
 html{height:100%; min-height:100%;}
-body{margin:0px; padding: 0 0 0; background: linear-gradient(to top left, var(--option-color), var(--theme-color)); overflow-x: hidden; height:100%; min-height:100%; font-family: 'OpenSans-Regular'; background-attachment: fixed; font-size: 13px; }
+body{margin:0px; padding: 0 0 0 0; background: linear-gradient(to top left, var(--option-color), var(--theme-color)); overflow-x: hidden; height:100%; min-height:100%; font-family: 'OpenSans-Regular'; background-attachment: fixed; font-size: 13px; }
 app-root, admin-root,.height_100_box { display: block; height: 100%; min-height: 100%;}
 p{margin:0px; padding:0px 0 0 0; line-height:22px; color: #2e2d31; font-size: 13px;}
 p.padding_15{padding-bottom:15px;}
@@ -59,12 +59,12 @@ h5{color:#A50034; display:block; font:normal 16px/18px 'OpenSans-SemiBold'; marg
 
 /*-------------Header and navigation--------------------*/
 .container{ width:100%; max-width:100%; padding:0 30px;}
-header{ position: fixed; z-index: 999; width: 100%; padding:10px 0; top: 0;}
+header{ position: fixed; z-index: 99999; width: 100%; padding:0 0 10px 0; top: 0;}
 header .logo {padding: 5px 0;}
 header .logo .logo_text{font-family: 'OpenSans-Light'; width:75%; font-size: 30px; letter-spacing: -1px; text-decoration: none; text-transform: uppercase; color: #fff; line-height: 30px;}
 header .logo .toggle{background: rgba(0, 0, 0, 0.3);border-radius: 3px;color:#fff;cursor: pointer;display: block;height: 30px;line-height: 30px;text-align: center;width: 30px; border: 0; position: relative; right: -20px;}
 
-header.register_header{position:relative;}
+header.register_header{position:relative; padding-top:35px;}
 header.register_header .logo {padding: 5px 0; width:100%; text-align:center;}
 header.register_header .logo a{margin:auto; width:350px; display:block;}
 
@@ -152,7 +152,7 @@ select option{ background:#ddd!important; padding:5px!important; color:#2e2d31!i
 /*--------------End Register Login--------------------*/
 
 /* ------- Sidebar Area Start ------- */
-.sidebar_wrap{ position: fixed; top: 65px; left: 0; padding: 0 8px 0 30px; height: 90%; width: 17.6667%; z-index: 999; transition:all 0.4s ease 0s; overflow-y: auto;}
+.sidebar_wrap{ position: fixed; top: 100px; left: 0; padding: 0 8px 0 30px; height: 90%; width: 17.6667%; z-index: 999; transition:all 0.4s ease 0s; overflow-y: auto;}
 .sidebar_wrap .sidebar_box{background: rgba(0, 0, 0, 0.1);border-radius: 3px;padding:15px 0;margin-bottom:10px;box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);}
 .sidebar_wrap .sidebar_box .sidebar_box_label span{ background: rgba(0, 0, 0, 0.2);border-radius: 15px;padding: 5px 10px;color:#fff; display: inline-block;font-size: 12px;margin-bottom: 5px; margin: 0 15px 10px 15px;}
 .sidebar_wrap .sidebar_box li i {font-size: 18px; width:25px;}
@@ -185,7 +185,7 @@ footer.footer_fixed.active_footermenu{width:94.4%; transition:all 0.4s ease 0s;}
 .list_page li{padding:0px 0 7px 15px; background: url(../images/whitedot.png) left 5px no-repeat; background-size: 10px; color: #fff; font-size: 13px;}
 .list_page li a{color: #fff;}
 
-.right_content_block{position: fixed; right: -15px; top: 65px; height: 100%; min-height: 100%; width: 100%;}
+.right_content_block{position: fixed; right: -15px; top: 100px; height: 100%; min-height: 100%; width: 100%;}
 .right_content_block .height_100{height: 100%;}
 .right_content_block .bg_white_block{height:91.5%;width:100%; overflow-y: auto; position: relative;  background:#fff;}
 .right_content_block .bg_white_block:before { content: ""; position: absolute; top: 0; left: 0; border-width: 0 42px 42px 0; border-style: solid; border-color: #ffffff #203553; box-shadow: 0 0 0 rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.3); -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg);}
@@ -549,8 +549,8 @@ textarea{resize: none;}
 .linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:after {content: "";opacity: 0;transition: all 0.5s ease-in-out;background-color: rgba(0, 0, 0, 0.75);position: absolute;right: 0;left: 0;top: 0;bottom: 0;}
 .linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:hover:after {opacity: 1;}
 
-.owl-carousel .owl-nav div.owl-prev{ background:url(../images/prev_small.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
-.owl-carousel .owl-nav div.owl-next{ background:url(../images/next_small.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
+.owl-carousel .owl-nav div.owl-prev{ background:url(../images/prev_small_black.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
+.owl-carousel .owl-nav div.owl-next{ background:url(../images/next_small_black.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
 
 .linkup_wrapper .linkup_section .padding_carousel .screen_title{text-align: center;background: #fff;width: 100%;    color: #132b4d;padding: 15px 10px;font-size: 15px;text-transform: uppercase;font-weight: bold;}
 .linkup_wrapper .linkup_section .padding_carousel .screen_title span{display: block;color: #888;margin-top: 5px;}
@@ -558,12 +558,30 @@ textarea{resize: none;}
 /*----------------------------End linkup page ------------------------------*/
 
 /*--------------------------- bottombar page ------------------------------*/
-.option-heading {cursor:pointer;color: #fff;line-height: 62px;padding: 0px 50px;background: #1f2532;position: fixed;bottom: 0;left: 0;z-index: 10;height: 60px;width: 100%;box-shadow: 0 -2px 9px rgba(31,37,50,.15);}
-.optioncontent{background: #ffffff;position: relative;z-index: 1;}
-.optioncontent .dashboard_wrapper{padding:10px;}
-.header_content{background: #1f2532;padding: 10px;color: #fff;position: relative;width: 100%;float: left;font-weight: 600;font-size: 14px;}
-.is-hidden{ display: none; }
-.optioncontent .alert-close{background: transparent;color: #fff;right: 5px;top: 5px;font-size: 24px;box-shadow: none;}
+
+/* .is-hidden{ display: none; } */
+.footer_fixed_block{position: relative;top: 0;left: 0;right:0;z-index: 9999;width:100%; margin-bottom: 10px;}
+.footer_fixed_block.register_header{position: fixed;top: 0;left: 0;right:0;z-index: 999999;width:100%;}
+.footer_fixed_block .linkup_wrapper{background:none;}
+.footer_fixed_block .owl-carousel .owl-nav div.owl-prev{ background:url(../images/prev_small.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
+.footer_fixed_block .owl-carousel .owl-nav div.owl-next{ background:url(../images/next_small.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
+.footer_fixed_block .footer_fixed_wrapper{ width: 100%; padding:15px 0 0 0; opacity: 0; background:rgba(0,0,0,0.85); visibility: hidden; position: absolute; top: -100%; left: 0; height:auto; transition:all 0.3s linear 0s;}
+.footer_fixed_block .footer_fixed_wrapper.active_up{opacity:1; visibility: visible; top: 38px; transition:all 0.3s linear 0s;}
+.footer_fixed_block .footer_bottom{background: #000;padding: 10px; position: relative; z-index: 99;}
+.footer_fixed_block .footer_bottom span{color:#fff; cursor: pointer;}
+.footer_fixed_block .footer_bottom span i{margin-left:7px;}
+.footer_fixed_block .footer_bottom span.active_i .fa-angle-double-down:before{content:"\f102"!important;}
+.footer_fixed_block .footer_fixed_header{float: left;width: 100%;padding: 10px;color: #fff;position: relative; margin-top:-40px;}
+.footer_fixed_block .footer_fixed_header .courses_li{margin-right:15px;}
+.footer_fixed_block .footer_fixed_header .courses_li li {display: inline-block;font-size: 10px;margin: 0 8px 0px 0;}
+.footer_fixed_block .footer_fixed_header .courses_li li span.success {background: #5CB85C;}
+.footer_fixed_block .footer_fixed_header .courses_li li span {height: 8px;width: 8px;margin-right: 5px;display: inline-block;}
+.footer_fixed_block .footer_fixed_header .courses_li li span.warning {background: #F0AD4E;}
+.footer_fixed_block .footer_fixed_header .courses_li li span.danger {background: #D9534F;}
+.footer_fixed_block .footer_fixed_section .owl-carousel-bottom .admin_border{border: 2px solid #5cb85c;}
+.footer_fixed_block .footer_fixed_section .owl-carousel-bottom .learner_border{border: 2px solid #F0AD4E}
+.footer_fixed_block .footer_fixed_section .owl-carousel-bottom .instructor_border{border: 2px solid #D9534F;}
+.footer_fixed_block .alert-close{background: transparent;color: #fff;right: 5px;top: 9px;font-size: 24px;box-shadow: none;}
 /*----------------------------End bottombar page ------------------------------*/
 
 @media (min-width: 768px) {

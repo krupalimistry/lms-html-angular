@@ -20,6 +20,53 @@ export class HeaderRegisterComponent implements OnInit {
     });	 
 	const body = document.querySelector('body');
 	body.style.setProperty('--screen-height', $(window).height()+"px");
+	
+	$('.owl-carousel-bottom').owlCarousel({
+      loop: true,
+      autoPlay: true,
+      nav: true,
+      dots: false,
+      margin: 30,
+      stopOnHover: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 5
+        },
+
+        300: {
+          items: 1
+        },
+        479: {
+          items: 2
+        },
+        600: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        979: {
+          items: 5
+        },
+        1024: {
+          items: 5
+        },
+        1199: {
+          items: 5
+        }
+      }
+    });
+
+    $(".alert-close").click(function () {
+      $(".footer_fixed_wrapper").removeClass("active_up");
+           $(".footer_bottom span").removeClass("active_i");
+    });
+
+    $(".footer_bottom span").click(function () {
+           $(".footer_fixed_wrapper").toggleClass("active_up");
+           $(".footer_bottom span").toggleClass("active_i");
+    });
   }
 
 }
