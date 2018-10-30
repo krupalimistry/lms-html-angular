@@ -12,26 +12,120 @@ export class LinkListComponent implements OnInit {
 
   ngOnInit() {
 
-      var owl = $('.owl-carousel');
-      owl.owlCarousel({
-        margin: 10,
-        nav: true,
-        dots: false,
-        loop: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 3
-          },
-          1000: {
-            items: 5
-          }
-        }
-      })
+    $('.owl-carousel-admin').owlCarousel({
+      loop: false,
+      autoPlay: false,
+      nav: false,
+      dots: false,
+      margin: 30,
+      stopOnHover: false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 4
+        },
 
+        300: {
+          items: 1
+        },
+        479: {
+          items: 2
+        },
+        600: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        979: {
+          items: 4
+        },
+        1024: {
+          items: 4
+        },
+        1199: {
+          items: 4
+        }
+      }
+    })
+
+
+
+    $('.owl-carousel-learner').owlCarousel({
+      loop: false,
+      autoPlay: false,
+      nav: true,
+      dots: false,
+      margin: 30,
+      stopOnHover: false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 4
+        },
+
+        300: {
+          items: 1
+        },
+        479: {
+          items: 2
+        },
+        600: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        979: {
+          items: 4
+        },
+        1024: {
+          items: 4
+        },
+        1199: {
+          items: 4
+        }
+      }
+    })
+
+
+
+    $('.owl-carousel-instructor').owlCarousel({
+      loop: false,
+      autoPlay: false,
+      nav: true,
+      dots: false,
+      margin: 30,
+      stopOnHover: false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 4
+        },
+
+        300: {
+          items: 1
+        },
+        479: {
+          items: 2
+        },
+        600: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        979: {
+          items: 4
+        },
+        1024: {
+          items: 4
+        },
+        1199: {
+          items: 4
+        }
+      }
+    })
 
   }
-
 }

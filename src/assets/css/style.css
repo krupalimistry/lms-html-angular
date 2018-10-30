@@ -534,23 +534,37 @@ textarea{resize: none;}
 /*--------------------------- linkup page ------------------------------*/
 .top_header .logo img{width: 75px;height: 75px;margin: 10px 0px;}
 .linkup_wrapper{background: #fff;}
-.linkup_wrapper .linkup_section .linkup_header{position: relative;width: 100%;float: left;clear: both;text-align: center;margin: 19px 0;}
-.linkup_wrapper .linkup_section .linkup_header h2{padding: 0 10px;line-height: 26px;color: #111;font-weight: 600;text-transform: uppercase;display: inline-block;font-size: 14px;background-color: #fff;vertical-align: middle;position: relative;z-index: 1;}
-.linkup_wrapper .linkup_section .linkup_header h2 span {position: relative;top: -1px;vertical-align: middle;font-size: 12px;border: 1px solid #111;border-radius: 20px;color: #111;padding: 2px 10px;margin: 0 5px;}
-.linkup_wrapper .linkup_section .linkup_header:after {content: "";background: #111;position: absolute;width: 100%;top: 0;left: 0;margin: 13px 0 0;height: 1px;}
-#demos .owl-carousel {margin: 2rem 0;padding: 0px 132px;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item{position: relative;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul li {transition: all 0.5s ease-in-out 0s;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul {position: absolute;z-index: 2;bottom: 50px;text-align: center;width: 100%;padding-left: 0px;height: 0px;margin: 0px;opacity: 0;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul li {display: inline-block;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul li a {border: 1px solid #000;width: 35px;height: 35px;font-size: 12px;display: block;margin: 0 3px;line-height: 35px;border: 1px solid #fff;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul a {transition: all 0.3s ease-in-out 0s;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item ul li a span.fa {color: #fff;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item:hover ul {opacity: 1;margin-bottom: 15px;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item:after {content: "";opacity: 0;background-color: rgba(0, 0, 0, 0.75);position: absolute;right: 0;left: 0;top: 0;bottom: 0;}
-.linkup_wrapper .linkup_section #demos .owl-carousel.owl-theme .item:hover:after {opacity: 1;}
-.owl-theme .owl-nav{position: absolute;top: 25px;left: 0px;}
+.linkup_wrapper .linkup_section .linkup_header{position: relative;width: 100%;float: left;clear: both;text-align: center;margin:25px 0px;}
+.linkup_wrapper .linkup_section .linkup_header h2{padding: 0 10px;line-height: 26px;color: #d2d2d2;font-weight: 600;text-transform: uppercase;display: inline-block;font-size: 14px;background-color: #fff;vertical-align: middle;position: relative;z-index: 1;margin-bottom: 0px;}
+.linkup_wrapper .linkup_section .linkup_header h2 span {position: relative;top: -1px;vertical-align: middle;font-size: 12px;border: 1px solid #d2d2d2;border-radius: 20px;color: #d2d2d2;padding: 2px 10px;margin: 0 5px;}
+.linkup_wrapper .linkup_section .linkup_header:after {content: "";background: #d2d2d2;position: absolute;width: 100%;top: 0;left: 0;margin: 13px 0 0;height: 1px;}
+
+.linkup_wrapper .linkup_section .padding_carousel .box-shadow-item{position: relative;border: 1px solid #d6d6d6;}
+.linkup_wrapper .linkup_section .padding_carousel .figercaption span {transition: all 0.5s ease-in-out 0s;}
+.linkup_wrapper .linkup_section .padding_carousel .figercaption {position: absolute;z-index: 2;transition: all 0.5s ease-in-out;bottom: 90px;text-align: center;width: 100%;padding-left: 0px;height: 0px;margin: 0px;opacity: 0;}
+.linkup_wrapper .linkup_section .padding_carousel .figercaption span {display: inline-block;}
+.linkup_wrapper .linkup_section .padding_carousel .figercaption span a {font-size: 14px;border: 1px solid #fff;color: #fff;text-transform: uppercase;padding: 6px 10px;}
+.linkup_wrapper .linkup_section .padding_carousel .figercaption a {transition: all 0.3s ease-in-out 0s;}
+.linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:hover .figercaption {opacity: 1;margin-bottom: 15px;}
+.linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:after {content: "";opacity: 0;transition: all 0.5s ease-in-out;background-color: rgba(0, 0, 0, 0.75);position: absolute;right: 0;left: 0;top: 0;bottom: 0;}
+.linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:hover:after {opacity: 1;}
+
+.owl-carousel .owl-nav div.owl-prev{ background:url(../images/prev_small.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
+.owl-carousel .owl-nav div.owl-next{ background:url(../images/next_small.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
+
+.linkup_wrapper .linkup_section .padding_carousel .screen_title{text-align: center;background: #fff;width: 100%;    color: #132b4d;padding: 15px 10px;font-size: 15px;text-transform: uppercase;font-weight: bold;}
+.linkup_wrapper .linkup_section .padding_carousel .screen_title span{display: block;color: #888;margin-top: 5px;}
+.owl-carousel.owl-drag .owl-item{margin-bottom: 10px!important;margin-right: 7px!important;margin-left: 16px;width: 300px!important;}
 /*----------------------------End linkup page ------------------------------*/
+
+/*--------------------------- bottombar page ------------------------------*/
+.option-heading {cursor:pointer;color: #fff;line-height: 62px;padding: 0px 50px;background: #1f2532;position: fixed;bottom: 0;left: 0;z-index: 10;height: 60px;width: 100%;box-shadow: 0 -2px 9px rgba(31,37,50,.15);}
+.optioncontent{background: #ffffff;position: relative;z-index: 1;}
+.optioncontent .dashboard_wrapper{padding:10px;}
+.header_content{background: #1f2532;padding: 10px;color: #fff;position: relative;width: 100%;float: left;font-weight: 600;font-size: 14px;}
+.is-hidden{ display: none; }
+.optioncontent .alert-close{background: transparent;color: #fff;right: 5px;top: 5px;font-size: 24px;box-shadow: none;}
+/*----------------------------End bottombar page ------------------------------*/
 
 @media (min-width: 768px) {
     .account_menu ul li ul.dropdown-menu {display:block; opacity:0; top:100px; visibility:hidden; -moz-transition: all .25s ease-out;-ms-transition: all .25s ease-out;-o-transition: all .25s ease-out;transition: all .25s ease-out; }
