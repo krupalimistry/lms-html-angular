@@ -15,7 +15,12 @@
 		<div class="col-md-10 col-sm-9 col-xs-10">
 				<div class="header_left pull-left"><a routerLink="/link-list"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
 		<div class="header_right pull-right"><ul class="notification">
-				<li class="user_indicator">Learner</li>
+				<li class="user_indicator">
+					<span *ngIf="globals.authData.RoleId==1">SuperAdmin</span>
+					<span *ngIf="globals.authData.RoleId==2">Admin</span>
+					<span *ngIf="globals.authData.RoleId==3">Instructor</span>
+					<span *ngIf="globals.authData.RoleId==4">Learner</span>
+				</li>
 				<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-comments-o" aria-hidden="true"></i><span class="badge1">3</span></a></li>
 				<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span class="badge2">5</span></a></li>
 				<li><a href="#"><i class="fa fa-life-ring" aria-hidden="true"></i></a></li>
