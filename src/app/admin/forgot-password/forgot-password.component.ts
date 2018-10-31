@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare function myInput() : any;
 
 @Component({
   selector: 'app-forgot-password',
@@ -10,6 +11,7 @@ export class ForgotPasswordComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    myInput();
   }
 
 }
