@@ -139,7 +139,7 @@ select option{ background:#ddd!important; padding:5px!important; color:#2e2d31!i
 .file_upload input[type="text"]{background:url(../images/upload.png) 98% center no-repeat; background-size:18px;}
 .file_upload input[type="file"]{opacity: 0; position: absolute; left: 0; top: 0; z-index: 99; width: 100%; cursor: pointer;}
 
-.register_tab { border: 0; margin: 10px 0 0;text-align: center;}
+.register_tab { border: 0; margin: 20px 0 0;text-align: center;}
 .register_tab li { display: inline-block;float: none;}
 .register_tab li::after { border-bottom: 1px solid #fff; content: ""; left: 60px; position: absolute; top: 50%; width: 73px;}
 .register_tab li a {outline:none; background: transparent !important; border: 1px solid #fff!important; border-radius: 100%; color: #fff !important; font-size: 25px; height: 60px; margin: 0 70px 0 0; padding: 10px; text-align: center; width: 60px;}
@@ -149,6 +149,9 @@ select option{ background:#ddd!important; padding:5px!important; color:#2e2d31!i
 .register_tab li:last-child a{margin:0;}
 
 .error_span { color: #ff0000; font-size: 10px; position: absolute;padding-top: 3px;}
+.white_form_block .padding_box .preview_tab h1{padding: 0px 15px;}
+.white_form_block .padding_box .preview_tab p span{display:block;color: #102749;font-size: 12px;font-weight: bold;}
+.white_form_block .tab_logo img{width: 60px;height: 60px;margin: 0 auto;}
 /*--------------End Register Login--------------------*/
 
 /* ------- Sidebar Area Start ------- */
