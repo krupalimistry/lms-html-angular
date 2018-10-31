@@ -64,7 +64,7 @@ header .logo {padding: 2px 0;}
 header .logo .logo_text{font-family: 'OpenSans-Light'; width:75%; font-size: 30px; letter-spacing: -1px; text-decoration: none; text-transform: uppercase; color: #fff; line-height: 30px;}
 header .logo .toggle{background: rgba(0, 0, 0, 0.3);border-radius: 3px;color:#fff;cursor: pointer;display: block;height: 30px;line-height: 30px;text-align: center;width: 30px; border: 0; position: relative; right: -20px;}
 
-header.register_header{position:relative; padding-top:35px;}
+header.register_header{position:relative; padding-top:35px; z-index: 999;}
 header.register_header .logo {padding: 5px 0; width:100%; text-align:center;}
 header.register_header .logo a{margin:auto; width:350px; display:block;}
 
@@ -530,13 +530,6 @@ textarea{resize: none;}
 /*----------------------------End learner dashboard ------------------------------*/
 
 /*--------------------------- welcome page ------------------------------*/
-
-.welcome_page{text-align: center;}
-.welcome_page .logo img{width: 125px;height: 125px;margin: 0px auto 20px;}
-
-.welcome_page .white_form_block{text-align: center;}
-.welcome_page .logo_welcome img{width: 125px;height: 125px;margin: 0px auto 20px;}
-
 .welcome_page .white_form_block{text-align: center;}
 .welcome_page .logo_welcome img{width: 125px;height: 125px;margin: 0px auto 20px;}
 /*----------------------------End welcome page ------------------------------*/

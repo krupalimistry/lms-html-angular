@@ -177,7 +177,7 @@ $('body').tooltip({
     $('.owl-carousel-instructor').owlCarousel({
       loop: false,
       autoPlay: false,
-      nav: true,
+      nav: false,
       dots: false,
       margin: 30,
       stopOnHover: false,
