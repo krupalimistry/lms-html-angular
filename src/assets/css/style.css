@@ -524,11 +524,22 @@ textarea{resize: none;}
 .learner_dashboard .rated_course_block{height: 410px;}
 .learner_dashboard .audit_block{height: 415px;}
 .learner_dashboard .users_block{height: 300px;}
+.fliter_section h3{margin: 0px;padding-left: 15px;font-size: 16px;}
+.fliter_section{float: left;width: 100%;padding: 0px 0px 15px 0px;}
+.fliter_section .next_btn{margin-top: 15px;}
 /*----------------------------End learner dashboard ------------------------------*/
 
 /*--------------------------- welcome page ------------------------------*/
+<<<<<<< HEAD
 .welcome_page{text-align: center;}
 .welcome_page .logo img{width: 125px;height: 125px;margin: 0px auto 20px;}
+
+.welcome_page .white_form_block{text-align: center;}
+.welcome_page .logo_welcome img{width: 125px;height: 125px;margin: 0px auto 20px;}
+=======
+>>>>>>> a89f77640dcba4ce24cb1b29e12976516fe3f646
+.welcome_page .white_form_block{text-align: center;}
+.welcome_page .logo_welcome img{width: 125px;height: 125px;margin: 0px auto 20px;}
 /*----------------------------End welcome page ------------------------------*/
 
 /*--------------------------- linkup page ------------------------------*/
@@ -565,7 +576,6 @@ textarea{resize: none;}
 .linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:after {content: "";opacity: 0;transition: all 0.5s ease-in-out;background-color: rgba(0, 0, 0, 0.75);position: absolute;right: 0;left: 0;top: 0;bottom: 0;}
 .linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:hover:after {opacity: 1;}
 .linkup_wrapper .linkup_section .padding_carousel .box-shadow-item.active_currentpage:after{opacity:1; background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0; content: ""; display: block;height: 100%;left: 0; position: absolute; top: 0;width: 100%;}
-
 
 .owl-carousel .owl-nav div.owl-prev{ background:url(../images/prev_small_black.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
 .owl-carousel .owl-nav div.owl-next{ background:url(../images/next_small_black.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
