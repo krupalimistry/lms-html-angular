@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '../globals';
 declare var $: any;
 
 @Component({
@@ -8,7 +9,7 @@ declare var $: any;
 })
 export class HeaderRegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
 	  $('body').tooltip({
