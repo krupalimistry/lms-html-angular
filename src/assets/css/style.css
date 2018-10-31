@@ -530,14 +530,13 @@ textarea{resize: none;}
 /*----------------------------End learner dashboard ------------------------------*/
 
 /*--------------------------- welcome page ------------------------------*/
-<<<<<<< HEAD
+
 .welcome_page{text-align: center;}
 .welcome_page .logo img{width: 125px;height: 125px;margin: 0px auto 20px;}
 
 .welcome_page .white_form_block{text-align: center;}
 .welcome_page .logo_welcome img{width: 125px;height: 125px;margin: 0px auto 20px;}
-=======
->>>>>>> a89f77640dcba4ce24cb1b29e12976516fe3f646
+
 .welcome_page .white_form_block{text-align: center;}
 .welcome_page .logo_welcome img{width: 125px;height: 125px;margin: 0px auto 20px;}
 /*----------------------------End welcome page ------------------------------*/
