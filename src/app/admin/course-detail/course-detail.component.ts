@@ -62,7 +62,7 @@ export class CourseDetailComponent implements AfterViewChecked {
             title: 'Success...!!!',
 						text: 'Your payment is successfully.',
 						showConfirmButton: false,
-        		timer: 1500
+        		timer: 3000
             })   
 				}, 
 				(error) => 
