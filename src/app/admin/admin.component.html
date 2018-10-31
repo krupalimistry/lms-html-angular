@@ -5,7 +5,7 @@
     </div>
 </div>
 
-<div class="height_100_box" *ngIf="globals.IsLoggedIn && globals.currentLink!='/link-list'">
+<div class="height_100_box" *ngIf="globals.IsLoggedIn && (globals.currentLink!='/link-list') && (globals.currentLink!='/welcome')">
 <app-header></app-header> 
 <app-sidebar></app-sidebar> 
 <div class="right_content_block">
@@ -18,8 +18,8 @@
 </div>
 </div>
 
-<div class="height_100_box" *ngIf="!globals.IsLoggedIn && globals.currentLink!='/link-list'">
+<div class="height_100_box" *ngIf="!globals.IsLoggedIn && (globals.currentLink!='/link-list') && (globals.currentLink=='/welcome')">
 	<router-outlet></router-outlet>
 </div>
 
-<router-outlet *ngIf="globals.currentLink=='/link-list'"></router-outlet>
+<router-outlet *ngIf="(globals.currentLink=='/link-list') || (globals.currentLink!='/welcome')"></router-outlet>

@@ -527,8 +527,8 @@ textarea{resize: none;}
 /*----------------------------End learner dashboard ------------------------------*/
 
 /*--------------------------- welcome page ------------------------------*/
-.welcome_page{text-align: center;}
-.welcome_page .logo img{width: 125px;height: 125px;margin: 0px auto 20px;}
+.welcome_page .white_form_block{text-align: center;}
+.welcome_page .logo_welcome img{width: 125px;height: 125px;margin: 0px auto 20px;}
 /*----------------------------End welcome page ------------------------------*/
 
 /*--------------------------- linkup page ------------------------------*/
@@ -565,7 +565,6 @@ textarea{resize: none;}
 .linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:after {content: "";opacity: 0;transition: all 0.5s ease-in-out;background-color: rgba(0, 0, 0, 0.75);position: absolute;right: 0;left: 0;top: 0;bottom: 0;}
 .linkup_wrapper .linkup_section .padding_carousel .box-shadow-item:hover:after {opacity: 1;}
 .linkup_wrapper .linkup_section .padding_carousel .box-shadow-item.active_currentpage:after{opacity:1; background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0; content: ""; display: block;height: 100%;left: 0; position: absolute; top: 0;width: 100%;}
-
 
 .owl-carousel .owl-nav div.owl-prev{ background:url(../images/prev_small_black.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
 .owl-carousel .owl-nav div.owl-next{ background:url(../images/next_small_black.png) left top no-repeat; width:25px; height:25px; display:inline-block;background-size:100%;} 
