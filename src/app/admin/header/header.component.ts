@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
       nav: true,
       dots: false,
       margin: 30,
+	  center:true,
       stopOnHover: true,
       responsiveClass: true,
       responsive: {

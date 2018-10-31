@@ -1,106 +1,32 @@
 <div class="top_header">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 col-sm-12">
-				<div class="pull-left logo">
-					<a class="logo_text"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a>
+			<div class="col-md-6 col-sm-12 text-left">
+					<a class="logo_lms"><img src="../assets/images/logo.png" class="img-responsive" alt="" /><span>All Screens</span></a>
 				</div>
-				<div class="pull-right header_title">
-					<h3>Learning Manaegment System(LMS) Screens</h3>
+				<div class="col-md-6 col-sm-12 text-right">
+					<a class="logo_oe"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 <div class="clearfix"></div>
 <div class="linkup_wrapper">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
-				<div class="linkup_section admin_linkup">
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingOne">
-								<h4 class="panel-title">
-									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-									 aria-controls="collapseOne">
-										<div class="linkup_header">
-											<h2>Admin Section <span>4</span></h2>
-										</div>
-										<div class="clearfix"></div>
-									</a>
-								</h4>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-								<div class="panel-body">
-									<div class="padding_carousel">
-										<div class="owl-carousel-admin">
-											<div class="owl-item">
-												<div class="box-shadow-item">
-													<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-													<div class="figercaption text-center">
-														<span><a routerlink="/login" ng-reflect-router-link="/login" href="/login">View Screen</a></span>
-													</div>
-													<div class="screen_title">
-														Login
-													</div>
-												</div>
-											</div>
-											<div class="owl-item">
-												<div class="box-shadow-item">
-													<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-													<div class="figercaption text-center">
-														<span><a routerlink="/forgot-password" ng-reflect-router-link="/forgot-password" href="/forgot-password">View
-																Screen</a></span>
-													</div>
-													<div class="screen_title">
-														Forgot Password
-													</div>
-												</div>
-											</div>
-											<div class="owl-item">
-												<div class="box-shadow-item">
-													<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-													<div class="figercaption text-center">
-														<span><a routerlink="/dashboard-admin" ng-reflect-router-link="/dashboard-admin" href="/dashboard-admin">View
-																Screen</a></span>
-													</div>
-													<div class="screen_title">
-														Dashboard
-													</div>
-												</div>
-											</div>
-											<div class="owl-item">
-												<div class="box-shadow-item">
-													<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-													<div class="figercaption text-center">
-														<span><a routerlink="/edit-profile" ng-reflect-router-link="/edit-profile" href="/edit-profile">View
-																Screen</a></span>
-													</div>
-													<div class="screen_title">
-														Edit Profile
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- 
+				<div class="linkup_section admin_linkup active_slider_admin">
 					<div class="linkup_header">
-						<h2>Admin Section <span>4</span></h2>
+						<div class="border_h2"><h2>Admin Section <span class="number">4</span></h2><div class="plus-minus" data-toggle="collapse" href="#collapseadmin" aria-expanded="false" aria-controls="collapseadmin"><span data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div><div class="expand expand_admin"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div></div>
 					</div>
-					<div class="clearfix"></div> -->
-					<!-- <div class="padding_carousel">
-						<div class="owl-carousel-admin">
+					<div class="clearfix"></div>
+					 <div class="padding_carousel collapse in" id="collapseadmin">
+						<div class="slider_admin owl-carousel-admin">
 							<div class="owl-item">
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/login" ng-reflect-router-link="/login" href="/login">View Screen</a></span>
+										<span><a routerLink="/login">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Login
@@ -111,7 +37,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/forgot-password" ng-reflect-router-link="/forgot-password" href="/forgot-password">View
+										<span><a routerLink="/forgot-password" >View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -123,7 +49,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/dashboard-admin" ng-reflect-router-link="/dashboard-admin" href="/dashboard-admin">View
+										<span><a routerLink="/dashboard-admin">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -135,7 +61,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/edit-profile" ng-reflect-router-link="/edit-profile" href="/edit-profile">View Screen</a></span>
+										<span><a routerLink="/edit-profile" >View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Edit Profile
@@ -144,159 +70,22 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-					</div> -->
+					</div>
 				</div>
 				<div class="clearfix"></div>
 				<div class="linkup_section learner_linkup">
-					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingTwo">
-							<h4 class="panel-title">
-								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-								 aria-controls="collapseTwo">
-									<div class="linkup_header">
-										<h2>Learner Section <span>10</span></h2>
-									</div>
-									<div class="clearfix"></div>
-								</a>
-							</h4>
-						</div>
-						<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-							<div class="panel-body">
-								<div class="padding_carousel">
-									<div class="owl-carousel-learner">
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/register-learner" ng-reflect-router-link="/register-learner" href="/register-learner">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Register
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/login" ng-reflect-router-link="/login" href="/login">View Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Login
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/forgot-password" ng-reflect-router-link="/forgot-password" href="/forgot-password">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Forgot Password
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/dashboard-learner" ng-reflect-router-link="/dashboard-learner" href="/dashboard-learner">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Dashboard
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/edit-profile" ng-reflect-router-link="/edit-profile" href="/edit-profile">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Edit Profile
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/learner-courses" ng-reflect-router-link="/learner-courses" href="/learner-courses">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Your Course
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/course-detail" ng-reflect-router-link="/course-detail" href="/course-detail">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Course Detail
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/course-list" ng-reflect-router-link="/course-list" href="/course-list">View Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Course List
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/calendar" ng-reflect-router-link="/calendar" href="/calendar">View Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Scheduler
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/certificate" ng-reflect-router-link="/certificate" href="/certificate">View Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Certificates & Badges
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
+					<div class="linkup_header">
+						<div class="border_h2"><h2>Learner Section <span class="number">10</span></h2><div class="plus-minus" data-toggle="collapse" href="#collapselearner" aria-expanded="false" aria-controls="collapselearner"><span data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div><div class="expand expand_learner"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div></div>
 					</div>
-					<!-- <div class="linkup_header">
-						<h2>Learner Section <span>10</span></h2>
-					</div>
-					<div class="clearfix"></div> -->
-					<!-- <div class="padding_carousel">
-						<div class="owl-carousel-learner">
+					<div class="clearfix"></div>
+					 <div class="padding_carousel collapse in" id="collapselearner">
+				
+						<div class="slider_leaner owl-carousel-learner">
 							<div class="owl-item">
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/register-learner" ng-reflect-router-link="/register-learner" href="/register-learner">View
+										<span><a routerLink="/register-learner">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -308,7 +97,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/login" ng-reflect-router-link="/login" href="/login">View Screen</a></span>
+										<span><a routerLink="/login">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Login
@@ -319,7 +108,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/forgot-password" ng-reflect-router-link="/forgot-password" href="/forgot-password">View
+										<span><a routerLink="/forgot-password">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -331,7 +120,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/dashboard-learner" ng-reflect-router-link="/dashboard-learner" href="/dashboard-learner">View
+										<span><a routerLink="/dashboard-learner" ng-reflect-router-link="/dashboard-learner" href="/dashboard-learner">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -343,7 +132,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/edit-profile" ng-reflect-router-link="/edit-profile" href="/edit-profile">View Screen</a></span>
+										<span><a routerLink="/edit-profile">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Edit Profile
@@ -354,7 +143,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/learner-courses" ng-reflect-router-link="/learner-courses" href="/learner-courses">View
+										<span><a routerLink="/learner-courses">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -366,7 +155,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/course-detail" ng-reflect-router-link="/course-detail" href="/course-detail">View
+										<span><a routerLink="/course-detail">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -378,7 +167,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/course-list" ng-reflect-router-link="/course-list" href="/course-list">View Screen</a></span>
+										<span><a routerLink="/course-list">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Course List
@@ -389,7 +178,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/calendar" ng-reflect-router-link="/calendar" href="/calendar">View Screen</a></span>
+										<span><a routerLink="/calendar" >View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Scheduler
@@ -400,7 +189,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/certificate" ng-reflect-router-link="/certificate" href="/certificate">View Screen</a></span>
+										<span><a routerLink="/certificate">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Certificates & Badges
@@ -409,150 +198,21 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-					</div> -->
-				</div>
+					</div></div>
+				
 				<div class="clearfix"></div>
 				<div class="linkup_section instructor_linkup">
-					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingThree">
-							<h4 class="panel-title">
-								<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-								 aria-controls="collapseThree">
-									<div class="linkup_header">
-										<h2>Instructor Section <span>9</span></h2>
-									</div>
-									<div class="clearfix"></div>
-
-								</a>
-							</h4>
-						</div>
-						<div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-							<div class="panel-body">
-								<div class="padding_carousel">
-									<div class="owl-carousel-instructor">
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/register-instructor" ng-reflect-router-link="/register-instructor" href="/register-instructor">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Register
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/login" ng-reflect-router-link="/login" href="/login">View Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Login
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/forgot-password" ng-reflect-router-link="/forgot-password" href="/forgot-password">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Forgot Password
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/dashboard-instructor" ng-reflect-router-link="/dashboard-instructor" href="/dashboard-instructor">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Dashboard
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/edit-profile" ng-reflect-router-link="/edit-profile" href="/edit-profile">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Edit Profile
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/instructor-course-form" ng-reflect-router-link="/instructor-course-form" href="/instructor-course-form">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Course Form
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/instructor-courses" ng-reflect-router-link="/instructor-courses" href="/instructor-courses">View
-															Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Courses List
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/calendar" ng-reflect-router-link="/calendar" href="/calendar">View Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Scheduler
-												</div>
-											</div>
-										</div>
-										<div class="owl-item">
-											<div class="box-shadow-item">
-												<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-												<div class="figercaption text-center">
-													<span><a routerlink="/certificate" ng-reflect-router-link="/certificate" href="/certificate">View Screen</a></span>
-												</div>
-												<div class="screen_title">
-													Certificates & Badges
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- <div class="linkup_header">
-						<h2>Instructor Section <span>9</span></h2>
+					<div class="linkup_header">
+						<div class="border_h2"><h2>Instructor Section <span class="number">9</span></h2><div class="plus-minus" data-toggle="collapse" href="#collapseinstructor" aria-expanded="false" aria-controls="collapseinstructor"><span data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div><div class="expand expand_instructor"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div></div>
 					</div>
 					<div class="clearfix"></div>
- -->
-					<!-- <div class="padding_carousel">
-						<div class="owl-carousel-instructor">
+					 <div class="padding_carousel collapse in" id="collapseinstructor">
+						<div class="slider_instructor owl-carousel-instructor">
 							<div class="owl-item">
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/register-instructor" ng-reflect-router-link="/register-instructor" href="/register-instructor">View
+										<span><a routerLink="/register-instructor">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -564,7 +224,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/login" ng-reflect-router-link="/login" href="/login">View Screen</a></span>
+										<span><a routerLink="/login">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Login
@@ -575,7 +235,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/forgot-password" ng-reflect-router-link="/forgot-password" href="/forgot-password">View
+										<span><a routerLink="/forgot-password">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -587,7 +247,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/dashboard-instructor" ng-reflect-router-link="/dashboard-instructor" href="/dashboard-instructor">View
+										<span><a routerLink="/dashboard-instructor">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -599,7 +259,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/edit-profile" ng-reflect-router-link="/edit-profile" href="/edit-profile">View Screen</a></span>
+										<span><a routerLink="/edit-profile">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Edit Profile
@@ -610,7 +270,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/instructor-course-form" ng-reflect-router-link="/instructor-course-form" href="/instructor-course-form">View
+										<span><a routerLink="/instructor-course-form">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -622,7 +282,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/instructor-courses" ng-reflect-router-link="/instructor-courses" href="/instructor-courses">View
+										<span><a routerLink="/instructor-courses">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -634,7 +294,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/calendar" ng-reflect-router-link="/calendar" href="/calendar">View Screen</a></span>
+										<span><a routerLink="/calendar">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Scheduler
@@ -645,7 +305,7 @@
 								<div class="box-shadow-item">
 									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerlink="/certificate" ng-reflect-router-link="/certificate" href="/certificate">View Screen</a></span>
+										<span><a routerLink="/certificate">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Certificates & Badges
@@ -654,11 +314,18 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-					</div> -->
+					</div> 
+					</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
 	</div>
+<div class="clearfix"></div>
+<div class="footer_link">
+	<div class="col-md-6 col-sm-12 text-left">© 2018 <a href="#" target="_blank">Learning Management System</a></div>
+	<div class="col-md-6 col-sm-12 text-right">Powered by <a href="http://www.theopeneyes.com/" target="_blank" title="Open in new window">OpenEyes
+			Technologies, Inc.</a></div>
+	<div class="clearfix"></div>
 </div>
 <div class="clearfix"></div>

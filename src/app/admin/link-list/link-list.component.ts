@@ -11,7 +11,44 @@ export class LinkListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+$('body').tooltip({
+        selector: '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])',
+        trigger: 'hover',
+        container: 'body'
+    }).on('click mousedown mouseup', '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])', function () {
+        $('[data-toggle="tooltip"], [title]:not([data-toggle="popover"])').tooltip('destroy');
+    });	
+  $(".expand_learner").click(function () {
+        $(".learner_linkup").toggleClass("active_slider");
+		$(".expand_learner").toggleClass("active_down");
+        $(".slider_leaner").toggleClass("owl-carousel");
+		$(".slider_leaner").toggleClass("owl-carousel-learner");
+		$(".slider_leaner").toggleClass("owl-theme");
+		$(".slider_leaner").toggleClass("owl-responsive-1199");
+		$(".slider_leaner").toggleClass("owl-loaded");
+    });
+  
+  
+  $(".expand_admin").click(function () {
+        $(".admin_linkup").toggleClass("active_slider");
+		$(".expand_admin").toggleClass("active_down");
+        $(".slider_admin").toggleClass("owl-carousel");
+		$(".slider_admin").toggleClass("owl-carousel-admin");
+		$(".slider_admin").toggleClass("owl-theme");
+		$(".slider_admin").toggleClass("owl-responsive-1199");
+		$(".slider_admin").toggleClass("owl-loaded");
+    });
+	
+	$(".expand_instructor").click(function () {
+        $(".instructor_linkup").toggleClass("active_slider");
+		$(".expand_instructor").toggleClass("active_down");
+        $(".slider_instructor").toggleClass("owl-carousel");
+		$(".slider_instructor").toggleClass("owl-carousel-instructor");
+		$(".slider_instructor").toggleClass("owl-theme");
+		$(".slider_instructor").toggleClass("owl-responsive-1199");
+		$(".slider_instructor").toggleClass("owl-loaded");
+    });
+  
     $('.owl-carousel-admin').owlCarousel({
       loop: false,
       autoPlay: false,
