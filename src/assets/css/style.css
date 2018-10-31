@@ -607,6 +607,8 @@ textarea{resize: none;}
 .footer_fixed_block .footer_fixed_header .courses_li li span {height: 8px;width: 8px;margin-right: 5px;display: inline-block;}
 .footer_fixed_block .footer_fixed_header .courses_li li span.warning {background: #F0AD4E;}
 .footer_fixed_block .footer_fixed_header .courses_li li span.danger {background: #D9534F;}
+.footer_fixed_block .footer_fixed_header .courses_li li span.info {background: #bce8f1;}
+.footer_fixed_block .footer_fixed_section .owl-carousel-bottom .profile_border{border: 2px solid #bce8f1;}
 .footer_fixed_block .footer_fixed_section .owl-carousel-bottom .admin_border{border: 2px solid #5cb85c;}
 .footer_fixed_block .footer_fixed_section .owl-carousel-bottom .learner_border{border: 2px solid #F0AD4E}
 .footer_fixed_block .footer_fixed_section .owl-carousel-bottom .instructor_border{border: 2px solid #D9534F;}

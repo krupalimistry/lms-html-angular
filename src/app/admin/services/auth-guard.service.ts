@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
 	} else {
 		this.globals.currentLink = '/'+state.url.split('/')[1];
 	}
-
+	
 	if(this.globals.currentLink=='/dashboard-admin'){
 		this.globals.currentLinkName = 'Dashboard Admin';
 	} else if(this.globals.currentLink=='/dashboard-learner') {
