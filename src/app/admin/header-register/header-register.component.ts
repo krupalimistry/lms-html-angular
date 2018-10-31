@@ -23,7 +23,7 @@ export class HeaderRegisterComponent implements OnInit {
 	body.style.setProperty('--screen-height', $(window).height()+"px");
 	
 	$('.owl-carousel-bottom').owlCarousel({
-      loop: true,
+      loop: false,
       autoPlay: true,
       nav: true,
       dots: false,

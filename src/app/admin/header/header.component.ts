@@ -24,12 +24,11 @@ export class HeaderComponent implements OnInit {
     });	 
     
     $('.owl-carousel-bottom').owlCarousel({
-      loop: true,
+      loop: false,
       autoPlay: true,
       nav: true,
       dots: false,
       margin: 30,
-	  center:true,
       stopOnHover: true,
       responsiveClass: true,
       responsive: {

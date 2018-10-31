@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare function myInput() : any;
 declare var CKEDITOR, Dropzone, $: any;
 
 @Component({
@@ -14,6 +15,7 @@ export class InstructorCourseFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+	   myInput();
 this.secondform = false;
     var item = { 'Name': ''};
     this.CourseFormList = [];
