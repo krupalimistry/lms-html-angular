@@ -6,7 +6,7 @@
 		</div>
 		<div class="col-md-8 col-sm-8">
 			<div class="welcome_message alert" role="alert">
-				<i class="fa fa-info"></i>Welcome back, <strong>Dave Mattew!</strong> You last sign in at 16:54 PM on 09/20/2018
+				<i class="fa fa-info"></i>Welcome back, <strong>Super Admin!</strong> You last sign in at 16:54 PM on 09/20/2018
 				 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 		</div>
@@ -16,7 +16,7 @@
 				<ul class="breadcrumb">
 					<li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i></a></li>
 					<li class="breadcrumb-item"><a href="#">Courses</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Angular</li>
+					<li class="breadcrumb-item active" aria-current="page">Corse-detail</li>
 				</ul>
 				<div class="clearfix"></div>
 			</div>
@@ -29,7 +29,7 @@
 </div>
 <div class="content_block course_detail_block">
    <div class="col-md-9 col-sm-9">
-		<h1 class="no_margin">Angular</h1>
+		<h1 class="no_margin">Angular Material 2 Design For Programmers and CSS Newbies</h1>
 	   <div class="stars_block"><a href=""><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o" aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></a>| <a href="" class="review_link">Write a Review</a></div>
 	   <div class="clearfix"></div>
 	   <p class="padding_15"><video width="350" height="200" controls class="pull-left video_margin" poster="../assets/images/video.jpg"><source src="../assets/images/angular.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>Angular is a TypeScript-based open-source front-end web application platform led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. Originally, the rewrite of AngularJS was called "Angular 2" by the team, but this led to confusion among developers. To clarify, the team announced that separate terms should be used for each framework with "AngularJS" referring to the 1.X versions and "Angular" without the "JS" referring to versions 2 and up.</p>
@@ -195,7 +195,8 @@
 			  <strong><i class="fa fa-check"></i> Attending:</strong> 30</p>
 			  <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
 			<div class="text-center">
-				<div id="paypal-checkout-btn"></div>
+					<a routerLink="/payment" class="next_btn">Enroll Now</a>
+				<!-- <div id="paypal-checkout-btn"></div> -->
 				<!-- <a id="paypal-checkout-btn" class="next_btn">Register</a> -->
 		</div>
 		</div>

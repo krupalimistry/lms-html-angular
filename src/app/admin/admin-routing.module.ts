@@ -42,6 +42,7 @@ import { LearnerCoursesComponent } from './learner-courses/learner-courses.compo
 import { InstructorCourseFormComponent } from './instructor-course-form/instructor-course-form.component';
 import { InstructorCoursesComponent } from './instructor-courses/instructor-courses.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [	
   {
@@ -70,6 +71,7 @@ const routes: Routes = [
 				  { path : 'instructor-course-form', component : InstructorCourseFormComponent,canActivate : [AuthGuard] },
 				  { path : 'instructor-courses', component : InstructorCoursesComponent,canActivate : [AuthGuard] },
 				  { path : 'welcome', component : WelcomeComponent,canActivate : [AuthGuard] },
+				  { path : 'payment', component : PaymentComponent,canActivate : [AuthGuard] },
 				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path : '**', redirectTo : 'link-list' }
         
