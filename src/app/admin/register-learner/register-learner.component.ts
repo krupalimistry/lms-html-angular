@@ -56,23 +56,23 @@ export class RegisterLearnerComponent implements OnInit {
 		//    $(".register_tab li").removeClass("active");
 		//    $(".register_tab li#loginli").addClass("active");
 	  //  });
-	  //  var skills = new Bloodhound({
-		//   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
-		//   queryTokenizer: Bloodhound.tokenizers.whitespace,
-		//   prefetch: {
-		// 	url: '../assets/skills.json'
-		//   }
-		// });
-		// skills.initialize();
-		// 	 var elt = $('#skills');
-		// 		elt.tagsinput({
-		// 		  typeaheadjs: {
-		// 			name: 'skills',
-		// 			displayKey: 'name',
-		// 			valueKey: 'name',
-		// 			source: skills.ttAdapter()
-		// 		  }
-		// 		});
+	    var skills = new Bloodhound({
+		   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+	  queryTokenizer: Bloodhound.tokenizers.whitespace,
+		  prefetch: {
+			url: '../assets/skills.json'
+		  }
+	 });
+		 skills.initialize();
+		 	 var elt = $('#skills');
+		 		elt.tagsinput({
+		 		  typeaheadjs: {
+		 			name: 'skills',
+		 			displayKey: 'name',
+		 			valueKey: 'name',
+		 			source: skills.ttAdapter()
+		 		  }
+		 		});
 	}
 	
 	next1(RegisterForm1){
