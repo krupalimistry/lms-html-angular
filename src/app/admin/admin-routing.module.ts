@@ -59,7 +59,7 @@ const routes: Routes = [
 				  { path : 'course-detail', component : CourseDetailComponent,canActivate : [AuthGuard] },
 				  { path : 'course-list', component : CourseListComponent,canActivate : [AuthGuard] },
 				  { path : 'register-instructor', component : RegisterInstructorComponent,canActivate : [AuthGuard] },
-				  { path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
+				  //{ path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'register-learner', component : RegisterLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'login', component : LoginComponent,canActivate : [AuthGuard] },
 				  { path : 'link-list', component : LinkListComponent,canActivate : [AuthGuard] },

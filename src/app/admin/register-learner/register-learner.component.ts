@@ -93,7 +93,7 @@ export class RegisterLearnerComponent implements OnInit {
 			$("#personaldetail").addClass("active in");
 	}
 
-	next2(RegisterForm2){
+	next2(RegisterForm2){ debugger
 		this.submitted2 = true;
 		if(RegisterForm2.valid){   
 			this.submitted2 = false; 

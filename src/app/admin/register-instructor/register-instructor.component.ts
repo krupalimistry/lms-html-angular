@@ -86,6 +86,8 @@ export class RegisterInstructorComponent implements OnInit {
 			if(file1){
 				this.certificate_error = false;
 				this.submitted2 = false; 
+				let file1 = this.elem.nativeElement.querySelector('#CertificateId').files[0];
+				this.RegisterEntity.Certificate = file1['name'];
 				$(".register_tab li").removeClass("active");
 				$(".register_tab li#loginli").addClass("active");
 				$("#educationdetail").removeClass("active in");
@@ -104,7 +106,7 @@ export class RegisterInstructorComponent implements OnInit {
 	}
 
 	instructor_Register(InstructerRegisterForm){ 
-
+		
 		this.submitted = true;
 		if(InstructerRegisterForm.valid){ 
 			let file1 = this.elem.nativeElement.querySelector('#CertificateId').files[0];

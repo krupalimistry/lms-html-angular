@@ -59,7 +59,7 @@ h5{color:#A50034; display:block; font:normal 16px/18px 'OpenSans-SemiBold'; marg
 
 /*-------------Header and navigation--------------------*/
 .container{ width:100%; max-width:100%; padding:0 30px;}
-header{ position: fixed; z-index: 99999; width: 100%; padding:0 0 10px 0; top: 0;}
+header{ position: fixed; z-index: 999; width: 100%; padding:0 0 10px 0; top: 0;}
 header .logo {padding: 2px 0;}
 header .logo .logo_text{font-family: 'OpenSans-Light'; width:75%; font-size: 30px; letter-spacing: -1px; text-decoration: none; text-transform: uppercase; color: #fff; line-height: 30px;}
 header .logo .toggle{background: rgba(0, 0, 0, 0.3);border-radius: 3px;color:#fff;cursor: pointer;display: block;height: 30px;line-height: 30px;text-align: center;width: 30px; border: 0; position: relative; right: -20px;}
@@ -155,7 +155,7 @@ select option{ background:#ddd!important; padding:5px!important; color:#2e2d31!i
 /*--------------End Register Login--------------------*/
 
 /* ------- Sidebar Area Start ------- */
-.sidebar_wrap{ position: fixed; top: 100px; left: 0; padding: 0 8px 0 30px; height: 90%; width: 17.6667%; z-index: 999; transition:all 0.4s ease 0s; overflow-y: auto;}
+.sidebar_wrap{ position: fixed; top: 100px; left: 0; padding: 0 8px 0 30px; height: 90%; width: 17.6667%; z-index: 99; transition:all 0.4s ease 0s; overflow-y: auto;}
 .sidebar_wrap .sidebar_box{background: rgba(0, 0, 0, 0.1);border-radius: 3px;padding:15px 0;margin-bottom:10px;box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);}
 .sidebar_wrap .sidebar_box .sidebar_box_label span{ background: rgba(0, 0, 0, 0.2);border-radius: 15px;padding: 5px 10px;color:#fff; display: inline-block;font-size: 12px;margin-bottom: 5px; margin: 0 15px 10px 15px;}
 .sidebar_wrap .sidebar_box li i {font-size: 18px; width:25px;}
