@@ -12,12 +12,12 @@ declare var $,Bloodhound,swal: any;
 })
 export class RegisterLearnerComponent implements OnInit {
 
-  	RegisterEntity;
+  RegisterEntity;
 	same;
 	submitted;
 	submitted1;
 	submitted2;
-  	btn_disable;
+  btn_disable;
 	EducationLeveList;
   
 
