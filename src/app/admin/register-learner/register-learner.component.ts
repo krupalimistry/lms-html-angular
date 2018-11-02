@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { RegisterService } from '../services/register.service';
 import { Globals } from '.././globals';
 declare function myInput() : any;
-declare var $,swal: any;
+declare var $,Bloodhound,swal: any;
 
 @Component({
   selector: 'app-register-learner',
@@ -56,23 +56,23 @@ export class RegisterLearnerComponent implements OnInit {
 		//    $(".register_tab li").removeClass("active");
 		//    $(".register_tab li#loginli").addClass("active");
 	  //  });
-	  //  var skills = new Bloodhound({
-		//   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
-		//   queryTokenizer: Bloodhound.tokenizers.whitespace,
-		//   prefetch: {
-		// 	url: '../assets/skills.json'
-		//   }
-		// });
-		// skills.initialize();
-		// 	 var elt = $('#skills');
-		// 		elt.tagsinput({
-		// 		  typeaheadjs: {
-		// 			name: 'skills',
-		// 			displayKey: 'name',
-		// 			valueKey: 'name',
-		// 			source: skills.ttAdapter()
-		// 		  }
-		// 		});
+	    var skills = new Bloodhound({
+		   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+	  queryTokenizer: Bloodhound.tokenizers.whitespace,
+		  prefetch: {
+			url: '../assets/skills.json'
+		  }
+	 });
+		 skills.initialize();
+		 	 var elt = $('#skills');
+		 		elt.tagsinput({
+		 		  typeaheadjs: {
+		 			name: 'skills',
+		 			displayKey: 'name',
+		 			valueKey: 'name',
+		 			source: skills.ttAdapter()
+		 		  }
+		 		});
 	}
 	
 	next1(RegisterForm1){
