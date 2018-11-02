@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { RegisterService } from '../services/register.service';
 import { Globals } from '.././globals';
 declare function myInput() : any;
-declare var $,swal: any;
+declare var $,Bloodhound,swal: any;
 
 @Component({
   selector: 'app-register-learner',
