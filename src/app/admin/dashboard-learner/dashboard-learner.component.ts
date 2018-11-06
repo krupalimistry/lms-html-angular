@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Globals } from '../globals';
-declare var $, AmCharts : any;
+declare var $, AmCharts,PerfectScrollbar : any;
 
 @Component({
   selector: 'app-dashboard-learner',
@@ -189,6 +189,11 @@ export class DashboardLearnerComponent implements OnInit {
 			"title": "Test", "titleFontSize" : 11
 		},
 	});
+
+
+	// PERFECT SCROLLBAR
+new PerfectScrollbar('.scroll_yourscore');
+// END PERFECT SCROLLBAR
 	
 	  
   }

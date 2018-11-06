@@ -1,4 +1,4 @@
-<div class="col-md-6 col-sm-6 col-md-offset-3">
+<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3 col-sm-offset-3">
 	<div class="all_outer_page">
 		<app-header-register></app-header-register>
 		<div class="clearfix"></div>
@@ -16,11 +16,11 @@
 					<div role="tabpanel" class="tab-pane active fade in" id="personaldetail">
 						<form #RegisterForm1="ngForm">
 							<div class="row">
-								<div class="col-md-10 col-sm-10">
+								<div class="col-md-10 col-sm-10 col-xs-10">
 									<h1>Personal Detail</h1>
 									<p class="padding_15">Enter your detail to Register:</p>
 								</div>
-								<div class="col-md-2 col-sm-2">
+								<div class="col-md-2 col-sm-2 col-xs-2">
 									<div class="logo tab_logo">
 										<a class="logo_text"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a>
 									</div>
@@ -152,11 +152,11 @@
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="educationdetail">
 						<div class="row">
-							<div class="col-md-10 col-sm-10">
+							<div class="col-md-10 col-sm-10 col-xs-10">
 								<h1>Educational Detail</h1>
 								<p class="padding_15">Enter your details to Register:</p>
 							</div>
-							<div class="col-md-2 col-sm-2">
+							<div class="col-md-2 col-sm-2 col-xs-2">
 								<div class="logo tab_logo">
 									<a class="logo_text"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a>
 								</div>
@@ -238,7 +238,7 @@
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="logindetail">
 						<div class="row">
-							<div class="col-md-10 col-sm-10">
+							<div class="col-md-10 col-sm-10 col-xs-10">
 								<div class="preview_tab">
 									<div class="row">
 										<h1>Personal Details</h1>
@@ -258,11 +258,13 @@
 									<div class="row">
 										<h1>Educational Details</h1>
 										<div class="col-md-4">
+
 											<p class="padding_15">Education Level: 
 												<span *ngFor="let education of EducationLeveList">
 													<span *ngIf="education.EducationLevelId==RegisterEntity.EducationLevelId">{{education.Education}}</span>
 												</span>
 											</p>
+
 										</div>
 										<div class="col-md-4">
 											<p class="padding_15">Expertise Field: <span>{{RegisterEntity.Field}}</span></p>
@@ -273,7 +275,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-2 col-sm-2">
+							<div class="col-md-2 col-sm-2 col-xs-2">
 								<div class="logo tab_logo">
 									<a class="logo_text"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a>
 								</div>
