@@ -45,8 +45,7 @@ function myInput(){
 	});
 
 	
-	$('input').each(function() { 
-		
+	$('input').each(function() {
 			if($(this).attr('ng-reflect-model')){
 				 $(this).addClass('filled');
 				$(this).parents('.form-group').addClass('focused');
