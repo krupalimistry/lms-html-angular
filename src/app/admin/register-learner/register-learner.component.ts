@@ -12,12 +12,12 @@ declare var $,Bloodhound,swal: any;
 })
 export class RegisterLearnerComponent implements OnInit {
 
-  	RegisterEntity;
+  RegisterEntity;
 	same;
 	submitted;
 	submitted1;
 	submitted2;
-  	btn_disable;
+  btn_disable;
 	EducationLeveList;
   
 
@@ -93,7 +93,7 @@ export class RegisterLearnerComponent implements OnInit {
 			$("#personaldetail").addClass("active in");
 	}
 
-	next2(RegisterForm2){
+	next2(RegisterForm2){ debugger
 		this.submitted2 = true;
 		if(RegisterForm2.valid){   
 			this.submitted2 = false; 
