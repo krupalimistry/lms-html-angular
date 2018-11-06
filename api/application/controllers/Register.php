@@ -304,7 +304,7 @@ class Register extends CI_Controller
 	{
 		if($_FILES){
 			if(isset($_FILES['Certificate']) && !empty($_FILES['Certificate'])){
-				move_uploaded_file($_FILES["Certificate"]["tmp_name"], "../assets/certificate/".$_FILES["Certificate"]["name"]);
+				move_uploaded_file($_FILES["Certificate"]["tmp_name"], "../src/assets/certificate/".$_FILES["Certificate"]["name"]);
 			}
 			echo json_encode('success');
 		}
