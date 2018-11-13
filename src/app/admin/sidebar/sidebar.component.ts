@@ -19,7 +19,7 @@ export class SidebarComponent implements OnInit {
       $('footer').toggleClass("footer_sidebaractive");
     });
     //alert($(window).width());
-    if ($(window).width() <= 812) {
+    if ($(window).width() <= 834) {
       $('.left_menu_toggle i').addClass("fa-indent");
       $('.sidebar_wrap').addClass("small_menu");
       $('.menu_right').addClass("active_right");
