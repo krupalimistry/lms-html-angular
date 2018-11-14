@@ -5,11 +5,14 @@ import { AuthService } from '../services/auth.service';
 declare function myInput() : any;
 import { Globals } from '.././globals';
 declare var $,swal: any;
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}]
 })
 export class LoginComponent implements OnInit {
 
@@ -17,12 +20,26 @@ export class LoginComponent implements OnInit {
   submitted;
   btn_disable;
 
-  constructor(private router: Router,public globals: Globals,private route: ActivatedRoute,private AuthService : AuthService) { }
+  constructor(private router: Router,public globals: Globals,private route: ActivatedRoute
+    ,private AuthService : AuthService,private location: Location) { }
 
   ngOnInit() {
     this.globals.isLoading = false;
     this.loginEntity = {};
-	   myInput();
+     myInput();
+
+      // var host = this.location.path();
+      // console.log(this.location['host']);
+      // alert(window.location.host);
+      // var parts = host.split('.');
+      // var subdomain = null;
+
+      // // more than domain.cn, will always return the first
+      // if (parts.length > 2){
+      //   subdomain = parts[0];
+      // }
+      
+
   }
 
   login(loginForm)
