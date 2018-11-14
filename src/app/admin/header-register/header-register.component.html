@@ -7,9 +7,33 @@
 								<div class="col-md-12 col-sm-12 linkup_section">
 									<div class="padding_carousel">
 										<div class="owl-carousel-bottom">
-											<div class="owl-item active">
-								<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/login'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+										<div class="owl-item">
+								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/welcome'}">
+									<img src="../assets/images/welcom.jpg" class="img-responsive" alt="" />
+									<div class="figercaption text-center">
+										<span><a routerLink="/welcome">View
+												Screen</a></span>
+									</div>
+									<div class="screen_title">
+										Welcome
+									</div>
+								</div>
+							</div>
+										<div class="owl-item">
+								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/register-instructor'}">
+									<img src="../assets/images/register.jpg" class="img-responsive" alt="" />
+									<div class="figercaption text-center">
+										<span><a routerLink="/register-instructor" >View
+												Screen</a></span>
+									</div>
+									<div class="screen_title">
+										Register
+									</div>
+								</div>
+							</div>
+											<div class="owl-item">
+								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/login'}">
+									<img src="../assets/images/login.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/login" >View Screen</a></span>
 									</div>
@@ -19,8 +43,8 @@
 								</div>
 							</div>
 							<div class="owl-item">
-								<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/forgot-password'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/forgot-password'}">
+									<img src="../assets/images/forgot.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/forgot-password" >View
 												Screen</a></span>
@@ -31,8 +55,20 @@
 								</div>
 							</div>
 							<div class="owl-item">
+								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/edit-profile'}">
+									<img src="../assets/images/editprofile.jpg" class="img-responsive" alt="" />
+									<div class="figercaption text-center">
+										<span><a routerLink="/edit-profile">View Screen</a></span>
+									</div>
+									<div class="screen_title">
+										Edit Profile
+									</div>
+								</div>
+							</div>
+							
+							<div class="owl-item">
 								<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/dashboard-admin'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/admindash.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/dashboard-admin" >View
 												Screen</a></span>
@@ -43,55 +79,22 @@
 								</div>
 							</div>
 							<div class="owl-item">
-								<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/edit-profile'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+								<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/user-list'}">
+									<img src="../assets/images/adminlist.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerLink="/edit-profile">View Screen</a></span>
+										<span><a routerLink="/user-list" >View
+												Screen</a></span>
 									</div>
 									<div class="screen_title">
-										Edit Profile
+										User List
 									</div>
 								</div>
 							</div>
 							
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/register-learner'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/register-learner">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Register
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/login'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/login">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Login
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/forgot-password'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/forgot-password" >View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Forgot Password
-									</div>
-								</div>
-							</div>
+							
 							<div class="owl-item">
 								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/dashboard-learner'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/learnerdash.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/dashboard-learner">View
 												Screen</a></span>
@@ -102,19 +105,33 @@
 								</div>
 							</div>
 							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/edit-profile'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/course-list'}">
+									<img src="../assets/images/courselist.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a routerLink="/edit-profile">View Screen</a></span>
+										<span><a routerLink="/course-list">View Screen</a></span>
 									</div>
 									<div class="screen_title">
-										Edit Profile
+										Course Catalog
 									</div>
 								</div>
 							</div>
+							
+							<div class="owl-item">
+								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/course-detail'}">
+									<img src="../assets/images/coursedetail.jpg" class="img-responsive" alt="" />
+									<div class="figercaption text-center">
+										<span><a routerLink="/course-detail">View
+												Screen</a></span>
+									</div>
+									<div class="screen_title">
+										Course Detail
+									</div>
+								</div>
+							</div>
+							
 							<div class="owl-item">
 								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/learner-courses'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/my course.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/learner-courses">View
 												Screen</a></span>
@@ -125,31 +142,8 @@
 								</div>
 							</div>
 							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/course-detail'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/course-detail">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Course Detail
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/course-list'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/course-list">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Course List
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
 								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/calendar'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/events.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/calendar">View Screen</a></span>
 									</div>
@@ -160,7 +154,7 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/certificate'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/certificate.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/certificate">View Screen</a></span>
 									</div>
@@ -170,67 +164,11 @@
 								</div>
 							</div>
 							
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/register-instructor'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/register-instructor">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Register
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/login'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/login">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Login
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/forgot-password'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/forgot-password">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Forgot Password
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/dashboard-instructor'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/dashboard-instructor">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Dashboard
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/edit-profile'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/edit-profile">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Edit Profile
-									</div>
-								</div>
-							</div>
+							
+		
 							<div class="owl-item">
 								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/instructor-course-form'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/instructorcourseform.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/instructor-course-form">View
 												Screen</a></span>
@@ -242,35 +180,13 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/instructor-courses'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/courselist.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a routerLink="/instructor-courses">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Courses List
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/calendar'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/calendar">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Scheduler
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/certificate'}">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/certificate">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Certificates & Badges
 									</div>
 								</div>
 							</div>
@@ -285,20 +201,28 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="footer_fixed_header">
-							<span class="pull-left">23 Screens</span>
+							<span class="pull-left">15 Screens</span>
+							<div class="alert-close pull-right">×</div>
 							<div class="courses_li pull-right">
 								<ul>
+									<li><span class="info"></span>Welcome and Profile</li>
 									<li><span class="success"></span>Admin</li>
 									<li><span class="warning"></span>Learner</li>
 									<li><span class="danger"></span>Instructor</li>
 								</ul>
 							</div>
-							<div class="alert-close pull-right">×</div>
+							
 						</div>
 				</div>
 				
 				<div class="footer_bottom">
-					<span>All Screens<i class="fa fa-angle-double-down"></i></span>
+					<div class="screen_black">
+						<a class="logo_oe"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a> 
+						<i class="fa fa-angle-double-right"></i>
+						<a routerLink="/link-list">All Screens</a>
+						<i class="fa fa-angle-double-right"></i>
+						<span>{{globals.currentLinkName}}<i class="fa fa-angle-double-down"></i></span>
+					</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>

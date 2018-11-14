@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Globals } from '../globals';
-declare var $, AmCharts : any;
+declare var $, AmCharts,PerfectScrollbar : any;
 
 @Component({
   selector: 'app-dashboard-admin',
@@ -202,6 +202,13 @@ export class DashboardAdminComponent implements OnInit {
 			"divId": "legenddiv",
 		  },
 		});
+
+
+
+// PERFECT SCROLLBAR
+new PerfectScrollbar('.scroll_invitetbl');
+new PerfectScrollbar('.scroll_topcourse'); 
+// END PERFECT SCROLLBAR
 		
   }
 

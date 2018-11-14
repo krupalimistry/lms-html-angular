@@ -42,6 +42,7 @@ import { LearnerCoursesComponent } from './learner-courses/learner-courses.compo
 import { InstructorCourseFormComponent } from './instructor-course-form/instructor-course-form.component';
 import { InstructorCoursesComponent } from './instructor-courses/instructor-courses.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [	
   {
@@ -58,18 +59,19 @@ const routes: Routes = [
 				  { path : 'course-detail', component : CourseDetailComponent,canActivate : [AuthGuard] },
 				  { path : 'course-list', component : CourseListComponent,canActivate : [AuthGuard] },
 				  { path : 'register-instructor', component : RegisterInstructorComponent,canActivate : [AuthGuard] },
-				  { path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
+				  //{ path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'register-learner', component : RegisterLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'login', component : LoginComponent,canActivate : [AuthGuard] },
 				  { path : 'link-list', component : LinkListComponent,canActivate : [AuthGuard] },
 				  { path : 'forgot-password', component : ForgotPasswordComponent,canActivate : [AuthGuard] },
-				  { path : 'edit-profile-learner', component : EditProfileLearnerComponent,canActivate : [AuthGuard] },
-				  { path : 'edit-profile-instructor', component : EditProfileInstructorComponent,canActivate : [AuthGuard] },
+				  //{ path : 'edit-profile-learner', component : EditProfileLearnerComponent,canActivate : [AuthGuard] },
+				  //{ path : 'edit-profile-instructor', component : EditProfileInstructorComponent,canActivate : [AuthGuard] },
 				  { path : 'edit-profile', component : EditProfileAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'learner-courses', component : LearnerCoursesComponent,canActivate : [AuthGuard] },
 				  { path : 'instructor-course-form', component : InstructorCourseFormComponent,canActivate : [AuthGuard] },
 				  { path : 'instructor-courses', component : InstructorCoursesComponent,canActivate : [AuthGuard] },
 				  { path : 'welcome', component : WelcomeComponent,canActivate : [AuthGuard] },
+				  { path : 'payment', component : PaymentComponent,canActivate : [AuthGuard] },
 				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path : '**', redirectTo : 'link-list' }
         

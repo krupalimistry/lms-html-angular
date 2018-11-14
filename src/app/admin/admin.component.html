@@ -1,15 +1,15 @@
 <div class="loader_new" *ngIf="globals.isLoading">
-    <div style="position: fixed; z-index: 9999; top: 38%; left: 45%;">
+    <div style="position: fixed; z-index: 9999999; top: 38%; left: 45%;">
         <div class="loader"></div>
         <div style="color: #fff; margin-top: 10px; text-align: center;"><strong>Processing...</strong></div>
     </div>
 </div>
 
-<div class="height_100_box" *ngIf="globals.IsLoggedIn && globals.currentLink!='/link-list'">
+<div class="height_100_box" *ngIf="globals.IsLoggedIn && (globals.currentLink!='/link-list')">
 <app-header></app-header> 
 <app-sidebar></app-sidebar> 
 <div class="right_content_block">
-	<div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-2 height_100 menu_right">
+	<div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-2 col-sm-offset-2 height_100 menu_right">
 		<div class="bg_white_block"> 
 			<router-outlet></router-outlet>
 			<app-footer></app-footer>
@@ -18,8 +18,8 @@
 </div>
 </div>
 
-<div class="height_100_box" *ngIf="!globals.IsLoggedIn && globals.currentLink!='/link-list'">
+<div class="height_100_box" *ngIf="!globals.IsLoggedIn && (globals.currentLink!='/link-list')">
 	<router-outlet></router-outlet>
 </div>
 
-<router-outlet *ngIf="globals.currentLink=='/link-list'"></router-outlet>
+<router-outlet *ngIf="(globals.currentLink=='/link-list')"></router-outlet>

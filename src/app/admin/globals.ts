@@ -17,5 +17,6 @@ export class Globals {
   message = '';
   type = '';
   currentLink: string = '';
+  currentLinkName: string = '';
   pageTitle: string = '';
 }
