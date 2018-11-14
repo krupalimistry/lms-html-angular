@@ -292,7 +292,7 @@ footer.register_footer a:hover{color:var(--theme-color); }
 /* --------------------- Calendar End ------------------ */
 
 /* --------------------- Certificate Start ------------------ */
-.certificate_box{ display: block; position: relative; border:1px solid #ccc; box-shadow: 1px 1px 10px rgba(0,0,0,0.1); margin-bottom: 30px; padding: 20px; text-align: center; border-radius: 5px; height: 317px;}
+.certificate_box{ display: block; position: relative; border:1px solid #ccc; box-shadow: 1px 1px 10px rgba(0,0,0,0.1); margin-bottom: 50px; padding: 20px; text-align: center; border-radius: 5px; height: 317px;}
 .certificate_box .icon_img{ height: 170px; display: block; margin-bottom: 10px; position: relative;}
 .certificate_box .icon_img img{height: 100%; margin: auto; opacity: 0.9;}
 .certificate_box .course_name{color:var(--theme-color); font-size: 18px; font-family: 'OpenSans-Regular'; margin-bottom: 10px; text-transform: uppercase;}
@@ -602,7 +602,7 @@ textarea{resize: none;}
 .linkup_wrapper .linkup_section .owl-theme .owl-nav {margin-top: -10px!important;}
 
 .active_slider .owl-stage{width:102%!important; margin:0 -15px!important; transform: none!important;}
-.active_slider .owl-item{float:left!important; margin:0px 25px 30px 0px!important; padding:0 0px!important;}
+.active_slider .owl-item{float:left!important; margin:0px 15px 30px 0px!important; padding:0 0px!important;}
 .active_slider .owl-item .owl-item{float:left!important; margin:0!important; padding:0!important;}
 /*----------------------------End linkup page ------------------------------*/
 
@@ -665,10 +665,6 @@ textarea{resize: none;}
 /*--------------------------- Responsive CSS Start ------------------------------*/
 @media only screen and (max-width: 640px) and (min-width: 320px) {
   .top_header .logo_oe img{width: 70%;}
-}
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-  .top_header .logo_oe img{width: 32%;}  
-  .footer_fixed_block .footer_fixed_header{margin-top: -25px;}
 }
 @media (width: 1200px) {
   footer{width: 80.8%;}
@@ -839,6 +835,10 @@ textarea{resize: none;}
     .footer_link,footer.footer_fixed{line-height: 20px;text-align: center;position: relative;width: 100% !important;}
   .footer_link .text-left,footer.footer_fixed .text-left{text-align: center;}
   .footer_link .text-right,footer.footer_fixed .text-right{text-align: center;}
+    .course_learner_block .course_box .progress_block .progress{float: none;}
+    .course_learner_block .course_box .progress_block{height: 50px;}
+    .course_learner_block .course_box .course_img{height: 80px;}
+	.admin_dashboard .notification_block .notification_time{text-align:left;}
   }
   @media (max-width: 768px) {
     .footer_link,footer.footer_fixed{line-height: 20px;text-align: center;position: relative!important;width: 100% !important;}
@@ -850,14 +850,12 @@ textarea{resize: none;}
     .sidebar_wrap {padding: 0 5px 0 10px;}
     .admin_dashboard .overview_block{padding: 10px;margin-top: 15px;}
     footer{width: 100%!important;position: relative!important;}
-    footer.footer_sidebaractive{width: 100%!important;}
+    footer.footer_sidebaractive{width: 100%!important;bottom: 55px;}
     .top_header .logo_lms img {margin-top: 3px;}
-    .content_block{padding: 30px 0px 15px 0px!important;}
+    .content_block{padding: 30px 0px 65px 0px!important;}
     .certificate_box{margin-bottom: 50px;}
     .white_form_block .tab_logo img {width: auto;height: auto;}
     .admin_dashboard .audit_block{margin-bottom: 0px;}
-    .course_learner_block .course_box .progress_block{height: 50px;}
-    .course_learner_block .course_box .progress_block .progress{float: none;}
     .course_learner_block .course_box .course_title {height: 115px!important;font-size: 14px;line-height: 20px;}
     .width_li30 li {width: 50%;}
     .course_detail_block .course_tabs .nav-tabs li:last-child{border-right: 0px!important;}
@@ -865,7 +863,6 @@ textarea{resize: none;}
     .right_content_block .bg_white_block .title_heading .alert{padding: 15px 0px;display: inline;}
     .learner_dashboard .users_block, .admin_dashboard .graph_block {height: auto !important;}
     .learner_dashboard .notification_block .notification_time{font-size: 11px;}
-    .course_learner_block .course_box .course_img{height: 80px;}
     .course_learner_block .course_box .course_btn{padding: 10px 5px;}
     .course_list_block .course_box .course_img{height: 80px;}
     .course_list_block .course_box .desc_block {height: 400px;}
@@ -927,10 +924,8 @@ textarea{resize: none;}
     .footer_fixed_block .footer_fixed_header{margin-top: -22px;}
     footer{width: 100%;position: relative;}
     .top_header .logo_lms img {margin-top: 8px;}
-    .certificate_box .badge_button{width: 25%;margin: -5px 5px !important;}
     .linkup_wrapper .linkup_section .expand {top: -64px;right: 40px;}
     .certificate_box{height: 265px;}
-    .certificate_box p.padding_15{height: 50px;}
     .admin_dashboard .audit_block .audit_box .title,.admin_dashboard .audit_block .audit_box .time{width: 100%;}
     .right_content_block .bg_white_block .title_heading .breadcrumb_block .next_btn.pull-right{float: left!important;margin-top: 10px;}
   }
@@ -939,11 +934,28 @@ textarea{resize: none;}
     .white_form_block .account_block{text-align: center;}
     .course_list_block .list_grid{display: none;}
     .panel-title > a {color: var(--theme-color);}
-    .editprofile_right h3{margin: 15px 0px;}    
+    .editprofile_right h3{margin: 15px 0px;}   
+    .certificate_box p.padding_15{height: 50px;}
+    .certificate_box .badge_button{width: 25%;margin: -5px 5px !important;} 
     .footer_fixed_block .footer_fixed_header{margin-top: -25px;}
     .white_form_block .account_block .pull-left,.white_form_block .account_block .pull-right{float: none!important;}
     .right_content_block .bg_white_block .title_heading .alert{text-align: left;float: left;}
     .course_list_block .course_box .instructor,.course_list_block .course_box .desc_block,.course_list_block .course_box .course_title,.learner_dashboard .rated_course_block, .learner_dashboard .content_block,.admin_dashboard .notification_block,.admin_dashboard .audit_block,.admin_dashboard .users_block,.admin_dashboard .rated_course_block,.admin_dashboard .invited_user_block,.admin_dashboard .graph_block,.learner_dashboard .scroll_calender{height: auto!important;}
+  }
+  @media only screen and (max-width: 991px) and (min-width: 768px) {
+	.admin_dashboard .users_block,.admin_dashboard .rated_course_block,.learner_dashboard .rated_course_block, .learner_dashboard .content_block,.learner_dashboard .users_block, .admin_dashboard .graph_block{height:auto!important;}
+  .top_header .logo_oe img{width: 32%;}  
+  .footer_fixed_block .footer_fixed_header{margin-top: -25px;}
+  .course_learner_block .course_box .course_title {height: 115px !important;font-size: 14px!important;line-height: 20px!important;}
+  .course_learner_block .course_box .course_btn.instructor_btn .back_btn, .course_learner_block .course_box .course_btn.instructor_btn .next_btn{margin: 0px 2px!important;min-width: 35px!important;}
+}
+  @media only screen and (max-width: 767px) and (min-width: 360px) {
+	  .course_learner_block .course_box .progress_block{padding:5px 10px;height:45px;}	 
+	  .course_learner_block .course_box .course_img {display: block;height: 85px;margin: 10px auto 0px;width: 150px;border-bottom:0px;}
+	  .course_learner_block .course_box .course_title{text-align:center;}
+      .course_learner_block .course_box .course_title{height:auto!important;}	 
+      .course_learner_block .course_box .course_btn{text-align:center;}	 
+      .course_list_block .course_box .course_img{display: block;height: 85px;margin: 10px auto 0px;width: 150px;border-bottom: 0px;}	  
   }
   @media (max-width: 480px) {
     .active_slider .owl-stage{margin: 0 0px !important;}
@@ -977,5 +989,6 @@ textarea{resize: none;}
      .certificate_box p.padding_15 {height: 75px;}
      .certificate_box {height: 285px;}
      .certificate_box .badge_button{width: 35%;}
+	 .admin_dashboard .notification_block .notification_time,.admin_dashboard .notification_block .notification_desc{font-size:10px;}
     }
 /*---------------------------- End Responsive CSS ------------------------------*/

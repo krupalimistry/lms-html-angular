@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 declare function myInput() : any;
-declare var CKEDITOR, Dropzone, $: any;
+declare var $,CKEDITOR,Dropzone,getAccordion: any;
 
 @Component({
   selector: 'app-instructor-course-form',
@@ -16,6 +16,10 @@ export class InstructorCourseFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+	  
+	  	getAccordion("#tabs",768);
+	  
+	  
     this.secondform = false;
     this.courseEntity = {};
     // CKEDITOR.replace('test', {
@@ -149,6 +153,9 @@ export class InstructorCourseFormComponent implements OnInit {
     //   $(this).parent().fadeOut('slow', function (c) {
     //   });
     // });
+	
+
+	
     
   }
 
