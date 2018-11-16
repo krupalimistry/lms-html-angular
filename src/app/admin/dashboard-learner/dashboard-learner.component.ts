@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-declare var $,AmCharts : any;setTimeout(function(){
-			if( $(".bg_white_block").hasClass( "ps--active-y" )){  
-				$('footer').removeClass('footer_fixed');     
-			}      
-			else{  
-				$('footer').addClass('footer_fixed');    
-			}
-		},1000);
+import { Globals } from '../globals';
+declare var $, AmCharts,PerfectScrollbar : any;
 
 @Component({
   selector: 'app-dashboard-learner',
@@ -15,10 +9,18 @@ declare var $,AmCharts : any;setTimeout(function(){
 })
 export class DashboardLearnerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
-
+		setTimeout(function(){
+			if( $(".bg_white_block").hasClass( "ps--active-y" )){  
+				$('footer').removeClass('footer_fixed');     
+			}      
+			else{  
+				$('footer').addClass('footer_fixed');    
+			}
+		},1000);
+		
 		$('#calendar').fullCalendar({
       
 	 eventRender: function(eventObj, $el) {
@@ -187,6 +189,12 @@ export class DashboardLearnerComponent implements OnInit {
 			"title": "Test", "titleFontSize" : 11
 		},
 	});
+
+
+	// PERFECT SCROLLBAR
+new PerfectScrollbar('.scroll_yourscore');
+new PerfectScrollbar('.scroll_calender');
+// END PERFECT SCROLLBAR
 	
 	  
   }

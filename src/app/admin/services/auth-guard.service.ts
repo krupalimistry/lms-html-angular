@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
 	} else {
 		this.globals.currentLink = '/'+state.url.split('/')[1];
 	}
-
+	
 	if(this.globals.currentLink=='/dashboard-admin'){
 		this.globals.currentLinkName = 'Dashboard Admin';
 	} else if(this.globals.currentLink=='/dashboard-learner') {
@@ -59,6 +59,8 @@ export class AuthGuard implements CanActivate {
 		this.globals.currentLinkName = 'Instructor courses';
 	} else if(this.globals.currentLink=='/welcome') {
 		this.globals.currentLinkName = 'Welcome';
+	} else if(this.globals.currentLink=='/payment') {
+		this.globals.currentLinkName = 'Make Payment';
 	} else {
 		this.globals.currentLinkName = '';
 	}
@@ -69,7 +71,7 @@ export class AuthGuard implements CanActivate {
 	
 	  if(this.authService.isLoggedIn()==true){	
 
-		  if(state.url=='/register-instructor' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin'){			
+		  if(state.url=='/register-instructor' || state.url=='/welcome' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin'){			
 			  this.globals.IsLoggedIn = true;
 			  this.router.navigate(['/dashboard-admin']);
 			  return false;
@@ -78,7 +80,7 @@ export class AuthGuard implements CanActivate {
 			  return true;		  
 		  }		  
 	  } else {
-			if(state.url=='/register-instructor' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin'){			
+			if(state.url=='/register-instructor' || state.url=='/welcome' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin'){			
 			   this.globals.IsLoggedIn = false;
 			   return true;
 		   } else {

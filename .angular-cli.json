@@ -25,6 +25,7 @@
 		"assets/js/jquery-1.11.3.min.js",
     "assets/js/bootstrap.min.js",
     "assets/js/owl.carousel.js",
+    "assets/js/accordion.js",
     "assets/js/sweetalert2.min.js",
 		"assets/js/moment.min.js",
 		"assets/js/fullcalendar.min.js",

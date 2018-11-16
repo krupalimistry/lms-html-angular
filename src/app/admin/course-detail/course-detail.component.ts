@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { CourseService } from '../services/course.service';
 import { Globals } from '.././globals';
-declare var $,swal,paypal: any;
+declare var $,swal,paypal,getAccordion: any;
 
 @Component({
   selector: 'app-course-detail',
@@ -26,9 +26,16 @@ export class CourseDetailComponent implements AfterViewChecked {
 			}
 		},1000);
 		this.PurchaseEntity = {};
-		this.PurchaseEntity.TotalAmount = 1;
+    this.PurchaseEntity.TotalAmount = 1;
+    
+
+    getAccordion("#tabs",768);
+    
 	}
 
+
+
+  
 	paypalConfig = {
     env: 'sandbox',
     client: {
@@ -62,7 +69,7 @@ export class CourseDetailComponent implements AfterViewChecked {
             title: 'Success...!!!',
 						text: 'Your payment is successfully.',
 						showConfirmButton: false,
-        		timer: 1500
+        		timer: 3000
             })   
 				}, 
 				(error) => 
