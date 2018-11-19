@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    baseUrl: 'http://localhost:4200/lms-html-angular',
+    baseUrl: 'http://localhost/lms-html-angular',
     env: 'local'
   };
