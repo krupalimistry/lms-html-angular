@@ -54,7 +54,7 @@ class Register extends CI_Controller
 				$body = '<table border="0" cellpadding="0" cellspacing="0" style="border:1px solid #333333; color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; margin:0 auto; width:600px">
 				<tbody>
 					<tr>
-						<td style="background-color:#f3f3f3; background:#f3f3f3; border-bottom:1px solid #333333; padding:10px 10px 5px 10px"><img alt="Learn Feedback" src="'.BASE_URL.'/assets/images/logo.png" /></td>
+						<td style="background: linear-gradient(to top left, var(--option-color), var(--theme-color)); background:background: linear-gradient(to top left, var(--option-color), var(--theme-color)); border-bottom:1px solid #333333; padding:10px 10px 5px 10px;width: 35%;margin:0 auto;"><img alt="Learn Feedback" src="'.BASE_URL.'/assets/images/logo.png" /></td>
 					</tr>
 					<tr>
 						<td style="border-width:0; padding:20px 10px 10px 10px; text-align:center">
@@ -148,7 +148,7 @@ class Register extends CI_Controller
 				$body = '<table border="0" cellpadding="0" cellspacing="0" style="border:1px solid #333333; color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; margin:0 auto; width:600px">
 				<tbody>
 					<tr>
-						<td style="background-color:#f3f3f3; background:#f3f3f3; border-bottom:1px solid #333333; padding:10px 10px 5px 10px"><img alt="Learn Feedback" src="'.BASE_URL.'/assets/images/logo.png" /></td>
+						<td style="background: linear-gradient(to top left, var(--option-color), var(--theme-color)); background:background: linear-gradient(to top left, var(--option-color), var(--theme-color)); border-bottom:1px solid #333333; padding:10px 10px 5px 10px;width: 35%;margin:0 auto;"><img alt="Learn Feedback" src="'.BASE_URL.'/assets/images/logo.png" /></td>
 					</tr>
 					<tr>
 						<td style="border-width:0; padding:20px 10px 10px 10px; text-align:center">
@@ -242,7 +242,7 @@ class Register extends CI_Controller
 				$body = '<table border="0" cellpadding="0" cellspacing="0" style="border:1px solid #333333; color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; margin:0 auto; width:600px">
 				<tbody>
 					<tr>
-						<td style="background-color:#f3f3f3; background:#f3f3f3; border-bottom:1px solid #333333; padding:10px 10px 5px 10px"><img alt="Learn Feedback" src="'.BASE_URL.'/assets/images/logo.png" /></td>
+						<td style="background: linear-gradient(to top left, var(--option-color), var(--theme-color)); background:background: linear-gradient(to top left, var(--option-color), var(--theme-color)); border-bottom:1px solid #333333; padding:10px 10px 5px 10px;width: 35%;margin:0 auto;"><img alt="Learn Feedback" src="'.BASE_URL.'/assets/images/logo.png" /></td>
 					</tr>
 					<tr>
 						<td style="border-width:0; padding:20px 10px 10px 10px; text-align:center">

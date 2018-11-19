@@ -1,244 +1,314 @@
 <!-- Header Section -->
 <div class="footer_fixed_block register_header">
-				<div class="footer_fixed_wrapper">
-					<div class="linkup_wrapper footer_fixed_section">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12 col-sm-12 linkup_section">
-									<div class="padding_carousel">
-										<div class="owl-carousel-bottom">
-										<div class="owl-item">
-								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/welcome'}">
-									<img src="../assets/images/welcom.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/welcome">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Welcome
-									</div>
-								</div>
-							</div>
-										<div class="owl-item">
-								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/register-instructor'}">
-									<img src="../assets/images/register.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/register-instructor" >View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Register
-									</div>
-								</div>
-							</div>
-											<div class="owl-item">
-								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/login'}">
-									<img src="../assets/images/login.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/login" >View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Login
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/forgot-password'}">
-									<img src="../assets/images/forgot.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/forgot-password" >View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Forgot Password
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/edit-profile'}">
-									<img src="../assets/images/editprofile.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/edit-profile">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Edit Profile
-									</div>
-								</div>
-							</div>
-							
-							<div class="owl-item">
-								<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/dashboard-admin'}">
-									<img src="../assets/images/admindash.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/dashboard-admin" >View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Dashboard
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/user-list'}">
-									<img src="../assets/images/adminlist.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/user-list" >View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										User List
-									</div>
-								</div>
-							</div>
-							
-							
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/dashboard-learner'}">
-									<img src="../assets/images/learnerdash.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/dashboard-learner">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Dashboard
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/course-list'}">
-									<img src="../assets/images/courselist.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/course-list">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Course Catalog
-									</div>
-								</div>
-							</div>
-							
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/course-detail'}">
-									<img src="../assets/images/coursedetail.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/course-detail">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Course Detail
-									</div>
-								</div>
-							</div>
-							
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/learner-courses'}">
-									<img src="../assets/images/my course.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/learner-courses">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Your Course
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/calendar'}">
-									<img src="../assets/images/events.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/calendar">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Scheduler
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/certificate'}">
-									<img src="../assets/images/certificate.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/certificate">View Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Certificates & Badges
-									</div>
-								</div>
-							</div>
-							
-							
-		
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/instructor-course-form'}">
-									<img src="../assets/images/instructorcourseform.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/instructor-course-form">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Course Form
-									</div>
-								</div>
-							</div>
-							<div class="owl-item">
-								<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/instructor-courses'}">
-									<img src="../assets/images/courselist.jpg" class="img-responsive" alt="" />
-									<div class="figercaption text-center">
-										<span><a routerLink="/instructor-courses">View
-												Screen</a></span>
-									</div>
-									<div class="screen_title">
-										Courses List
-									</div>
-								</div>
-							</div>
-							
-							
+	<div class="footer_fixed_wrapper">
+		<div class="linkup_wrapper footer_fixed_section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 linkup_section">
+						<div class="padding_carousel">
+							<div class="owl-carousel-bottom">
+								<div class="owl-item">
+									<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/welcome'}">
+										<img src="../assets/images/welcom.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/welcome">View
+													Screen</a></span>
 										</div>
-										<div class="clearfix"></div>
+										<div class="screen_title">
+											Welcome
+										</div>
 									</div>
 								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/register-instructor'}">
+										<img src="../assets/images/register.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/register-instructor">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Register
+										</div>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/login'}">
+										<img src="../assets/images/login.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/login">View Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Login
+										</div>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/forgot-password'}">
+										<img src="../assets/images/forgot.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/forgot-password">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Forgot Password
+										</div>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item profile_border" [ngClass]="{'active_currentpage':globals.currentLink=='/edit-profile'}">
+										<img src="../assets/images/editprofile.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/edit-profile">View Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Edit Profile
+										</div>
+									</div>
+								</div>
+
+								<div class="owl-item">
+									<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/dashboard-admin'}">
+										<img src="../assets/images/admindash.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/dashboard-admin">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Dashboard
+										</div>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item admin_border" [ngClass]="{'active_currentpage':globals.currentLink=='/user-list'}">
+										<img src="../assets/images/adminlist.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/user-list">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											User List
+										</div>
+									</div>
+								</div>
+
+
+								<div class="owl-item">
+									<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/dashboard-learner'}">
+										<img src="../assets/images/learnerdash.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/dashboard-learner">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Dashboard
+										</div>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/course-list'}">
+										<img src="../assets/images/courselist.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/course-list">View Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Course Catalog
+										</div>
+									</div>
+								</div>
+
+								<div class="owl-item">
+									<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/course-detail'}">
+										<img src="../assets/images/coursedetail.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/course-detail">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Course Detail
+										</div>
+									</div>
+								</div>
+
+								<div class="owl-item">
+									<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/learner-courses'}">
+										<img src="../assets/images/my course.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/learner-courses">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Your Course
+										</div>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/calendar'}">
+										<img src="../assets/images/events.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/calendar">View Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Scheduler
+										</div>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item learner_border" [ngClass]="{'active_currentpage':globals.currentLink=='/certificate'}">
+										<img src="../assets/images/certificate.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/certificate">View Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Certificates & Badges
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="owl-item">
+									<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/instructor-course-form'}">
+										<img src="../assets/images/instructorcourseform.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/instructor-course-form">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Course Form
+										</div>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="box-shadow-item instructor_border" [ngClass]="{'active_currentpage':globals.currentLink=='/instructor-courses'}">
+										<img src="../assets/images/courselist.jpg" class="img-responsive" alt="" />
+										<div class="figercaption text-center">
+											<span><a routerLink="/instructor-courses">View
+													Screen</a></span>
+										</div>
+										<div class="screen_title">
+											Courses List
+										</div>
+									</div>
+								</div>
+
+
 							</div>
+							<div class="clearfix"></div>
 						</div>
 					</div>
-					<div class="clearfix"></div>
-					<div class="footer_fixed_header">
-							<span class="pull-left">15 Screens</span>
-							<div class="alert-close pull-right">×</div>
-							<div class="courses_li pull-right">
-								<ul>
-									<li><span class="info"></span>Welcome and Profile</li>
-									<li><span class="success"></span>Admin</li>
-									<li><span class="warning"></span>Learner</li>
-									<li><span class="danger"></span>Instructor</li>
-								</ul>
-							</div>
-							
-						</div>
 				</div>
-				
-				<div class="footer_bottom">
-					<div class="screen_black">
-						<a class="logo_oe"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a> 
-						<i class="fa fa-angle-double-right"></i>
-						<a routerLink="/link-list">All Screens</a>
-						<i class="fa fa-angle-double-right"></i>
-						<span>{{globals.currentLinkName}}<i class="fa fa-angle-double-down"></i></span>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="clearfix"></div>
-<header class="register_header">
-	<div class="container">
-	  <div class="row"> 
-		<!-- Logo -->
-		<div class="col-md-12 col-sm-12 col-xs-12">
-			<div class="logo text-center">
-				<a class="logo_text"><img src="../assets/images/logo.png" class="img-responsive" alt="" /></a>
 			</div>
 		</div>
-		<!-- End Logo --> 
 		<div class="clearfix"></div>
-	  </div>
+		<div class="footer_fixed_header">
+			<span class="pull-left">15 Screens</span>
+			<div class="alert-close pull-right">×</div>
+			<div class="courses_li pull-right">
+				<ul>
+					<li><span class="info"></span>Welcome and Profile</li>
+					<li><span class="success"></span>Admin</li>
+					<li><span class="warning"></span>Learner</li>
+					<li><span class="danger"></span>Instructor</li>
+				</ul>
+			</div>
+
+		</div>
 	</div>
+
+	<div class="footer_bottom">
+		<div class="screen_black">
+			<a class="logo_oe"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a>
+			<i class="fa fa-angle-double-right"></i>
+			<a routerLink="/link-list">All Screens</a>
+			<i class="fa fa-angle-double-right"></i>
+			<span>{{globals.currentLinkName}}<i class="fa fa-angle-double-down"></i></span>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<header class="register_header">
+	<div class="container">
+		<div class="row">
+			<!-- Logo -->
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="logo text-center">
+					<a class="logo_text"><img src="../assets/images/logo.png" class="img-responsive" alt="" /></a>
+				</div>
+			</div>
+			<!-- End Logo -->
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+
+	
+
+
 </header>
 <div class="clearfix"></div>
+<!-- Inquiry Form -->
+	<div class="inquiryform_block">
+		<a href="javascript:void(0);" class="inquire_now">Inquire Now</a>
+		<div class="form_widget">
+			<i class="glyphicon glyphicon-remove"></i>
+			<div class="content">
+				<h2>Inquire Now</h2>
+				<div class="separator inner_separator"><span class="dott"></span><span class="dott"></span><span class="dott"></span></div>
+				<form action="" method="post" id="inquireform">
+					<div class="form-group">
+						<label><span>*</span>First Name </label>
+						<input type="text" class="form-control" #FirstName="ngModel" [(ngModel)]="RegisterEntity.FirstName" name="FirstName"
+						 pattern="[a-zA-Z'.$\ ]{2,100}" [ngClass]="{red_border: (FirstName.dirty && FirstName.invalid) || (FirstName.pristine && submitted1)}"
+						 required />
+						<span class="error_span" *ngIf="(FirstName.dirty && FirstName.invalid) || (FirstName.pristine && submitted1)">
+							<span *ngIf="FirstName.errors.required || (FirstName.pristine && submitted1)">Please enter first name</span>
+							<span *ngIf="FirstName.errors && FirstName.errors.pattern">Please enter valid first name</span>
+						</span>
+					</div>
+					<div class="form-group">
+						<label><span>*</span>Last Name </label>
+						<input type="text" class="form-control" #LastName="ngModel" [(ngModel)]="RegisterEntity.LastName" name="LastName"
+						 pattern="[a-zA-Z'.$\ ]{2,100}" [ngClass]="{red_border: (LastName.dirty && LastName.invalid) || (LastName.pristine && submitted)}"
+						 required />
+						<span class="error_span" *ngIf="(LastName.dirty && LastName.invalid) || (LastName.pristine && submitted)">
+							<span *ngIf="LastName.errors.required || (LastName.pristine && submitted)">Please enter last name</span>
+							<span *ngIf="LastName.errors && LastName.errors.pattern">Please enter valid last name</span>
+						</span>
+					</div>
+					<div class="form-group">
+						<label><span>*</span>Email Address </label>
+						<input type="text" class="form-control" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+						 #EmailAddress="ngModel" [(ngModel)]="RegisterEntity.EmailAddress" name="EmailAddress" [ngClass]="{red_border: (EmailAddress.dirty && EmailAddress.invalid) || (EmailAddress.pristine && submitted)}"
+						 required>
+						<span class="error_span" *ngIf="(EmailAddress.dirty && EmailAddress.invalid) || (EmailAddress.pristine && submitted)">
+							<span *ngIf="EmailAddress.errors.required || (EmailAddress.pristine && submitted)">Please enter email address</span>
+							<span *ngIf="EmailAddress.errors && EmailAddress.errors.pattern">Please enter valid email address</span>
+						</span>
+					</div>
+					<div class="form-group">
+						<label><span>*</span>Phone Number </label>
+						<input type="text" class="form-control" #PhoneNumber="ngModel" name="PhoneNumber" pattern="[0-9\-.()+\s]{0,13}"
+						 maxlength="13" [(ngModel)]="RegisterEntity.PhoneNumber" [ngClass]="{red_border: (PhoneNumber.dirty && PhoneNumber.invalid) || (PhoneNumber.pristine && submitted)}"
+						 required />
+						<span class="error_span" *ngIf="(PhoneNumber.dirty && PhoneNumber.invalid) || (PhoneNumber.pristine && submitted)">
+							<span *ngIf="PhoneNumber.errors.required || (PhoneNumber.pristine && submitted)">Please enter phone number</span>
+							<span *ngIf="PhoneNumber.errors && PhoneNumber.errors.pattern">Please enter valid phone number</span>
+						</span>
+					</div>
+					<div class="form-group">
+						<label>Message </label>
+						<textarea class="form-control" #Address1="ngModel" maxlength="250" [(ngModel)]="RegisterEntity.Address1" name="Address1"
+						 [ngClass]="{red_border: (Address1.dirty && Address1.invalid)}"></textarea>
+						<span class="error_span" *ngIf="(Address1.dirty && Address1.invalid)">
+							<span *ngIf="Address1.errors && Address1.errors.pattern">Please enter valid address</span>
+						</span>
+					</div>
+					<div class="text-center">
+						<button type="submit" id="inquiry_submit" class="next_btn" name="inquire_submit" [disabled]="btn_disable2 && !same"><span>Submit</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- End Inquiry Form -->

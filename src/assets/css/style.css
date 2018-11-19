@@ -265,6 +265,8 @@ input[type="checkbox"] { visibility:hidden; position:absolute;}
 .linkup_wrapper .linkup_section .expand{position: absolute!important;top: -64px;right: 50px;}
 
 .learner_dashboard .scroll_calender{height: 400px;}
+
+.inquiryform_block  .inquire_now{float: right; color:#fff!important; text-transform:uppercase; font-size:18px; padding:14px 30px!important;  font-weight:400; background:#102749; line-height: 18px;}
 /*--------------End Common content--------------------*/
 
 /* ------------------------ Footer Area Start ----------------- */
@@ -659,7 +661,31 @@ textarea{resize: none;}
 .content_block .Payment_mode .payment_method_option ul li a{display: block;background: #fff;padding: 5px;border-radius: 5px;box-shadow: 0 0 10px #ccc;}
 /*----------------------------End bottombar page ------------------------------*/
 
+/*--------------Inquire Form----------------------*/
+.form_widget.active{right: 0%; transition: all .5s ease-in-out;}
+.form_widget {z-index: 9999999; width: 25%; right: -100%; height: 100%; background:rgba(255,255,255,0.95);  position: fixed; display: block; top: 0; transition: all .7s ease-in-out; border-left: 5px solid #102749;}
+.form_widget .glyphicon-remove{cursor: pointer; position: relative; left: -1px; top: 0; z-index: 999; height: 40px; width: 40px; background:#102749; color: #fff; text-align: center; font-size: 20px; padding: 7px 0;}
+.form_widget .content { margin: 0; padding: 10px 30px 30px 30px; position: relative; height: 100%; overflow-y: auto;}
+input[type="text"],input[type="email"],input[type="number"],textarea{border-radius: 0; background: transparent; font-family: 'Titillium Web', sans-serif; font-size: 16px; font-weight: normal; color: #111; border: 0; border-bottom: 1px solid #3b3b3b; padding: 8px 25px 5px 5px; width: 100%; outline: 0;}
+input[type="text"]:focus,input[type="email"]:focus,input[type="number"]:focus,textarea:focus,select:focus{ outline: 0; border-bottom: 1px solid #3b3b3b;}
+.form-group{position: relative;}
+.form-group i{ position: absolute; bottom: 0px; right: 7px; font-size: 20px; color: #111;}
+.form-group textarea + i{top: 8px; bottom: 0;}
+input:required,input:-moz-placeholder,:-moz-submit-invalid,input:invalid,select:required,select:-moz-placeholder,select:invalid,textarea:required,textarea:-moz-placeholder,textarea:invalid{ box-shadow:none!important; outline: none!important;}
+::placeholder{color: #111!important; opacity: 1!important;}
+::-moz-placeholder{color: #111!important; opacity: 1!important;}
+:-ms-input-placeholder{color: #111!important; opacity: 1!important;}
+::-ms-input-placeholder{color: #111!important; opacity: 1!important;}
+::-webkit-input-placeholder{color: #111!important; opacity: 1!important;}
+:-moz-placeholder {color: #111!important; opacity: 1!important;}
 
+select {-moz-appearance: none!important;-webkit-appearance: none!important;background:transparent url("../images/arrow-down-b.png") no-repeat scroll right 5px / 31px auto!important; border: 0; border-bottom: 1px solid #3b3b3b!important; color: #111!important; border-radius:0px!important; padding: 8px 35px 5px 0px!important; width: 100%!important; font-family:'Titillium Web', sans-serif; font-size:16px!important; font-weight: normal;}
+select option{ background:#fff!important; padding:0 5px!important; color:#222!important; font-size:15px!important; text-transform:capitalize!important; display:block!important; width:100%!important; transition:all 0.2s linear 0s!important; border:0!important; border-bottom:1px solid #909090!important; font-family: 'Titillium Web', sans-serif;}
+textarea{resize: none; height: 100px;}
+.read_more{ padding:9px 15px 10px 15px; font-size: 16px; display: inline-block; line-height: 16px; position: relative; background: transparent; border:2px solid #0061af; color: #111; transition:all 0.3s ease-in 0s; min-width: 100px; text-align: center; font-weight: 500; border-radius:15px;}
+.read_more:hover{ color: #000; transition:all 0.3s ease-in 0s; font-weight: 600;}
+.inquiryform_block .inquire_now{cursor: pointer;width: 160px;height: 45px;overflow: hidden;position: fixed;top: 255px;right: -60px;text-align: center;transform: rotate(-90deg);z-index: 9999999;font-size: 18px;padding: 7px 10px !important;line-height: 30px;}
+/*--------------End Inquire Form----------------------*/
 
 
 /*--------------------------- Responsive CSS Start ------------------------------*/
@@ -936,6 +962,7 @@ textarea{resize: none;}
     .panel-title > a {color: var(--theme-color);}
     .editprofile_right h3{margin: 15px 0px;}   
     .certificate_box p.padding_15{height: 50px;}
+    .form_widget { width: 100%;}
     .certificate_box .badge_button{width: 25%;margin: -5px 5px !important;} 
     .footer_fixed_block .footer_fixed_header{margin-top: -25px;}
     .white_form_block .account_block .pull-left,.white_form_block .account_block .pull-right{float: none!important;}
@@ -943,8 +970,11 @@ textarea{resize: none;}
     .course_list_block .course_box .instructor,.course_list_block .course_box .desc_block,.course_list_block .course_box .course_title,.learner_dashboard .rated_course_block, .learner_dashboard .content_block,.admin_dashboard .notification_block,.admin_dashboard .audit_block,.admin_dashboard .users_block,.admin_dashboard .rated_course_block,.admin_dashboard .invited_user_block,.admin_dashboard .graph_block,.learner_dashboard .scroll_calender{height: auto!important;}
   }
   @media only screen and (max-width: 991px) and (min-width: 768px) {
+    .inquiryform_block .inquire_now{font-size: 15px; padding: 14px 10px!important;}
 	.admin_dashboard .users_block,.admin_dashboard .rated_course_block,.learner_dashboard .rated_course_block, .learner_dashboard .content_block,.learner_dashboard .users_block, .admin_dashboard .graph_block{height:auto!important;}
-  .top_header .logo_oe img{width: 32%;}  
+  .top_header .logo_oe img{width: 32%;} 
+  .form_widget { width: 50%;} 
+  .form_widget .content{height: 90%;}
   .footer_fixed_block .footer_fixed_header{margin-top: -25px;}
   .course_learner_block .course_box .course_title {height: 115px !important;font-size: 14px!important;line-height: 20px!important;}
   .course_learner_block .course_box .course_btn.instructor_btn .back_btn, .course_learner_block .course_box .course_btn.instructor_btn .next_btn{margin: 0px 2px!important;min-width: 35px!important;}
@@ -970,6 +1000,7 @@ textarea{resize: none;}
     .width_li30 li{width: 100%;}
     .top_header .logo_lms img {margin-top: 3px;}
     .sidebar_wrap.small_menu{width: 47px!important;}
+    /* .inquiryform_block .inquire_now{color: #0061af!important; width: 45px; height: 45px; overflow: hidden;} */
     .sidebar_wrap{padding: 0 0 0 5px!important;}
     .course_forum_block .forum_box .content_name .reply_time .pull-right{margin-top: 5px;width: 100%;float: left!important;}
     .course_forum_block .forum_box.inner_forum{width: 100%;margin-left: 0px;}

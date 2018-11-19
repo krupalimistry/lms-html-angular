@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
+declare function myInput() : any;
 
 @Component({
   selector: 'app-link-list',
@@ -7,10 +8,11 @@ declare var $: any;
   styleUrls: ['./link-list.component.css']
 })
 export class LinkListComponent implements OnInit {
-
+RegisterEntity;
   constructor() { }
 
   ngOnInit() {
+	  this.RegisterEntity = {};
     $('body').tooltip({
       selector: '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])',
       trigger: 'hover',
@@ -234,6 +236,25 @@ export class LinkListComponent implements OnInit {
         }
       }
     })
+
+
+// Inquiry Form
+$(".inquire_now").click(function() {
+	$('.form_widget').addClass("active");
+	$('body').addClass("overflow_body");
+});
+$(".form_widget .glyphicon-remove").click(function() {
+	$('.form_widget').removeClass("active");
+	$('body').removeClass("overflow_body");
+});
+
+
+setTimeout(function(){
+  myInput();
+},100);
+
+//End Inquiry Form
+
 
   }
 }

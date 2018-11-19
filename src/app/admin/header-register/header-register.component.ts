@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Globals } from '../globals';
 declare var $: any;
+declare function myInput() : any;
 
 @Component({
   selector: 'app-header-register',
@@ -8,21 +9,22 @@ declare var $: any;
   styleUrls: ['./header-register.component.css']
 })
 export class HeaderRegisterComponent implements OnInit {
-
+RegisterEntity;
   constructor(public globals: Globals) { }
 
   ngOnInit() {
-	  $('body').tooltip({
-        selector: '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])',
-        trigger: 'hover',
-        container: 'body'
+	  this.RegisterEntity = {};
+    $('body').tooltip({
+      selector: '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])',
+      trigger: 'hover',
+      container: 'body'
     }).on('click mousedown mouseup', '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])', function () {
-        $('[data-toggle="tooltip"], [title]:not([data-toggle="popover"])').tooltip('destroy');
-    });	 
-	const body = document.querySelector('body');
-	body.style.setProperty('--screen-height', $(window).height()+"px");
-	
-	$('.owl-carousel-bottom').owlCarousel({
+      $('[data-toggle="tooltip"], [title]:not([data-toggle="popover"])').tooltip('destroy');
+    });
+    const body = document.querySelector('body');
+    body.style.setProperty('--screen-height', $(window).height() + "px");
+
+    $('.owl-carousel-bottom').owlCarousel({
       loop: false,
       autoPlay: true,
       nav: true,
@@ -65,17 +67,36 @@ export class HeaderRegisterComponent implements OnInit {
     });
 
     $(".footer_bottom span").click(function (e) {
-           $(".footer_fixed_wrapper").toggleClass("active_up");
-           $(".footer_bottom span").toggleClass("active_i");
-		   e.stopPropagation();
+      $(".footer_fixed_wrapper").toggleClass("active_up");
+      $(".footer_bottom span").toggleClass("active_i");
+      e.stopPropagation();
     });
-	$(".footer_fixed_wrapper").click(function(e){
-		e.stopPropagation();
-	});
-	$("body").click(function(){
-		$(".footer_fixed_wrapper").removeClass("active_up");
-        $(".footer_bottom span").removeClass("active_i");
-	});
+    $(".footer_fixed_wrapper").click(function (e) {
+      e.stopPropagation();
+    });
+    $("body").click(function () {
+      $(".footer_fixed_wrapper").removeClass("active_up");
+      $(".footer_bottom span").removeClass("active_i");
+    });
+
+// Inquiry Form
+$(".inquire_now").click(function() {
+	$('.form_widget').addClass("active");
+  $('body').addClass("overflow_body");
+});
+$(".form_widget .glyphicon-remove").click(function() {
+	$('.form_widget').removeClass("active");
+  $('body').removeClass("overflow_body");
+});
+
+
+setTimeout(function(){
+  myInput();
+},100);
+
+//End Inquiry Form
+
+
   }
 
 }
