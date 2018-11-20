@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { CommonService } from '../services/common.service';
 import { Router } from '@angular/router';
 import { Globals } from '../globals';
 declare var $, PerfectScrollbar: any;
 declare function myInput() : any;
+declare var $,swal,Bloodhound: any;
 
 @Component({
   selector: 'app-header',
@@ -11,11 +13,13 @@ declare function myInput() : any;
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-RegisterEntity;
-  constructor(private authService: AuthService, private router: Router, public globals: Globals) { }
+FeedbackEntity;
+submitted;
+btn_disable;
+  constructor(private authService: AuthService, private router: Router, public globals: Globals, private CommonService:CommonService) { }
 
   ngOnInit() {
-	  this.RegisterEntity = {};
+	  this.FeedbackEntity = {};
     new PerfectScrollbar('.bg_white_block');
     $('body').tooltip({
       selector: '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])',
@@ -104,6 +108,53 @@ setTimeout(function(){
     this.globals.authData = '';
     localStorage.removeItem('token');
     this.router.navigate(['/']);
+  }
+
+  FeedbackSubmit(FeedbackForm){ debugger
+    this.submitted = true;			
+		if(FeedbackForm.valid){
+      //this.submitted = false;
+			this.btn_disable = true;
+      this.globals.isLoading = true;
+      var postdata = {
+        "fields": {
+           "project":
+           { 
+              "key": "LMS"
+           },
+           "summary": "Ex. Feedback - "+this.FeedbackEntity.Summary,
+           "description": this.FeedbackEntity.Description,
+           "issuetype": {
+              "name": "Improvement"
+           }
+          
+          }
+        }
+      console.log(postdata);
+			// this.CommonService.FeedbackSubmit(this.FeedbackEntity)			
+			// .then((data) => 
+			// { 
+			// 	  this.btn_disable = false;
+			// 		this.submitted = false;
+			// 		this.FeedbackEntity = {};
+			// 		FeedbackForm.form.markAsPristine();
+			// 		this.globals.isLoading = false;
+			// 		swal({
+			// 			position: 'top-end',
+			// 			type: 'success',
+			// 			title: 'Your feedback has been submitted',
+			// 			showConfirmButton: false,
+			// 			timer: 1500
+			// 		})
+			// }, 
+			// (error) => 
+			// {
+			// 	this.btn_disable = false;
+			// 	this.submitted = false;
+			// 	this.globals.isLoading = false;
+			// 	this.router.navigate(['/pagenotfound']);
+			// });
+		}
   }
 
 }

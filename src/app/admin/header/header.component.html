@@ -321,59 +321,56 @@
 		<div class="form_widget">
 			<i class="glyphicon glyphicon-remove"></i>
 			<div class="content">
-				<h2>Inquire Now</h2>
+				<h2>Share Feedback</h2>
 				<div class="separator inner_separator"><span class="dott"></span><span class="dott"></span><span class="dott"></span></div>
-				<form action="" method="post" id="inquireform">
+				<form #FeedbackForm="ngForm" (ngSubmit)="FeedbackSubmit(FeedbackForm)">
 					<div class="form-group">
-						<label><span>*</span>First Name </label>
-						<input type="text" class="form-control" #FirstName="ngModel" [(ngModel)]="RegisterEntity.FirstName" name="FirstName"
-						 pattern="[a-zA-Z'.$\ ]{2,100}" [ngClass]="{red_border: (FirstName.dirty && FirstName.invalid) || (FirstName.pristine && submitted1)}"
+						<label><span>*</span>Summary </label>
+						<input type="text" class="form-control" #Summary="ngModel" [(ngModel)]="FeedbackEntity.Summary" name="Summary"
+						 pattern="[a-zA-Z'.$\ ]{2,100}" [ngClass]="{red_border: (Summary.dirty && Summary.invalid) || (Summary.pristine && submitted)}"
 						 required />
-						<span class="error_span" *ngIf="(FirstName.dirty && FirstName.invalid) || (FirstName.pristine && submitted1)">
-							<span *ngIf="FirstName.errors.required || (FirstName.pristine && submitted1)">Please enter first name</span>
-							<span *ngIf="FirstName.errors && FirstName.errors.pattern">Please enter valid first name</span>
+						<span class="error_span" *ngIf="(Summary.dirty && Summary.invalid) || (Summary.pristine && submitted)">
+							<span *ngIf="Summary.errors.required || (Summary.pristine && submitted)">Please enter summary</span>
+							<span *ngIf="Summary.errors && Summary.errors.pattern">Please enter valid summary</span>
 						</span>
 					</div>
 					<div class="form-group">
-						<label><span>*</span>Last Name </label>
-						<input type="text" class="form-control" #LastName="ngModel" [(ngModel)]="RegisterEntity.LastName" name="LastName"
-						 pattern="[a-zA-Z'.$\ ]{2,100}" [ngClass]="{red_border: (LastName.dirty && LastName.invalid) || (LastName.pristine && submitted)}"
+						<label><span>*</span>Description </label>
+						<textarea class="form-control" #Description="ngModel" maxlength="250" [(ngModel)]="FeedbackEntity.Description" name="Description"
+						 [ngClass]="{red_border: (Description.dirty && Description.invalid) || (Description.pristine && submitted)}" required></textarea>
+						 <span class="error_span" *ngIf="(Description.dirty && Description.invalid) || (Description.pristine && submitted)">
+							<span *ngIf="Description.errors.required || (Description.pristine && submitted)">Please enter description</span>
+							<span *ngIf="Description.errors && Description.errors.pattern">Please enter valid description</span>
+						</span>
+						
+					</div>
+					<div class="form-group file_upload">
+						<label>Attachment </label>
+						<input type="text" disabled /><input type="file" accept="image/*" name="Attachment" id="Attachment" class="form-control" #Attachment="ngModel" [(ngModel)]="FeedbackEntity.Attachment"/>
+					
+					</div>
+					<div class="form-group">
+						<label><span>*</span>Company/Organisation </label>
+						<input type="text" class="form-control" #Company="ngModel" name="Company" pattern="[0-9\-.()+\s]{0,13}"
+						 maxlength="13" [(ngModel)]="FeedbackEntity.Company" [ngClass]="{red_border: (Company.dirty && Company.invalid) || (Company.pristine && submitted)}"
 						 required />
-						<span class="error_span" *ngIf="(LastName.dirty && LastName.invalid) || (LastName.pristine && submitted)">
-							<span *ngIf="LastName.errors.required || (LastName.pristine && submitted)">Please enter last name</span>
-							<span *ngIf="LastName.errors && LastName.errors.pattern">Please enter valid last name</span>
+						<span class="error_span" *ngIf="(Company.dirty && Company.invalid) || (Company.pristine && submitted)">
+							<span *ngIf="Company.errors.required || (Company.pristine && submitted)">Please enter company</span>
+							<span *ngIf="Company.errors && Company.errors.pattern">Please enter valid company</span>
 						</span>
 					</div>
 					<div class="form-group">
-						<label><span>*</span>Email Address </label>
+						<label><span>*</span>Your Contact Email </label>
 						<input type="text" class="form-control" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
-						 #EmailAddress="ngModel" [(ngModel)]="RegisterEntity.EmailAddress" name="EmailAddress" [ngClass]="{red_border: (EmailAddress.dirty && EmailAddress.invalid) || (EmailAddress.pristine && submitted)}"
+						 #EmailAddress="ngModel" [(ngModel)]="FeedbackEntity.EmailAddress" name="EmailAddress" [ngClass]="{red_border: (EmailAddress.dirty && EmailAddress.invalid) || (EmailAddress.pristine && submitted)}"
 						 required>
 						<span class="error_span" *ngIf="(EmailAddress.dirty && EmailAddress.invalid) || (EmailAddress.pristine && submitted)">
-							<span *ngIf="EmailAddress.errors.required || (EmailAddress.pristine && submitted)">Please enter email address</span>
-							<span *ngIf="EmailAddress.errors && EmailAddress.errors.pattern">Please enter valid email address</span>
-						</span>
-					</div>
-					<div class="form-group">
-						<label><span>*</span>Phone Number </label>
-						<input type="text" class="form-control" #PhoneNumber="ngModel" name="PhoneNumber" pattern="[0-9\-.()+\s]{0,13}"
-						 maxlength="13" [(ngModel)]="RegisterEntity.PhoneNumber" [ngClass]="{red_border: (PhoneNumber.dirty && PhoneNumber.invalid) || (PhoneNumber.pristine && submitted)}"
-						 required />
-						<span class="error_span" *ngIf="(PhoneNumber.dirty && PhoneNumber.invalid) || (PhoneNumber.pristine && submitted)">
-							<span *ngIf="PhoneNumber.errors.required || (PhoneNumber.pristine && submitted)">Please enter phone number</span>
-							<span *ngIf="PhoneNumber.errors && PhoneNumber.errors.pattern">Please enter valid phone number</span>
-						</span>
-					</div>
-					<div class="form-group">
-						<label>Message </label>
-						<textarea class="form-control" #Address1="ngModel" maxlength="250" [(ngModel)]="RegisterEntity.Address1" name="Address1"
-						 [ngClass]="{red_border: (Address1.dirty && Address1.invalid)}"></textarea>
-						<span class="error_span" *ngIf="(Address1.dirty && Address1.invalid)">
-							<span *ngIf="Address1.errors && Address1.errors.pattern">Please enter valid address</span>
+							<span *ngIf="EmailAddress.errors.required || (EmailAddress.pristine && submitted)">Please enter email</span>
+							<span *ngIf="EmailAddress.errors && EmailAddress.errors.pattern">Please enter valid email</span>
 						</span>
 					</div>
 					<div class="text-center">
-						<button type="submit" id="inquiry_submit" class="next_btn" name="inquire_submit" [disabled]="btn_disable2 && !same"><span>Submit</span></button>
+						<button type="submit" id="inquiry_submit" class="next_btn" name="inquire_submit" [disabled]="btn_disable"><span>Submit</span></button>
 					</div>
 
 				</form>

@@ -18,6 +18,7 @@ import { AuthService } from './services/auth.service';
 import { RegisterService } from './services/register.service';
 import { EditProfileService } from './services/edit-profile.service';
 import { CourseService } from './services/course.service';
+import { CommonService } from './services/common.service';
 
 import { UserListComponent } from './user-list/user-list.component';
 import { CalendarComponent } from './calendar/calendar.component';
@@ -50,7 +51,7 @@ const routes: Routes = [
         component: AdminComponent,
         children: [
 		  
-		      { path : 'dashboard-admin', component : DashboardAdminComponent,canActivate : [AuthGuard] },
+		          { path : 'dashboard-admin', component : DashboardAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'dashboard-learner', component : DashboardLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'dashboard-instructor', component : DashboardInstructorComponent,canActivate : [AuthGuard] },
 				  { path : 'user-list', component : UserListComponent,canActivate : [AuthGuard] },
@@ -83,7 +84,7 @@ const routes: Routes = [
 imports: [RouterModule.forChild(routes)],
 exports: [RouterModule],
  
-  providers: [Globals,AuthGuard,AuthService,RegisterService,EditProfileService,CourseService,{
+  providers: [Globals,AuthGuard,AuthService,RegisterService,EditProfileService,CourseService,CommonService,{
     
     provide: HTTP_INTERCEPTORS,
       useClass: HttpInterceptorClassService,
