@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { CommonService } from '../services/common.service';
 import { Router } from '@angular/router';
@@ -16,7 +16,8 @@ export class HeaderComponent implements OnInit {
 FeedbackEntity;
 submitted;
 btn_disable;
-  constructor(private authService: AuthService, private router: Router, public globals: Globals, private CommonService:CommonService) { }
+  constructor(private authService: AuthService, private router: Router, public globals: Globals, 
+    private CommonService:CommonService,private elem: ElementRef) { }
 
   ngOnInit() {
 	  this.FeedbackEntity = {};
@@ -113,31 +114,30 @@ setTimeout(function(){
   FeedbackSubmit(FeedbackForm){ debugger
     this.submitted = true;			
 		if(FeedbackForm.valid){
-      //this.submitted = false;
 			this.btn_disable = true;
       this.globals.isLoading = true;
-      var postdata = {
-        "fields": {
-           "project":
-           { 
-              "key": "LMS"
-           },
-           "summary": "Ex. Feedback - "+this.FeedbackEntity.Summary,
-           "description": this.FeedbackEntity.Description,
-           "issuetype": {
-              "name": "Improvement"
-           }
-          
-          }
-        }
-      console.log(postdata);
-			// this.CommonService.FeedbackSubmit(this.FeedbackEntity)			
-			// .then((data) => 
-			// { 
-			// 	  this.btn_disable = false;
+      let file1 = this.elem.nativeElement.querySelector('#Attachment').files;
+      var fd = new FormData();
+      if(file1.length>0)
+      {
+        for (var i = 0; i < file1.length; i++)
+        { 
+            var logo = Date.now()+'_'+file1[i]['name'];
+            fd.append('file'+i, file1[i],logo);
+        } 
+      } else
+      {
+        fd.append('file', null);
+      }
+
+      // if(file1.length>0){
+      //   this.CommonService.uploadFile(fd,file1.length,'LMS-15')
+      //   .then((data) => 
+      //   {	
+      //     this.btn_disable = false;
 			// 		this.submitted = false;
-			// 		this.FeedbackEntity = {};
-			// 		FeedbackForm.form.markAsPristine();
+			// 		//this.FeedbackEntity = {};
+			// 		//FeedbackForm.form.markAsPristine();
 			// 		this.globals.isLoading = false;
 			// 		swal({
 			// 			position: 'top-end',
@@ -145,16 +145,70 @@ setTimeout(function(){
 			// 			title: 'Your feedback has been submitted',
 			// 			showConfirmButton: false,
 			// 			timer: 1500
-			// 		})
-			// }, 
-			// (error) => 
-			// {
-			// 	this.btn_disable = false;
-			// 	this.submitted = false;
-			// 	this.globals.isLoading = false;
-			// 	this.router.navigate(['/pagenotfound']);
-			// });
-		}
+			// 		})          
+      //   }, 
+      //   (error) => 
+      //   { 
+      //     this.btn_disable = false;
+      //     this.submitted = false;
+      //     this.globals.isLoading = false;
+      //     this.router.navigate(['/pagenotfound']);
+      //   });
+      // }
+
+
+			this.CommonService.FeedbackSubmit(this.FeedbackEntity)			
+			.then((data) => 
+			{ 
+        console.log(data);
+         if(file1.length>0){
+        this.CommonService.uploadFile(fd,file1.length,data)
+        .then((data) => 
+        {	
+          this.btn_disable = false;
+					this.submitted = false;
+					this.FeedbackEntity = {};
+					FeedbackForm.form.markAsPristine();
+					this.globals.isLoading = false;
+					swal({
+						position: 'top-end',
+						type: 'success',
+						title: 'Your feedback has been submitted',
+						showConfirmButton: false,
+						timer: 1500
+					})          
+        }, 
+        (error) => 
+        { 
+          this.btn_disable = false;
+          this.submitted = false;
+          this.globals.isLoading = false;
+          this.router.navigate(['/pagenotfound']);
+        });
+      } else {
+        this.btn_disable = false;
+					this.submitted = false;
+					this.FeedbackEntity = {};
+					FeedbackForm.form.markAsPristine();
+					this.globals.isLoading = false;
+					swal({
+						position: 'top-end',
+						type: 'success',
+						title: 'Your feedback has been submitted',
+						showConfirmButton: false,
+						timer: 1500
+					})
+      }				  
+			}, 
+			(error) => 
+			{
+				this.btn_disable = false;
+				this.submitted = false;
+				this.globals.isLoading = false;
+				this.router.navigate(['/pagenotfound']);
+      });
+      
+		 }
   }
 
 }

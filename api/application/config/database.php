@@ -165,3 +165,24 @@ $db['Production'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+$db['lms_demo'] = array(
+	'dsn'	=> '',
+	'hostname' => 'oesslmsdemo.db.11797364.587.hostedresource.net',
+	'username' => 'oesslmsdemo',
+	'password' => 'W3lc0m3@2018',
+	'database' => 'oesslmsdemo',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => FALSE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
