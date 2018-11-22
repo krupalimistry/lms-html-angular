@@ -1,13 +1,13 @@
 <?php
 class RestRequest {
-    public $username;  
-    public $password; 
+    protected $username;  
+    protected $password; 
 	protected $url;  
     protected $verb;  
     protected $requestBody;  
     protected $requestLength;   
     protected $acceptType;
-    protected $responseBody; 
+    public $responseBody; 
     protected $responseInfo;  
   
     public function openConnect ($url = null, $verb = 'GET', $requestBody = null, $filename = null){  
