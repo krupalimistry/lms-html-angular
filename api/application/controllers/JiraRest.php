@@ -54,7 +54,7 @@ public function attachmnetJiraBug($iCount=null,$key=null) {
 			{
 			if(isset($_FILES['file'.$i]) && !empty($_FILES['file'.$i]))
 			{
-				if(move_uploaded_file($_FILES["file".$i]["tmp_name"], "../src/assets/feedback/".$_FILES["file".$i]["name"])){
+				if(move_uploaded_file($_FILES["file".$i]["tmp_name"], "../assets/feedback/".$_FILES["file".$i]["name"])){
 					$path = BASE_URL."/assets/feedback/".$_FILES["file".$i]["name"];
 					$result = (array) $newbug->attachmentIssue($path,$key);
 				} 
