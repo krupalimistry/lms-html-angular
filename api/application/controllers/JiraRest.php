@@ -25,7 +25,7 @@ class JiraRest extends CI_Controller {
 			$data->fields->project->key = "LMS";
 			$data->fields->issuetype->name = 'Improvement';
 			$data->fields->summary = trim("Ex. Feedback - ".$post_data['Summary']);
-			$data->fields->description = trim($post_data['Description']);
+			$data->fields->description = trim("Company - ".$post_data['Company'].", Email - ".$post_data['EmailAddress'].", Description - ".$post_data['Description']);
 			$newbug = new Jira($config);
 			$result = (array) $newbug->createIssue($data);
 			$res = json_decode($result['responseBody']);
@@ -73,13 +73,13 @@ public function attachmnetJiraBug($iCount=null,$key=null) {
 		ini_set('error_reporting', E_STRICT);
 		$config = array();
 		$this->load->helper('jira_helper');
-		$config['username'] = 'jirausername';
-		$config['password'] = 'jirapassword';
+		$config['username'] = 'vidhi.bathani@theopeneyes.in';
+		$config['password'] = 'jira@vidhi';
 		$config['port'] = 443;
-		$config['host'] = 'jirahost';
+		$config['host'] = 'theopeneyes.atlassian.net';
 		$newbug = new Jira($config);
 		/*get jira Issues description*/
-	 	$issuKey = trim('jiraprojectkey'); /*issue key from jira*/
+	 	$issuKey = trim('LMS-32'); /*issue key from jira*/
 		$getIssue = (array)$newbug->getIssue($issuKey);
 		$count = 1;
 					foreach ($getIssue as $test){
@@ -93,7 +93,8 @@ public function attachmnetJiraBug($iCount=null,$key=null) {
 		$data = (object)array();
 		$data->fields->project->key = "jiraprojectkey";
         $data->fields->issuetype->name = 'Bug';
-		$data->fields->summary = trim("dummy text of the printing and typesetting industry type specimen book. It has survived not only");
+		$data->fields->summary = trim("dummy");
+		$data->fields->description = trim("Company - OpenEyes, Email - test@gmail.com, Description - test desc");
 		$result = (array) $newbug->updateIssue($data,$issuKey);
 		//echo $result->acceptType;
 		$res = json_decode($result['requestBody']);

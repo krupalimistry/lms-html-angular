@@ -111,8 +111,8 @@ setTimeout(function(){
     this.router.navigate(['/']);
   }
 
-  FeedbackSubmit(FeedbackForm){ debugger
-    this.submitted = true;			
+  FeedbackSubmit(FeedbackForm){ 
+    this.submitted = true;		
 		if(FeedbackForm.valid){
 			this.btn_disable = true;
       this.globals.isLoading = true;
@@ -130,37 +130,9 @@ setTimeout(function(){
         fd.append('file', null);
       }
 
-      // if(file1.length>0){
-      //   this.CommonService.uploadFile(fd,file1.length,'LMS-15')
-      //   .then((data) => 
-      //   {	
-      //     this.btn_disable = false;
-			// 		this.submitted = false;
-			// 		//this.FeedbackEntity = {};
-			// 		//FeedbackForm.form.markAsPristine();
-			// 		this.globals.isLoading = false;
-			// 		swal({
-			// 			position: 'top-end',
-			// 			type: 'success',
-			// 			title: 'Your feedback has been submitted',
-			// 			showConfirmButton: false,
-			// 			timer: 1500
-			// 		})          
-      //   }, 
-      //   (error) => 
-      //   { 
-      //     this.btn_disable = false;
-      //     this.submitted = false;
-      //     this.globals.isLoading = false;
-      //     this.router.navigate(['/pagenotfound']);
-      //   });
-      // }
-
-
 			this.CommonService.FeedbackSubmit(this.FeedbackEntity)			
 			.then((data) => 
 			{ 
-        console.log(data);
          if(file1.length>0){
         this.CommonService.uploadFile(fd,file1.length,data)
         .then((data) => 
@@ -168,7 +140,9 @@ setTimeout(function(){
           this.btn_disable = false;
 					this.submitted = false;
 					this.FeedbackEntity = {};
-					FeedbackForm.form.markAsPristine();
+          FeedbackForm.form.markAsPristine();
+          $("#Attachment").val(null);
+          $('#file_upload input[type="text"]').val(null);
 					this.globals.isLoading = false;
 					swal({
 						position: 'top-end',

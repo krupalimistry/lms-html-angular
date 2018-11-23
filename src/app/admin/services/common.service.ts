@@ -11,7 +11,7 @@ export class CommonService {
   constructor(private http: Http, private globals: Globals, private router: Router) { }
 
 
-  FeedbackSubmit(postdata){ debugger
+  FeedbackSubmit(postdata){ 
     let promise = new Promise((resolve, reject) => {
       this.http.post(this.globals.baseAPIUrl + 'JiraRest/createJiraBug', postdata, this.globals.headerpath)
         .toPromise()
@@ -30,7 +30,7 @@ export class CommonService {
     }
 
 
-  uploadFile(file,icount,key){ debugger
+  uploadFile(file,icount,key){ 
     let promise = new Promise((resolve, reject) => {
       this.http.post(this.globals.baseAPIUrl + 'JiraRest/attachmnetJiraBug/'+icount+'/'+key, file)
         .toPromise()

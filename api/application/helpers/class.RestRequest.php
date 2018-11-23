@@ -1,7 +1,7 @@
 <?php
 class RestRequest {
-    protected $username;  
-    protected $password; 
+    public $username;  
+    public $password; 
 	protected $url;  
     protected $verb;  
     protected $requestBody;  

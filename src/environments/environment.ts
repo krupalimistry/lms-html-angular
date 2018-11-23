@@ -6,6 +6,8 @@
 export const environment = {
   production: false,
   //baseUrl: 'http://lms-demo.devbyopeneyes.com',
-  baseUrl: 'http://lms-demo.theopeneyes.com',
+  //baseUrl: 'http://lms-demo.uatbyopeneyes.com',
+  baseUrl: 'http://lms-live-demo.uatbyopeneyes.com',
+  //baseUrl: 'http://lms-demo.theopeneyes.com',
   env: 'dev'
 };
