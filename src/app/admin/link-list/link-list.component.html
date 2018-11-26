@@ -1,30 +1,104 @@
+<!-- Inquiry Form -->
+<div class="inquiryform_block">
+	<a href="javascript:void(0);" class="inquire_now">Feedback</a>
+	<div class="form_widget">
+		<i class="glyphicon glyphicon-remove"></i>
+		<div class="content">
+			<h2>Share your Feedback</h2>
+			<div class="separator inner_separator"><span class="dott"></span><span class="dott"></span><span class="dott"></span></div>
+			<form #FeedbackForm="ngForm" (ngSubmit)="FeedbackSubmit(FeedbackForm)">
+				<div class="form-group">
+					<label><span>*</span>Summary </label>
+					<input type="text" class="form-control" #Summary="ngModel" [(ngModel)]="FeedbackEntity.Summary" name="Summary"
+					 pattern="[a-zA-Z0-9'.$\@!$%^*&\# ]{2,100}" [ngClass]="{red_border: (Summary.dirty && Summary.invalid) || (Summary.pristine && submitted)}"
+					 required />
+					<span class="error_span" *ngIf="(Summary.dirty && Summary.invalid) || (Summary.pristine && submitted)">
+						<span *ngIf="Summary.errors.required || (Summary.pristine && submitted)">Please enter summary</span>
+						<span *ngIf="Summary.errors && Summary.errors.pattern">Please enter valid summary</span>
+					</span>
+				</div>
+				<div class="form-group">
+					<label><span>*</span>Description </label>
+					<textarea class="form-control" #Description="ngModel" maxlength="250" [(ngModel)]="FeedbackEntity.Description" name="Description"
+					 [ngClass]="{red_border: (Description.dirty && Description.invalid) || (Description.pristine && submitted)}" required></textarea>
+					 <span class="error_span" *ngIf="(Description.dirty && Description.invalid) || (Description.pristine && submitted)">
+						<span *ngIf="Description.errors.required || (Description.pristine && submitted)">Please enter description</span>
+					</span>
+					
+				</div>
+				<div class="form-group file_upload" id="file_upload">
+					<label>Attachment </label>
+					<input type="text" disabled /><input type="file" accept="image/*" multiple name="Attachment" id="Attachment" class="form-control" #Attachment="ngModel" [(ngModel)]="FeedbackEntity.Attachment"/>
+				
+				</div>
+				<div class="form-group">
+					<label><span>*</span>Company/Organisation </label>
+					<input type="text" class="form-control" #Company="ngModel" name="Company" 
+					[(ngModel)]="FeedbackEntity.Company" [ngClass]="{red_border: (Company.dirty && Company.invalid) || (Company.pristine && submitted)}"
+					 required />
+					<span class="error_span" *ngIf="(Company.dirty && Company.invalid) || (Company.pristine && submitted)">
+						<span *ngIf="Company.errors.required || (Company.pristine && submitted)">Please enter company</span>
+					</span>
+				</div>
+				<div class="form-group">
+					<label><span>*</span>Your Contact Email </label>
+					<input type="text" class="form-control" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+					 #EmailAddress="ngModel" [(ngModel)]="FeedbackEntity.EmailAddress" name="EmailAddress" [ngClass]="{red_border: (EmailAddress.dirty && EmailAddress.invalid) || (EmailAddress.pristine && submitted)}"
+					 required>
+					<span class="error_span" *ngIf="(EmailAddress.dirty && EmailAddress.invalid) || (EmailAddress.pristine && submitted)">
+						<span *ngIf="EmailAddress.errors.required || (EmailAddress.pristine && submitted)">Please enter email</span>
+						<span *ngIf="EmailAddress.errors && EmailAddress.errors.pattern">Please enter valid email</span>
+					</span>
+				</div>
+				<div class="text-center">
+					<button type="submit" id="inquiry_submit" class="next_btn" name="inquire_submit" [disabled]="btn_disable"><span>Submit</span></button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+<!-- End Inquiry Form -->
+
+
 <div class="top_header">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-sm-12 text-left">
-					<a class="logo_lms"><img src="../assets/images/logo.png" class="img-responsive" alt="" /><span>All Screens</span></a>
-				</div>
-				<div class="col-md-6 col-sm-12 text-right">
-					<a class="logo_oe"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a>
-				</div>
+			<div class="col-md-6 col-sm-9 col-xs-9 text-left">
+				<a class="logo_lms"><img src="../assets/images/logo.png" class="img-responsive" alt="" />
+					<!-- <span>All Screens</span> -->
+				</a>
+			</div>
+			<div class="col-md-6 col-sm-3 col-xs-3 text-right">
+				<a class="logo_oe"><img src="../assets/images/landing_logo.png" class="img-responsive" alt="" /></a>
 			</div>
 		</div>
 	</div>
+</div>
 <div class="clearfix"></div>
 <div class="linkup_wrapper">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
-			<div class="linkup_section profile_linkup active_slider_profile">
+				<div class="header_title">
+					<h3><i class="fa fa-desktop" aria-hidden="true"></i> All Screens</h3>
+				</div>
+				<div class="linkup_section profile_linkup active_slider_profile">
 					<div class="linkup_header">
-						<div class="border_h2"><h2>Welcome and Profile Section <span class="number">5</span></h2><div class="plus-minus" data-toggle="collapse" href="#collapseprofile" aria-expanded="false" aria-controls="collapseprofile"><span data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div><div class="expand expand_profile"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div></div>
+						<div class="border_h2">
+							<h2>Welcome and Profile Section <span class="number">5</span></h2>
+							<div class="plus-minus" data-toggle="collapse" href="#collapseprofile" aria-expanded="false" aria-controls="collapseprofile"><span
+								 data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div>
+							<!-- <div class="expand expand_profile"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div> -->
+						</div>
 					</div>
 					<div class="clearfix"></div>
-					 <div class="padding_carousel collapse in" id="collapseprofile">
+					<div class="padding_carousel collapse in" id="collapseprofile">
+						<div class="expand expand_profile"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div>
 						<div class="slider_profile owl-carousel-profile">
-						<div class="owl-item">
+							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/welcom.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/welcome">View
 												Screen</a></span>
@@ -34,9 +108,9 @@
 									</div>
 								</div>
 							</div>
-						<div class="owl-item">
+							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/register.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/register-instructor">View
 												Screen</a></span>
@@ -48,7 +122,7 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/login.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/login">View Screen</a></span>
 									</div>
@@ -59,9 +133,9 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/forgot.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a href="/forgot-password" >View
+										<span><a href="/forgot-password">View
 												Screen</a></span>
 									</div>
 									<div class="screen_title">
@@ -71,9 +145,9 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/editprofile.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a href="/edit-profile" >View Screen</a></span>
+										<span><a href="/edit-profile">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Edit Profile
@@ -86,14 +160,20 @@
 				</div>
 				<div class="linkup_section admin_linkup active_slider_admin">
 					<div class="linkup_header">
-						<div class="border_h2"><h2>Admin Section <span class="number">2</span></h2><div class="plus-minus" data-toggle="collapse" href="#collapseadmin" aria-expanded="false" aria-controls="collapseadmin"><span data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div><div class="expand expand_admin"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div></div>
+						<div class="border_h2">
+							<h2>Admin Section <span class="number">2</span></h2>
+							<div class="plus-minus" data-toggle="collapse" href="#collapseadmin" aria-expanded="false" aria-controls="collapseadmin"><span
+								 data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div>
+							<!-- <div class="expand expand_admin"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div> -->
+						</div>
 					</div>
 					<div class="clearfix"></div>
-					 <div class="padding_carousel collapse in" id="collapseadmin">
+					<div class="padding_carousel collapse in" id="collapseadmin">
+						<div class="expand expand_admin"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div>
 						<div class="slider_admin owl-carousel-admin">
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/admindash.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/dashboard-admin">View
 												Screen</a></span>
@@ -105,7 +185,7 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/adminlist.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/user-list">View
 												Screen</a></span>
@@ -122,15 +202,20 @@
 				<div class="clearfix"></div>
 				<div class="linkup_section learner_linkup">
 					<div class="linkup_header">
-						<div class="border_h2"><h2>Learner Section <span class="number">6</span></h2><div class="plus-minus" data-toggle="collapse" href="#collapselearner" aria-expanded="false" aria-controls="collapselearner"><span data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div><div class="expand expand_learner"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div></div>
+						<div class="border_h2">
+							<h2>Learner Section <span class="number">6</span></h2>
+							<div class="plus-minus" data-toggle="collapse" href="#collapselearner" aria-expanded="false" aria-controls="collapselearner"><span
+								 data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div>
+							<!-- <div class="expand expand_learner"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div> -->
+						</div>
 					</div>
 					<div class="clearfix"></div>
-					 <div class="padding_carousel collapse in" id="collapselearner">
-				
+					<div class="padding_carousel collapse in" id="collapselearner">
+						<div class="expand expand_learner"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div>
 						<div class="slider_leaner owl-carousel-learner">
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/learnerdash.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/dashboard-learner" ng-reflect-router-link="/dashboard-learner" href="/dashboard-learner">View
 												Screen</a></span>
@@ -142,7 +227,7 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/courselist.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/course-list">View Screen</a></span>
 									</div>
@@ -153,7 +238,7 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/coursedetail.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/course-detail">View
 												Screen</a></span>
@@ -165,7 +250,7 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/my course.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/learner-courses">View
 												Screen</a></span>
@@ -177,9 +262,9 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/events.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
-										<span><a href="/calendar" >View Screen</a></span>
+										<span><a href="/calendar">View Screen</a></span>
 									</div>
 									<div class="screen_title">
 										Scheduler
@@ -188,7 +273,7 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/certificate.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/certificate">View Screen</a></span>
 									</div>
@@ -199,19 +284,26 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-					</div></div>
-				
+					</div>
+				</div>
+
 				<div class="clearfix"></div>
 				<div class="linkup_section instructor_linkup">
 					<div class="linkup_header">
-						<div class="border_h2"><h2>Instructor Section <span class="number">2</span></h2><div class="plus-minus" data-toggle="collapse" href="#collapseinstructor" aria-expanded="false" aria-controls="collapseinstructor"><span data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div><div class="expand expand_instructor"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div></div>
+						<div class="border_h2">
+							<h2>Instructor Section <span class="number">2</span></h2>
+							<div class="plus-minus" data-toggle="collapse" href="#collapseinstructor" aria-expanded="false" aria-controls="collapseinstructor"><span
+								 data-toggle="tooltip" data-placement="top" title="Expand/Collapse Section"></span></div>
+							<!-- <div class="expand expand_instructor"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div> -->
+						</div>
 					</div>
 					<div class="clearfix"></div>
-					 <div class="padding_carousel collapse in" id="collapseinstructor">
+					<div class="padding_carousel collapse in" id="collapseinstructor">
+						<div class="expand expand_instructor"><span data-toggle="tooltip" data-placement="top" title="View all Screens"></span></div>
 						<div class="slider_instructor owl-carousel-instructor">
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/instructorcourseform.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/instructor-course-form">View
 												Screen</a></span>
@@ -223,7 +315,7 @@
 							</div>
 							<div class="owl-item">
 								<div class="box-shadow-item">
-									<img src="../assets/images/carousel.png" class="img-responsive" alt="" />
+									<img src="../assets/images/courselist.jpg" class="img-responsive" alt="" />
 									<div class="figercaption text-center">
 										<span><a href="/instructor-courses">View
 												Screen</a></span>
@@ -233,16 +325,16 @@
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 						<div class="clearfix"></div>
-					</div> 
 					</div>
 				</div>
-				<div class="clearfix"></div>
 			</div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
+</div>
 <div class="clearfix"></div>
 <div class="footer_link">
 	<div class="col-md-6 col-sm-12 text-left">© 2018 <a href="#" target="_blank">Learning Management System</a></div>

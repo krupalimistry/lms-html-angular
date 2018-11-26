@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 declare function myInput() : any;
-declare var CKEDITOR, Dropzone, $: any;
+declare var $,CKEDITOR,Dropzone,getAccordion: any;
 
 @Component({
   selector: 'app-instructor-course-form',
@@ -11,16 +11,37 @@ export class InstructorCourseFormComponent implements OnInit {
 
   CourseFormList;
   secondform;
+  courseEntity;
 
   constructor() { }
 
   ngOnInit() {
 	   myInput();
 this.secondform = false;
+	  
+	  	getAccordion("#tabs",768);
+	  
+	  
+    this.secondform = false;
+    this.courseEntity = {};
+    // CKEDITOR.replace('test', {
+    //   height: '100',
+    //   resize_enabled: 'false',
+    //   resize_maxHeight: '100',
+    //   resize_maxWidth: '948',
+    //   resize_minHeight: '100',
+    //   resize_minWidth: '948',
+    //   extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
+    //   //extraAllowedContent: 'style;*[id,rel](*){*}
+    // });
+
     var item = { 'Name': ''};
     this.CourseFormList = [];
     this.CourseFormList.push(item);
-
+    setTimeout(function(){
+      myInput();
+    },100);
+    
     //pre-next btn
     // var divs = $('.mydivs>div');
     // var now = 0; // currently shown div
@@ -78,71 +99,65 @@ this.secondform = false;
     // $("button.clone").on("click", clone);
 
 
-    CKEDITOR.replace('EmailBody', {
-      height: '100',
-      resize_enabled: 'false',
-      resize_maxHeight: '100',
-      resize_maxWidth: '948',
-      resize_minHeight: '100',
-      resize_minWidth: '948',
-      extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
-      //extraAllowedContent: 'style;*[id,rel](*){*}
-    });
-    CKEDITOR.replace('EmailBodyW', {
-      height: '100',
-      resize_enabled: 'false',
-      resize_maxHeight: '100',
-      resize_maxWidth: '948',
-      resize_minHeight: '100',
-      resize_minWidth: '948',
-      extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
-      //extraAllowedContent: 'style;*[id,rel](*){*}
-    });
-    CKEDITOR.replace('EmailBodyT', {
-      height: '100',
-      resize_enabled: 'false',
-      resize_maxHeight: '100',
-      resize_maxWidth: '948',
-      resize_minHeight: '100',
-      resize_minWidth: '948',
-      extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
-      //extraAllowedContent: 'style;*[id,rel](*){*}
-    });
-    CKEDITOR.replace('EmailBodyM', {
-      height: '100',
-      resize_enabled: 'false',
-      resize_maxHeight: '100',
-      resize_maxWidth: '948',
-      resize_minHeight: '100',
-      resize_minWidth: '948',
-      extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
-      //extraAllowedContent: 'style;*[id,rel](*){*}
-    });
+    
+    // CKEDITOR.replace('EmailBodyW', {
+    //   height: '100',
+    //   resize_enabled: 'false',
+    //   resize_maxHeight: '100',
+    //   resize_maxWidth: '948',
+    //   resize_minHeight: '100',
+    //   resize_minWidth: '948',
+    //   extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
+    //   //extraAllowedContent: 'style;*[id,rel](*){*}
+    // });
+    // CKEDITOR.replace('EmailBodyT', {
+    //   height: '100',
+    //   resize_enabled: 'false',
+    //   resize_maxHeight: '100',
+    //   resize_maxWidth: '948',
+    //   resize_minHeight: '100',
+    //   resize_minWidth: '948',
+    //   extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
+    //   //extraAllowedContent: 'style;*[id,rel](*){*}
+    // });
+    // CKEDITOR.replace('EmailBodyM', {
+    //   height: '100',
+    //   resize_enabled: 'false',
+    //   resize_maxHeight: '100',
+    //   resize_maxWidth: '948',
+    //   resize_minHeight: '100',
+    //   resize_minWidth: '948',
+    //   extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
+    //   //extraAllowedContent: 'style;*[id,rel](*){*}
+    // });
 
-    Dropzone.autoDiscover = false;
-    $(".dropzone").dropzone({
-      addRemoveLinks: true,
-      removedfile: function (file) {
-        var name = file.name;
+    // Dropzone.autoDiscover = false;
+    // $(".dropzone").dropzone({
+    //   addRemoveLinks: true,
+    //   removedfile: function (file) {
+    //     var name = file.name;
 
-        $.ajax({
-          type: 'POST',
-          url: 'upload.php',
-          data: { name: name, request: 2 },
-          sucess: function (data) {
-            console.log('success: ' + data);
-          }
-        });
-        var _ref;
-        return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
-      }
-    });
+    //     $.ajax({
+    //       type: 'POST',
+    //       url: 'upload.php',
+    //       data: { name: name, request: 2 },
+    //       sucess: function (data) {
+    //         console.log('success: ' + data);
+    //       }
+    //     });
+    //     var _ref;
+    //     return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+    //   }
+    // });
 
     // $('.alert-close').on('click', function (c) { debugger
     //   $(this).parent().fadeOut('slow', function (c) {
     //   });
     // });
+	
 
+	
+    
   }
 
   AddCourseForm(){ 
@@ -150,16 +165,19 @@ this.secondform = false;
     this.CourseFormList.splice(this.CourseFormList.length, 0, item);
     var index = this.CourseFormList.length;
     index = 'EmailBody'+index;
-    CKEDITOR.replace(index, {
-      height: '100',
-      resize_enabled: 'false',
-      resize_maxHeight: '100',
-      resize_maxWidth: '948',
-      resize_minHeight: '100',
-      resize_minWidth: '948',
-      extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
-      //extraAllowedContent: 'style;*[id,rel](*){*}
-    });
+    setTimeout(function(){
+      myInput();
+    },100);
+    // CKEDITOR.replace(index, {
+    //   height: '100',
+    //   resize_enabled: 'false',
+    //   resize_maxHeight: '100',
+    //   resize_maxWidth: '948',
+    //   resize_minHeight: '100',
+    //   resize_minWidth: '948',
+    //   extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
+    //   //extraAllowedContent: 'style;*[id,rel](*){*}
+    // });
     // if (this.CourseFormList.length <= index + 1) {
       
     // }
@@ -172,22 +190,31 @@ this.secondform = false;
 
     next_btn(){
       this.secondform = true;
-      for(var index=1; index<=this.CourseFormList.length; index++){
-        CKEDITOR.replace('EmailBody'+index, {
-          height: '100',
-          resize_enabled: 'false',
-          resize_maxHeight: '100',
-          resize_maxWidth: '948',
-          resize_minHeight: '100',
-          resize_minWidth: '948',
-          extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
-          //extraAllowedContent: 'style;*[id,rel](*){*}
-        });
-      }
+      // for(var index=1; index<=this.CourseFormList.length; index++){
+      //   CKEDITOR.replace('EmailBody'+index, {
+      //     height: '100',
+      //     resize_enabled: 'false',
+      //     resize_maxHeight: '100',
+      //     resize_maxWidth: '948',
+      //     resize_minHeight: '100',
+      //     resize_minWidth: '948',
+      //     extraAllowedContent: 'span;ul;li;table;td;style;*[id];*(*);*{*}'
+      //     //extraAllowedContent: 'style;*[id,rel](*){*}
+      //   });
+      // }
+      setTimeout(function(){
+        myInput();
+      },100);
     } 
 
     back_btn(){
       this.secondform = false;
+      setTimeout(function(){
+        myInput();
+      },100);
     }
 
+    add(courseForm){
+
+    }
 }

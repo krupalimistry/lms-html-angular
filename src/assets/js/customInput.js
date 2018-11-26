@@ -45,8 +45,7 @@ function myInput(){
 	});
 
 	
-	$('input').each(function() { 
-		
+	$('input').each(function() {
 			if($(this).attr('ng-reflect-model')){
 				 $(this).addClass('filled');
 				$(this).parents('.form-group').addClass('focused');
@@ -66,8 +65,13 @@ function myInput(){
 		});
 	
 		$('.file_upload input[type="file"]').change(function(e){
+			var length = e.target.files.length;
 			var fileName = e.target.files[0].name;
-			$('.file_upload input[type="text"]').val(fileName);
+			if(length==1){
+				$('.file_upload input[type="text"]').val(fileName);
+			} else {
+				$('.file_upload input[type="text"]').val(length+' files selected');
+			}
 		});
 	
 	// END INPUT

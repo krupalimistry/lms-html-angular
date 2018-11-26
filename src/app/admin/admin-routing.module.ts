@@ -18,6 +18,7 @@ import { AuthService } from './services/auth.service';
 import { RegisterService } from './services/register.service';
 import { EditProfileService } from './services/edit-profile.service';
 import { CourseService } from './services/course.service';
+import { CommonService } from './services/common.service';
 
 import { UserListComponent } from './user-list/user-list.component';
 import { CalendarComponent } from './calendar/calendar.component';
@@ -42,6 +43,7 @@ import { LearnerCoursesComponent } from './learner-courses/learner-courses.compo
 import { InstructorCourseFormComponent } from './instructor-course-form/instructor-course-form.component';
 import { InstructorCoursesComponent } from './instructor-courses/instructor-courses.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [	
   {
@@ -49,7 +51,7 @@ const routes: Routes = [
         component: AdminComponent,
         children: [
 		  
-		      { path : 'dashboard-admin', component : DashboardAdminComponent,canActivate : [AuthGuard] },
+		          { path : 'dashboard-admin', component : DashboardAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'dashboard-learner', component : DashboardLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'dashboard-instructor', component : DashboardInstructorComponent,canActivate : [AuthGuard] },
 				  { path : 'user-list', component : UserListComponent,canActivate : [AuthGuard] },
@@ -58,7 +60,7 @@ const routes: Routes = [
 				  { path : 'course-detail', component : CourseDetailComponent,canActivate : [AuthGuard] },
 				  { path : 'course-list', component : CourseListComponent,canActivate : [AuthGuard] },
 				  { path : 'register-instructor', component : RegisterInstructorComponent,canActivate : [AuthGuard] },
-				  { path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
+				  //{ path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'register-learner', component : RegisterLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'login', component : LoginComponent,canActivate : [AuthGuard] },
 				  { path : 'link-list', component : LinkListComponent,canActivate : [AuthGuard] },
@@ -70,6 +72,7 @@ const routes: Routes = [
 				  { path : 'instructor-course-form', component : InstructorCourseFormComponent,canActivate : [AuthGuard] },
 				  { path : 'instructor-courses', component : InstructorCoursesComponent,canActivate : [AuthGuard] },
 				  { path : 'welcome', component : WelcomeComponent,canActivate : [AuthGuard] },
+				  { path : 'payment', component : PaymentComponent,canActivate : [AuthGuard] },
 				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path : '**', redirectTo : 'link-list' }
         
@@ -81,7 +84,7 @@ const routes: Routes = [
 imports: [RouterModule.forChild(routes)],
 exports: [RouterModule],
  
-  providers: [Globals,AuthGuard,AuthService,RegisterService,EditProfileService,CourseService,{
+  providers: [Globals,AuthGuard,AuthService,RegisterService,EditProfileService,CourseService,CommonService,{
     
     provide: HTTP_INTERCEPTORS,
       useClass: HttpInterceptorClassService,

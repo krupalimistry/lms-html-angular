@@ -29,6 +29,7 @@ import { LearnerCoursesComponent } from './learner-courses/learner-courses.compo
 import { InstructorCourseFormComponent } from './instructor-course-form/instructor-course-form.component';
 import { InstructorCoursesComponent } from './instructor-courses/instructor-courses.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PaymentComponent } from './payment/payment.component';
 
 import { LinkListComponent } from './link-list/link-list.component';
 import { LoginComponent } from './login/login.component';
@@ -66,7 +67,8 @@ import { FooterRegisterComponent } from './footer-register/footer-register.compo
 	LearnerCoursesComponent,
     InstructorCourseFormComponent,
 	InstructorCoursesComponent,
-	WelcomeComponent
+	WelcomeComponent,
+	PaymentComponent
     
   ],
   imports: [

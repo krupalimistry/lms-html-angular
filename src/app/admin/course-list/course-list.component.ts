@@ -18,10 +18,10 @@ export class CourseListComponent implements OnInit {
 			else{  
 				$('footer').removeClass('footer_fixed');    
 			}
-			$('.left_menu_toggle i').toggleClass("fa-indent");
-			$('.sidebar_wrap').toggleClass("small_menu");
-			$('.menu_right').toggleClass("active_right");
-			$('footer.footer_fixed').toggleClass("active_footermenu");
+			// $('.left_menu_toggle i').toggleClass("fa-indent");
+			// $('.sidebar_wrap').toggleClass("small_menu");
+			// $('.menu_right').toggleClass("active_right");
+			// $('footer.footer_fixed').toggleClass("active_footermenu");
 		},500);
 	$('.grid_btn').click(function(){
 		$('.grid_btn').addClass("active");
