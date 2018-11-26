@@ -15,11 +15,7 @@ export class InstructorCourseFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-<<<<<<< HEAD
 	   myInput();
-=======
-    myInput();
->>>>>>> aea6f50936fecf4d80508b5fb8b34e4f6ea9cc2f
 this.secondform = false;
     var item = { 'Name': ''};
     this.CourseFormList = [];
