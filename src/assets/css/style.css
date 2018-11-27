@@ -703,14 +703,21 @@ textarea{resize: none; height: 100px;}
 /*---------------------Information page----------------------*/
 .intro_header{ margin-top:50px;}
 .grey_content{background: #f4f4f4; padding:30px 0; }
-.grey_content h1{font-size:25px!important; line-height:27px;}
-.grey_content p{}
-.transparent_content{background: transparent; padding:30px 0; text-align:center; }
+.grey_content h1,.white_content h1{font-size:25px!important; line-height:27px;}
+.white_content .owl-item h1{font-size:16px!important;margin-bottom: 0px;}
+.transparent_content{background: transparent; padding:30px 0 60px; text-align:center; }
 .transparent_content h1{font-size:25px!important; line-height:27px; color: #fff;}
 .height_link{ min-height:var(--screen-height);}
 .advantages_width{width: 70%; display:block; margin: auto;}
 .width_30_ul{width: 25%; display: inline-block;}
 .width_70_ul{width: 72%; display: inline-block; border-left:1px solid #ccc; padding-left: 20px;}
+
+.white_content{background: #fff; padding:30px 0; }
+.white_content h1.text-center{margin-bottom:30px;}
+.white_content .owl-item{position:relative;}
+.white_content .owl-item .services_desc{padding: 65px 65px;}
+.white_content .slider{width: 75%;margin: 70px auto 0px;}
+.white_content .owl-item span{position: absolute;background: #0061af;border: 3px solid #b0cb1f;color: #fff;left: 15px;top: 70px;width: 40px;height: 40px;border-radius: 50%;text-align: center;font-size: 18px;line-height: 34px;}
 /*---------------------End Information page----------------------*/
 
 /*--------------------------- Responsive CSS Start ------------------------------*/
@@ -869,6 +876,7 @@ textarea{resize: none; height: 100px;}
     .top_header .logo_lms span{margin: 40px 0 0!important;}
     header .logo .logo_text{width: 45%!important;}
     footer{width: 82.15%!important;}
+	.advantages_width {width: 55%;}
     footer.footer_fixed.active_footermenu{width: 95.3%!important;}
     .learner_dashboard .rated_course_block {height: 777px;}
     .course_list_block .course_box .course_title{height: 55px;}

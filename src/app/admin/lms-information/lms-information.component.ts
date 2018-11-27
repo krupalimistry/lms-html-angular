@@ -84,6 +84,53 @@ export class LmsInformationComponent implements OnInit {
         }
       }
     });
+	
+	var owl = $('.owl-carousel_services');
+    owl.owlCarousel({
+    loop:true,
+	dots: false,
+    nav:true,
+    margin:30,
+    responsive:{
+         0: {
+          items: 1
+        },
+
+        300: {
+          items: 1
+        },
+        479: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        979: {
+          items: 1
+        },
+        1024: {
+          items: 1
+        },
+        1199: {
+          items: 1
+        }
+    }
+});
+
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.originalEvent.wheelDelta /120 > 0) {
+        owl.trigger('next.owl');
+    } 
+	else  {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});
+	
+	
 	// Inquiry Form
 $(".inquire_now").click(function() {
 	$('.form_widget').addClass("active");

@@ -23,10 +23,9 @@
       ],
       "scripts": [
 		"assets/js/jquery-1.11.3.min.js",
-    "assets/js/bootstrap.min.js",
-    "assets/js/owl.carousel.js",
-    "assets/js/accordion.js",
-    "assets/js/sweetalert2.min.js",
+        "assets/js/bootstrap.min.js",
+        "assets/js/accordion.js",
+        "assets/js/sweetalert2.min.js",
 		"assets/js/moment.min.js",
 		"assets/js/fullcalendar.min.js",
 		"assets/js/perfect-scrollbar.js",
@@ -36,13 +35,14 @@
 		"assets/js/buttons.print.min.js",
 		"assets/js/jszip.min.js",
 		"assets/js/buttons.html5.min.js",
+        "assets/js/owl.carousel.js",
 		"assets/js/amcharts.js",
 		"assets/js/serial.js",
 		"assets/js/customInput.js",
 		"assets/js/typeahead.bundle.js",
 		"assets/js/bootstrap-tagsinput.min.js",
-    "assets/js/custom.js",
-    "assets/js/dropzone.js"
+        "assets/js/custom.js",
+        "assets/js/dropzone.js"
 	  ],
       "environmentSource": "environments/environment.ts",
       "environments": {
