@@ -28,6 +28,9 @@ constructor(private authService: AuthService, private router: Router, public glo
     }).on('click mousedown mouseup', '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])', function () {
       $('[data-toggle="tooltip"], [title]:not([data-toggle="popover"])').tooltip('destroy');
     });
+	 const body = document.querySelector('body');
+    body.style.setProperty('--screen-height', $(window).height() - 100 + "px");
+	
     $(".expand_profile").click(function () {
       $(".profile_linkup").toggleClass("active_slider");
       $(".expand_profile").toggleClass("active_down");

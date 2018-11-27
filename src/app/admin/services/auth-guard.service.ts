@@ -61,6 +61,8 @@ export class AuthGuard implements CanActivate {
 		this.globals.currentLinkName = 'Welcome';
 	} else if(this.globals.currentLink=='/payment') {
 		this.globals.currentLinkName = 'Make Payment';
+	} else if(this.globals.currentLink=='/lms-information') {
+		this.globals.currentLinkName = 'Information';
 	} else {
 		this.globals.currentLinkName = '';
 	}
@@ -80,7 +82,7 @@ export class AuthGuard implements CanActivate {
 			  return true;		  
 		  }		  
 	  } else {
-			if(state.url=='/register-instructor' || state.url=='/welcome' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin'){			
+			if(state.url=='/register-instructor' || state.url=='/welcome' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin' || state.url=='/lms-information'){			
 			   this.globals.IsLoggedIn = false;
 			   return true;
 		   } else {

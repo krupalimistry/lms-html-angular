@@ -99,6 +99,16 @@ header .notification li a span.badge2{background:#4AC4BC;}
 .account_menu li ul.dropdown-menu li:hover a{color: var(--theme-color);}
 /*--------------End header and navigation--------------------*/
 
+/*--------------Loader--------------------*/
+.lds-ripple {display: inline-block; position: relative; width: 64px;height: 64px;}
+.lds-ripple div { position: absolute; border: 4px solid #fff;opacity: 1;border-radius: 50%;animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;}
+.lds-ripple div:nth-child(2) {animation-delay: -0.5s;}
+@keyframes lds-ripple {
+  0% { top: 28px; left: 28px; width: 0; height: 0; opacity: 1;}
+  100% { top: -1px; left: -1px; width: 58px; height: 58px; opacity: 0;}
+}
+/*--------------End Loader--------------------*/
+
 /*--------------Register Login--------------------*/
 .all_outer_page{padding: 20px 0; height: var(--screen-height); vertical-align: middle; display: table-cell; position: relative; width: inherit;}
 .white_form_block{ margin: 20px 0 0 0; background: rgba(255,255,255,0.85); border-radius:10px; box-shadow:0 0 5px rgba(0,0,0,0.3); overflow:hidden;}
@@ -567,6 +577,7 @@ textarea{resize: none;}
 .footer_link{padding: 15px 15px 15px 0;font-size: 12px;font-weight: normal;line-height: 10px;position: fixed;z-index: 999;width: 100%;bottom: 0;left: 0;background: #f4f4f4;}
 /* .footer_link a{color:#fff;} */
 .linkup_wrapper{background: #fff; padding:30px 0;}
+.height_link{ min-height:var(--screen-height);}
 .linkup_wrapper .linkup_section .linkup_header{position: relative;width: 100%; clear: both;text-align: left;margin:0px 0px;}
 .linkup_wrapper .linkup_section .linkup_header .border_h2{position:relative;}
 .linkup_wrapper .linkup_section .linkup_header .border_h2:after{content:''; border-bottom:1px solid #ccc; position:absolute; top:20px; width:100%; left:0;}
@@ -689,6 +700,13 @@ textarea{resize: none; height: 100px;}
 .inquiryform_block .inquire_now{cursor: pointer;width: 160px;height: 45px;overflow: hidden;position: fixed;top: 255px;right: -60px;text-align: center;transform: rotate(-90deg);z-index: 99;font-size: 18px;padding: 7px 10px !important;line-height: 30px;}
 /*--------------End Inquire Form----------------------*/
 
+/*---------------------Information page----------------------*/
+.intro_header{ margin-top:50px;}
+.grey_content{background: #f4f4f4; padding:30px 0; text-align:center; }
+.grey_content h1{font-size:25px!important; line-height:27px;}
+.grey_content p{font-size:16px; line-height:27px;}
+.height_link{ min-height:var(--screen-height);}
+/*---------------------End Information page----------------------*/
 
 /*--------------------------- Responsive CSS Start ------------------------------*/
 @media only screen and (max-width: 640px) and (min-width: 320px) {

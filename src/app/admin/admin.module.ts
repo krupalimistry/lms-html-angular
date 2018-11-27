@@ -37,6 +37,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 
 import { HeaderRegisterComponent } from './header-register/header-register.component';
 import { FooterRegisterComponent } from './footer-register/footer-register.component';
+import { LmsInformationComponent } from './lms-information/lms-information.component';
 
 
 @NgModule({
@@ -68,8 +69,9 @@ import { FooterRegisterComponent } from './footer-register/footer-register.compo
     InstructorCourseFormComponent,
 	InstructorCoursesComponent,
 	WelcomeComponent,
-	PaymentComponent
-    
+	PaymentComponent,
+	LmsInformationComponent
+
   ],
   imports: [
 	//BrowserModule,
