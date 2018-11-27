@@ -877,6 +877,7 @@ textarea{resize: none; height: 100px;}
     header .logo .logo_text{width: 45%!important;}
     footer{width: 82.15%!important;}
 	.advantages_width {width: 55%;}
+	.width_30_ul{width:15%;}
     footer.footer_fixed.active_footermenu{width: 95.3%!important;}
     .learner_dashboard .rated_course_block {height: 777px;}
     .course_list_block .course_box .course_title{height: 55px;}
