@@ -702,10 +702,15 @@ textarea{resize: none; height: 100px;}
 
 /*---------------------Information page----------------------*/
 .intro_header{ margin-top:50px;}
-.grey_content{background: #f4f4f4; padding:30px 0; text-align:center; }
+.grey_content{background: #f4f4f4; padding:30px 0; }
 .grey_content h1{font-size:25px!important; line-height:27px;}
-.grey_content p{font-size:16px; line-height:27px;}
+.grey_content p{}
+.transparent_content{background: transparent; padding:30px 0; text-align:center; }
+.transparent_content h1{font-size:25px!important; line-height:27px; color: #fff;}
 .height_link{ min-height:var(--screen-height);}
+.advantages_width{width: 70%; display:block; margin: auto;}
+.width_30_ul{width: 25%; display: inline-block;}
+.width_70_ul{width: 72%; display: inline-block; border-left:1px solid #ccc; padding-left: 20px;}
 /*---------------------End Information page----------------------*/
 
 /*--------------------------- Responsive CSS Start ------------------------------*/

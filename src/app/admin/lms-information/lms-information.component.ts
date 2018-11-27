@@ -3,8 +3,9 @@ import { AuthService } from '../services/auth.service';
 import { CommonService } from '../services/common.service';
 import { Router } from '@angular/router';
 import { Globals } from '../globals';
-declare var $: any;
+declare var $, PerfectScrollbar: any;
 declare function myInput() : any;
+declare var $,swal,Bloodhound: any;
 
 @Component({
   selector: 'app-lms-information',
@@ -97,6 +98,10 @@ $(".form_widget .glyphicon-remove").click(function() {
 setTimeout(function(){
   myInput();
 },100);
+
+
+	
+  }
 	FeedbackSubmit(FeedbackForm){ 
     this.submitted = true;		
 		if(FeedbackForm.valid){
@@ -170,7 +175,4 @@ setTimeout(function(){
       
 		 }
   }
-	
-  }
-
 }
