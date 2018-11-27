@@ -794,6 +794,7 @@ textarea{resize: none; height: 100px;}
   .right_content_block .bg_white_block .title_heading .title_text{font-size: 12px;}
   .learner_dashboard .users_block,.admin_dashboard .graph_block {height: 360px!important;}
   .certificate_box .badge_button{width: 48%;margin: 0px;}
+  .white_content .owl-item span{top:5px;}
   .right_content_block .bg_white_block .title_heading .alert{display: inline;}
   .right_content_block .bg_white_block .title_heading .alert .close{margin-left: 5px;}
   .white_form_block .tab_logo img {width: auto;height: auto;}
@@ -808,6 +809,7 @@ textarea{resize: none; height: 100px;}
   .notification_block .col-md-4{padding-left: 0px;}
   .course_list_block .course_box .course_img {height: 95px;}
   .certificate_box p.padding_15{font-size: 12px;}
+  .white_content .owl-item .services_desc {padding: 0px 0px 0px 50px;}
   .course_list_block .course_box .course_title {font-size: 14px;line-height: 20px;height: 80px;}
   .learner_dashboard .rated_course_block,.learner_dashboard .content_block{height: 680px!important;}
   .admin_dashboard .notification_block .row .col-md-3,.admin_dashboard .notification_block .row .col-sm-3{padding: 0px 15px 0px 0px;}
@@ -906,6 +908,9 @@ textarea{resize: none; height: 100px;}
     .footer_link .text-right,footer.footer_fixed .text-right{text-align: center;}
     header .logo .toggle{display: none;}
     .sidebar_wrap.small_menu{width: 65px;}
+	.white_content .owl-item .services_desc {padding: 0px 0px 0px 50px;}
+	.advantages_width {width: 100%;}
+	.white_content .owl-item span{top:7px;}
     .course_forum_block .forum_box.inner_forum{width: 90%;margin-left: 40px;}
     .sidebar_wrap {padding: 0 5px 0 10px;}
     .admin_dashboard .overview_block{padding: 10px;margin-top: 15px;}
@@ -997,6 +1002,9 @@ textarea{resize: none; height: 100px;}
     .editprofile_right h3{margin: 15px 0px;}   
     .certificate_box p.padding_15{height: 50px;}
     .form_widget { width: 100%;}
+	.width_70_ul{padding-left:0px;border:0px;padding-top:25px;}
+	.width_30_ul,.width_70_ul{width:100%;}
+	.white_content .owl-item .services_desc {padding: 0px 0px 20px 50px;}
     .certificate_box .badge_button{width: 25%;margin: -5px 5px !important;} 
     .footer_fixed_block .footer_fixed_header{margin-top: -25px;}
     .white_form_block .account_block .pull-left,.white_form_block .account_block .pull-right{float: none!important;}
@@ -1004,7 +1012,6 @@ textarea{resize: none; height: 100px;}
     .course_list_block .course_box .instructor,.course_list_block .course_box .desc_block,.course_list_block .course_box .course_title,.learner_dashboard .rated_course_block, .learner_dashboard .content_block,.admin_dashboard .notification_block,.admin_dashboard .audit_block,.admin_dashboard .users_block,.admin_dashboard .rated_course_block,.admin_dashboard .invited_user_block,.admin_dashboard .graph_block,.learner_dashboard .scroll_calender{height: auto!important;}
   }
   @media only screen and (max-width: 991px) and (min-width: 768px) {
-    .inquiryform_block .inquire_now{font-size: 15px; padding: 14px 10px!important;}
 	.admin_dashboard .users_block,.admin_dashboard .rated_course_block,.learner_dashboard .rated_course_block, .learner_dashboard .content_block,.learner_dashboard .users_block, .admin_dashboard .graph_block{height:auto!important;}
   .top_header .logo_oe img{width: 32%;} 
   .form_widget { width: 50%;} 
