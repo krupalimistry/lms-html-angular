@@ -74,7 +74,7 @@ const routes: Routes = [
 				  { path : 'instructor-courses', component : InstructorCoursesComponent,canActivate : [AuthGuard] },
 				  { path : 'welcome', component : WelcomeComponent,canActivate : [AuthGuard] },
 				  { path : 'payment', component : PaymentComponent,canActivate : [AuthGuard] },
-				  { path : 'lms-information', component : LmsInformationComponent,canActivate : [AuthGuard] },
+				  //{ path : 'lms-information', component : LmsInformationComponent,canActivate : [AuthGuard] },
 				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
 				  { path : '**', redirectTo : 'link-list' }
         
