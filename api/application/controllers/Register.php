@@ -148,7 +148,7 @@ class Register extends CI_Controller
 				$body = '<table border="0" cellpadding="0" cellspacing="0" style="border:1px solid #333333; color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; margin:0 auto; width:600px">
 				<tbody>
 					<tr>
-						<td style="background: linear-gradient(to top left, var(--option-color), var(--theme-color)); background:background: linear-gradient(to top left, var(--option-color), var(--theme-color)); border-bottom:1px solid #333333; padding:10px 10px 5px 10px;width: 35%;margin:0 auto;"><img alt="Learn Feedback" src="'.BASE_URL.'/assets/images/logo.png" /></td>
+						<td style="background: var(--theme-color); border-bottom:1px solid #333333; padding:10px 10px 5px 10px;width: 35%;margin:0 auto;"><img alt="Learning Management System" src="'.BASE_URL.'/assets/images/logo-email.png" width="200px" /></td>
 					</tr>
 					<tr>
 						<td style="border-width:0; padding:20px 10px 10px 10px; text-align:center">
@@ -164,7 +164,7 @@ class Register extends CI_Controller
 						<table border="0" cellpadding="0" cellspacing="0" style="border:0; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; margin:0 auto">
 							<tbody>
 								<tr>
-									<td style="background-color:#b11016; background:#b11016; border-radius:4px; border-width:0; clear:both; color:#ffffff; font-size:14px; line-height:13px; opacity:1; padding:10px; text-align:center; text-decoration:none; width:130px"><a href="{login_link}" style="color:#fff; text-decoration:none;">Get Started</a></td>
+									<td style="background-color:var(--theme-color); background:var(--theme-color); border-radius:4px; border-width:0; clear:both; color:#ffffff; font-size:14px; line-height:13px; opacity:1; padding:10px; text-align:center; text-decoration:none; width:130px"><a href="{login_link}" style="color:#fff; text-decoration:none;">Get Started</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -178,7 +178,7 @@ class Register extends CI_Controller
 						</td>
 					</tr>
 					<tr>
-						<td style="background-color:#222222; background:#222222; border-top:1px solid #cccccc; color:#ffffff; font-size:13px; padding:7px; text-align:center">Copyright &copy; 2018 Learning Management System</td>
+						<td style="background-color:var(--option-color); background:var(--option-color); border-top:1px solid #cccccc; color:#ffffff; font-size:13px; padding:7px; text-align:center">Copyright &copy; 2018 Learning Management System</td>
 					</tr>
 				</tbody>
 			</table>';
@@ -242,7 +242,7 @@ class Register extends CI_Controller
 				$body = '<table border="0" cellpadding="0" cellspacing="0" style="border:1px solid #333333; color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; margin:0 auto; width:600px">
 				<tbody>
 					<tr>
-						<td style="background: linear-gradient(to top left, var(--option-color), var(--theme-color)); background:background: linear-gradient(to top left, var(--option-color), var(--theme-color)); border-bottom:1px solid #333333; padding:10px 10px 5px 10px;width: 35%;margin:0 auto;"><img alt="Learn Feedback" src="'.BASE_URL.'/assets/images/logo.png" /></td>
+						<td style="background: var(--theme-color); border-bottom:1px solid #333333; padding:10px 10px 5px 10px;width: 35%;margin:0 auto;"><img alt="Learning Management System" src="'.BASE_URL.'/assets/images/logo-email.png" width="200px" /></td>
 					</tr>
 					<tr>
 						<td style="border-width:0; padding:20px 10px 10px 10px; text-align:center">
@@ -258,7 +258,7 @@ class Register extends CI_Controller
 						<table border="0" cellpadding="0" cellspacing="0" style="border:0; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; margin:0 auto">
 							<tbody>
 								<tr>
-									<td style="background-color:#b11016; background:#b11016; border-radius:4px; border-width:0; clear:both; color:#ffffff; font-size:14px; line-height:13px; opacity:1; padding:10px; text-align:center; text-decoration:none; width:130px"><a href="{login_link}" style="color:#fff; text-decoration:none;">Get Started</a></td>
+									<td style="background-color:var(--theme-color); background:var(--theme-color); border-radius:4px; border-width:0; clear:both; color:#ffffff; font-size:14px; line-height:13px; opacity:1; padding:10px; text-align:center; text-decoration:none; width:130px"><a href="{login_link}" style="color:#fff; text-decoration:none;">Get Started</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -272,7 +272,7 @@ class Register extends CI_Controller
 						</td>
 					</tr>
 					<tr>
-						<td style="background-color:#222222; background:#222222; border-top:1px solid #cccccc; color:#ffffff; font-size:13px; padding:7px; text-align:center">Copyright &copy; 2018 Learning Management System</td>
+						<td style="background-color:var(--option-color); background:var(--option-color); border-top:1px solid #cccccc; color:#ffffff; font-size:13px; padding:7px; text-align:center">Copyright &copy; 2018 Learning Management System</td>
 					</tr>
 				</tbody>
 			</table>';
