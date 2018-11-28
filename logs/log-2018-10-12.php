@@ -1,9 +1,0 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-
-ERROR - 2018-10-12 12:39:28 --> Undefined index: LevelOfEducation at line no 108 in C:\wamp64\www\lms-html-angular\api\application\models\Register_model.php
-ERROR - 2018-10-12 12:39:28 --> Undefined index: Certificate at line no 110 in C:\wamp64\www\lms-html-angular\api\application\models\Register_model.php
-ERROR - 2018-10-12 12:39:28 --> Query error: Unknown column 'LevelOfEducation' in 'field list' - Invalid query: INSERT INTO `tbluser` (`RoleId`, `FirstName`, `LastName`, `PhoneNumber`, `EmailAddress`, `Password`, `LevelOfEducation`, `Field`, `Certificate`, `Status`, `CreatedBy`, `UpdatedBy`, `UpdatedOn`) VALUES (3, 'Vidhi', 'Berzellin', '4234234', 'nirav.bathani@theopeneyes.in', '25d55ad283aa400af464c76d713c07ad', NULL, 'sdfsd', NULL, 0, 1, 1, '18-10-12 12:39:28')
-ERROR - 2018-10-12 12:39:28 --> Database error! Error Code [1054] Error: Unknown column 'LevelOfEducation' in 'field list' at line no 137 in C:\wamp64\www\lms-html-angular\api\application\models\Register_model.php
-ERROR - 2018-10-12 12:41:20 --> Undefined index: Certificate at line no 110 in C:\wamp64\www\lms-html-angular\api\application\models\Register_model.php
-ERROR - 2018-10-12 12:41:20 --> Query error: Column 'Certificate' cannot be null - Invalid query: INSERT INTO `tbluser` (`RoleId`, `FirstName`, `LastName`, `PhoneNumber`, `EmailAddress`, `Password`, `EducationLevelId`, `Field`, `Certificate`, `Status`, `CreatedBy`, `UpdatedBy`, `UpdatedOn`) VALUES (3, 'Vidhi', 'Berzellin', '4234234', 'nirav.bathani@theopeneyes.in', '25d55ad283aa400af464c76d713c07ad', '2', 'sdfsd', NULL, 0, 1, 1, '18-10-12 12:41:20')
-ERROR - 2018-10-12 12:41:20 --> Database error! Error Code [1048] Error: Column 'Certificate' cannot be null at line no 137 in C:\wamp64\www\lms-html-angular\api\application\models\Register_model.php
