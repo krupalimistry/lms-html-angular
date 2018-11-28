@@ -110,7 +110,58 @@
 			<!-- /Bootstrap Accordion -->
 			<div class="clearfix"></div>
 		</div>
-		<div class="clearfix"></div>
+		<div class="clearfix"></div>		
+		
+		<div class="visible-xs">
+			<div class="course_right">
+				<p class="padding_15"> <strong><i class="fa fa-clock-o"></i> Duration:</strong> 4 hrs<br>
+					<strong><i class="fa fa-calendar"></i> Posted On:</strong> 18 Sept 2018 <br>
+					<strong><i class="fa fa-user"></i> Instructor:</strong> Adrian Demian <br>
+					<strong><i class="fa fa-graduation-cap"></i> Max. students:</strong> 50 <br>
+					<strong><i class="fa fa-check"></i> Attending:</strong> 30</p>
+				<h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+				<div class="text-center">
+					<a routerLink="/payment" class="next_btn">Enroll Now</a>
+					<!-- <div id="paypal-checkout-btn"></div> -->
+					<!-- <a id="paypal-checkout-btn" class="next_btn">Register</a> -->
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="instrutor_right">
+				<h3><img src="../assets/images/guy-6.jpg" alt="" class="img-responsive" />Adrian Demian<span>Biography</span></h3>
+				<p>Adrian Demian is a passionate and creative software engineer with a strong focus on pragmatism and simplicity. He
+					started programming at the age of seven on a Commodore 64. Later, during his high school years, he started learning
+					C and C++ .</p>
+			</div>
+			<div class="clearfix"></div>
+			<div class="related_course">
+				<h3>Related Courses</h3>
+				<ul>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Node.js</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star" aria-hidden="true"></i><i
+							 class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">HTML5 : Beginner to Advanced</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
+							 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">RESTful Web services</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
+							 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Master ASP.NET Core MVC 2.0</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star" aria-hidden="true"></i><i
+							 class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Angular 4</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
+							 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>		
+		
 		<div class="course_forum_block">
 			<h3 class="pull-left">Discussion board</h3>
 			<button class="next_btn pull-right">Start new Discussion</button>
@@ -221,51 +272,53 @@
 		</div>
 	</div>
 	<div class="col-md-3 col-sm-4">
-		<div class="course_right">
-			<p class="padding_15"> <strong><i class="fa fa-clock-o"></i> Duration:</strong> 4 hrs<br>
-				<strong><i class="fa fa-calendar"></i> Posted On:</strong> 18 Sept 2018 <br>
-				<strong><i class="fa fa-user"></i> Instructor:</strong> Adrian Demian <br>
-				<strong><i class="fa fa-graduation-cap"></i> Max. students:</strong> 50 <br>
-				<strong><i class="fa fa-check"></i> Attending:</strong> 30</p>
-			<h2 *ngIf="paypalLoad">Paypal button is loading</h2>
-			<div class="text-center">
-				<a routerLink="/payment" class="next_btn">Enroll Now</a>
-				<!-- <div id="paypal-checkout-btn"></div> -->
-				<!-- <a id="paypal-checkout-btn" class="next_btn">Register</a> -->
+		<div class="hidden-xs">
+			<div class="course_right">
+				<p class="padding_15"> <strong><i class="fa fa-clock-o"></i> Duration:</strong> 4 hrs<br>
+					<strong><i class="fa fa-calendar"></i> Posted On:</strong> 18 Sept 2018 <br>
+					<strong><i class="fa fa-user"></i> Instructor:</strong> Adrian Demian <br>
+					<strong><i class="fa fa-graduation-cap"></i> Max. students:</strong> 50 <br>
+					<strong><i class="fa fa-check"></i> Attending:</strong> 30</p>
+				<h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+				<div class="text-center">
+					<a routerLink="/payment" class="next_btn">Enroll Now</a>
+					<!-- <div id="paypal-checkout-btn"></div> -->
+					<!-- <a id="paypal-checkout-btn" class="next_btn">Register</a> -->
+				</div>
 			</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="instrutor_right">
-			<h3><img src="../assets/images/guy-6.jpg" alt="" class="img-responsive" />Adrian Demian<span>Biography</span></h3>
-			<p>Adrian Demian is a passionate and creative software engineer with a strong focus on pragmatism and simplicity. He
-				started programming at the age of seven on a Commodore 64. Later, during his high school years, he started learning
-				C and C++ .</p>
-		</div>
-		<div class="clearfix"></div>
-		<div class="related_course">
-			<h3>Related Courses</h3>
-			<ul>
-				<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Node.js</a>
-					<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star" aria-hidden="true"></i><i
-						 class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
-				</li>
-				<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">HTML5 : Beginner to Advanced</a>
-					<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
-						 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
-				</li>
-				<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">RESTful Web services</a>
-					<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
-						 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
-				</li>
-				<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Master ASP.NET Core MVC 2.0</a>
-					<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star" aria-hidden="true"></i><i
-						 class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
-				</li>
-				<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Angular 4</a>
-					<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
-						 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
-				</li>
-			</ul>
+			<div class="clearfix"></div>
+			<div class="instrutor_right">
+				<h3><img src="../assets/images/guy-6.jpg" alt="" class="img-responsive" />Adrian Demian<span>Biography</span></h3>
+				<p>Adrian Demian is a passionate and creative software engineer with a strong focus on pragmatism and simplicity. He
+					started programming at the age of seven on a Commodore 64. Later, during his high school years, he started learning
+					C and C++ .</p>
+			</div>
+			<div class="clearfix"></div>
+			<div class="related_course">
+				<h3>Related Courses</h3>
+				<ul>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Node.js</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star" aria-hidden="true"></i><i
+							 class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">HTML5 : Beginner to Advanced</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
+							 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">RESTful Web services</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
+							 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Master ASP.NET Core MVC 2.0</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star" aria-hidden="true"></i><i
+							 class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+					<li><i class="fa fa-graduation-cap"></i><a href="#" class="title">Angular 4</a>
+						<div class="stars_block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"
+							 aria-hidden="true"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="clearfix"></div>
