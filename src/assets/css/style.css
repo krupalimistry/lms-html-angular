@@ -1039,6 +1039,7 @@ textarea{resize: none; height: 100px;}
   }
   @media (max-width: 767px) {
     .top_header .logo_oe img{width: 40%;}
+	footer.footer_sidebaractive{bottom:60px!important;}
     .white_form_block .account_block{text-align: center;}
     .course_list_block .list_grid{display: none;}
     .panel-title > a {color: var(--theme-color);}
