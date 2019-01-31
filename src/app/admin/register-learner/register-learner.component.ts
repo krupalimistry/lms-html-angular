@@ -24,7 +24,7 @@ export class RegisterLearnerComponent implements OnInit {
   constructor(private router: Router,private globals: Globals, private RegisterService: RegisterService) { }
 
 
-  ngOnInit() {
+  ngOnInit() { 
 	this.RegisterEntity = {};
 	myInput();
 	this.globals.isLoading = true;

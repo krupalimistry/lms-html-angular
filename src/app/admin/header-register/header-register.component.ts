@@ -68,36 +68,37 @@ constructor(private authService: AuthService, private router: Router, public glo
       }
     });
 
-    $(".alert-close").click(function () {
-      $(".footer_fixed_wrapper").removeClass("active_up");
-      $(".footer_bottom span").removeClass("active_i");
-    });
-
-    $(".footer_bottom span").click(function (e) {
-      $(".footer_fixed_wrapper").toggleClass("active_up");
-      $(".footer_bottom span").toggleClass("active_i");
-      e.stopPropagation();
-    });
-    $(".footer_fixed_wrapper").click(function (e) {
-      e.stopPropagation();
-    });
-    $("body").click(function () {
-      $(".footer_fixed_wrapper").removeClass("active_up");
-      $(".footer_bottom span").removeClass("active_i");
-    });
-
-// Inquiry Form
-$(".inquire_now").click(function() {
-	$('.form_widget').addClass("active");
-  $('body').addClass("overflow_body");
-});
-$(".form_widget .glyphicon-remove").click(function() {
-	$('.form_widget').removeClass("active");
-  $('body').removeClass("overflow_body");
-});
+  
 
 
 setTimeout(function(){
+  $(".alert-close").click(function () {
+    $(".footer_fixed_wrapper").removeClass("active_up");
+    $(".footer_bottom span").removeClass("active_i");
+  });
+
+  $(".footer_bottom span").click(function (e) {
+    $(".footer_fixed_wrapper").toggleClass("active_up");
+    $(".footer_bottom span").toggleClass("active_i");
+    e.stopPropagation();
+  });
+  $(".footer_fixed_wrapper").click(function (e) {
+    e.stopPropagation();
+  });
+  $("body").click(function () {
+    $(".footer_fixed_wrapper").removeClass("active_up");
+    $(".footer_bottom span").removeClass("active_i");
+  });
+
+// Inquiry Form
+$(".inquire_now").click(function() {
+$('.form_widget').addClass("active");
+$('body').addClass("overflow_body");
+});
+$(".form_widget .glyphicon-remove").click(function() {
+$('.form_widget').removeClass("active");
+$('body').removeClass("overflow_body");
+});
   myInput();
 },100);
 
