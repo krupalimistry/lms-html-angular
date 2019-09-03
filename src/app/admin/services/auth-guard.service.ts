@@ -67,27 +67,27 @@ export class AuthGuard implements CanActivate {
 		this.globals.currentLinkName = '';
 	}
 	
-	if(state.url=='/link-list'){
-		return true;		  
-	}
+	// if(state.url=='/link-list'){
+	// 	return true;		  
+	// }
 	
 	  if(this.authService.isLoggedIn()==true){	
 
-		  if(state.url=='/register-instructor' || state.url=='/welcome' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin'){			
+		  if(state.url=='/register-instructor' || state.url=='/login' || state.url=='/register-learner' || state.url=='/register-admin' || state.url=='/forgot-password'){			
 			  this.globals.IsLoggedIn = true;
-			  this.router.navigate(['/dashboard-admin']);
+			  this.router.navigate(['/link-list']);
 			  return false;
 		  } else {
 			  this.globals.IsLoggedIn = true;
 			  return true;		  
 		  }		  
 	  } else {
-			if(state.url=='/register-instructor' || state.url=='/welcome' || state.url=='/login' || state.url=='/link-list' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin' || state.url=='/lms-information'){			
+			if(state.url=='/register-instructor' || state.url=='/welcome' || state.url=='/login' || state.url=='/forgot-password' || state.url=='/register-learner' || state.url=='/register-admin' || state.url=='/lms-information'){			
 			   this.globals.IsLoggedIn = false;
 			   return true;
 		   } else {
 			   this.globals.IsLoggedIn = false;
-			   this.router.navigate(['/link-list']);
+			   this.router.navigate(['/login']);
 			   return false;
 		   }		  
 	  }

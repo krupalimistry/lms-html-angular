@@ -60,7 +60,7 @@ const routes: Routes = [
 				  { path : 'certificate', component : CertificateComponent,canActivate : [AuthGuard] },
 				  { path : 'course-detail', component : CourseDetailComponent,canActivate : [AuthGuard] },
 				  { path : 'course-list', component : CourseListComponent,canActivate : [AuthGuard] },
-				  { path : 'register-instructor', component : RegisterInstructorComponent,canActivate : [AuthGuard] },
+				  // { path : 'register-instructor', component : RegisterInstructorComponent,canActivate : [AuthGuard] },
 				  //{ path : 'register-admin', component : RegisterAdminComponent,canActivate : [AuthGuard] },
 				  { path : 'register-learner', component : RegisterLearnerComponent,canActivate : [AuthGuard] },
 				  { path : 'login', component : LoginComponent,canActivate : [AuthGuard] },
@@ -75,8 +75,8 @@ const routes: Routes = [
 				  { path : 'welcome', component : WelcomeComponent,canActivate : [AuthGuard] },
 				  { path : 'payment', component : PaymentComponent,canActivate : [AuthGuard] },
 				  //{ path : 'lms-information', component : LmsInformationComponent,canActivate : [AuthGuard] },
-				  { path : '', redirectTo: 'link-list', pathMatch:'full'},
-				  { path : '**', redirectTo : 'link-list' }
+				  { path : '', redirectTo: 'login', pathMatch:'full'},
+				  { path : '**', redirectTo : 'login' }
         
         ]
   }

@@ -75,7 +75,7 @@ constructor(private authService: AuthService, private router: Router, public glo
     $('.owl-carousel-profile').owlCarousel({
       loop: false,
       autoPlay: false,
-      nav: true,
+      nav: false,
       dots: false,
       margin: 30,
       stopOnHover: false,

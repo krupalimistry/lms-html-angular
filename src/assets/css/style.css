@@ -900,6 +900,7 @@ textarea{resize: none; height: 100px;}
 	.course_list_block .course_box .course_title {height: 50px;}
 	.course_list_block .course_box .course_title {height: 75px;font-size:14px;}
 	.course_list_block .course_box .desc_block {height: 315px;}
+	.admin_dashboard .users_block,.admin_dashboard .rated_course_block{height: 500px!important;}
 }
 
 @media only screen and (max-width: 1400px) and (min-width: 991px) {
